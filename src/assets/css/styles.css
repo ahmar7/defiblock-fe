@@ -36,8 +36,8 @@ h3,
 h4,
 h5,
 h6 {
-  font-size: inherit;
-  font-weight: inherit;
+  /* font-size: inherit; */
+  /* font-weight: inherit; */
 }
 a {
   color: inherit;
@@ -1191,9 +1191,7 @@ video {
 .visible {
   visibility: visible;
 }
-.collapse {
-  visibility: collapse;
-}
+
 .fixed {
   position: fixed;
 }

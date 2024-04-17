@@ -1,273 +1,1535 @@
+import logo from "./images/logo.png";
+import logow from "./images/logow.png";
+// import portfolio from "./images/portfolio.png";
+// import image from "./images/brand/1.svg";
+// import image1 from "./images/brand/2.svg";
+// import image2 from "./images/brand/3.svg";
+// import image3 from "./images/brand/4.svg";
+// import image4 from "./images/brand/5.svg";
+// import image5 from "./images/brand/5.svg";
+import android from "./images/android.svg";
+import apple from "./images/apple.svg";
+import app from "./images/app.png";
+import image6 from "./images/blog/1.jpg";
+import image7 from "./images/avatar/5.jpg";
+import image8 from "./images/blog/2.jpg";
+import image9 from "./images/avatar/6.jpg";
+import image10 from "./images/blog/3.jpg";
+import image11 from "./images/avatar/7.jpg";
+
 import React from "react";
 import Header from "../../layout/HomeHeader/Header";
-import "./Home.css";
-import Price1 from "../../assets/img/prices-btc.svg";
-import Price2 from "../../assets/img/prices-eth.svg";
-import Price4 from "../../assets/img/prices-sol.svg";
-import Price3 from "../../assets/img/prices-xlm.svg";
+// import "./Home.css";
+import "./home2.css";
 const Home = () => {
   return (
-    <>
-      <Header />
-      <div className="Containers__Container-yamifu-1 Hero__HeroContainer-qcrt3z-0 llCkQr cePXDf">
-        <div className="Containers__Wrap-yamifu-7 Hero__HeroWrap-qcrt3z-1 jqlzrh cmBafN">
-          <div className="Hero__Content-qcrt3z-2 ldGnJz">
-            <h1 className="Text__H1-sc-1fwf07x-0 Hero__Title-qcrt3z-3 kRtqet cCjakL">
-              Be early to the future of finance
-            </h1>
-            <p className="Text__Subtitle1-sc-1fwf07x-5 Hero__Subtitle-qcrt3z-4 hrbjxU kYEboM">
-              Buy Bitcoin, Ethereum, and other leading cryptocurrencies on a
-              platform trusted by millions.
-            </p>
-            <form className="Hero__Form-qcrt3z-5 dKTyun">
-              <label
-                htmlFor="email"
-                className="Hero__HiddenLabel-qcrt3z-6 icspSe"
-              >
-                Your email address
-              </label>
-              <input
-                type="email"
-                autoComplete="on"
-                id="email"
-                name="email"
-                placeholder="Your email address"
-                required
-                className="Hero__Input-qcrt3z-7 bKwmbl"
-              />
-              <button
-                className="Button__BaseButton-sc-1e82yhp-0 llgLia Hero__SignUpButton-qcrt3z-8 kBRaGg"
-                type="button"
-              >
-                Sign Up
-              </button>
-            </form>
-          </div>
-        </div>
-      </div>
-      <div className="Containers__Wrap-yamifu-7 pages__PricesWrap-sc-4cqbfo-0 jqlzrh eBHa-Dv">
-        <div className="Prices__Wrapper-n3azef-0 lextIZ pages__CoinsPrices-sc-4cqbfo-2 bQGIkV">
-          <div className="Prices__ContentContainer-n3azef-1 evZIbd">
-            <div className="Prices__ScrollContainer-n3azef-4 iGlXs">
-              <div className="Prices__ListContainer-n3azef-5 hIwTsa">
-                <a
-                  href="#"
-                  className="Link__CustomLink-sc-1p80yfz-0 hDjhKH Prices__CoinCardLink-n3azef-6 lhvJwz"
-                >
-                  <div className="Prices__Header-n3azef-15 gqAVrV">
-                    <div className="Prices__IconContainer-n3azef-16 eymRoB">
-                      <img
-                        alt="BTC icon"
-                        src={Price1}
-                        className="Prices__Icon-n3azef-17 evkPTr"
-                      />
+    <div className="my-home">
+      <div id="main-wrapper" className="show">
+        <div className="header landing bg-primary">
+          <div className="container">
+            <div className="row">
+              <div className="col-xl-12">
+                <div className="navigation">
+                  <nav className="navbar navbar-expand-lg navbar-light">
+                    <div className="brand-logo">
+                      <a href="index.html">
+                        <img src={logo} alt className="logo-primary" />
+                        <img src={logow} alt className="logo-white" />
+                      </a>
                     </div>
-                    <div className="Prices__Actions-n3azef-18 bwPenO">
-                      <button className="Prices__BaseButton-n3azef-8 eAgFyd">
-                        Buy
-                      </button>
-                      <button className="Prices__BaseButton-n3azef-8 Prices__TradeButton-n3azef-9 eAgFyd eyFFcP">
-                        Trade
-                      </button>
+                    <button
+                      className="navbar-toggler"
+                      type="button"
+                      data-toggle="collapse"
+                      data-target="#navbarNavDropdown"
+                      aria-controls="navbarNavDropdown"
+                      aria-expanded="false"
+                      aria-label="Toggle navigation"
+                    >
+                      <span className="navbar-toggler-icon" />
+                    </button>
+                    <div
+                      className="collapse navbar-collapse"
+                      id="navbarNavDropdown"
+                    >
+                      <ul className="navbar-nav">
+                        {/* <li class="nav-item dropdown">
+                              <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Home
+                              </a>
+                              <div class="dropdown-menu">
+                                  <a class="dropdown-item" href="./index.html">Home 1</a>
+                                  <a class="dropdown-item" href="./index2.html">Home 2</a>
+                                  <a class="dropdown-item" href="./index3.html">Home 3</a>
+                                  <a class="dropdown-item" href="./index4.html">Home 4</a>
+                                  <a class="dropdown-item" href="./index5.html">Home 5</a>
+                                  <a class="dropdown-item" href="./index6.html">Home 6</a>
+                                  <a class="dropdown-item" href="./index7.html">Home 7</a>
+                              </div>
+                          </li> */}
+                        <li className="nav-item">
+                          <a className="nav-link" href="./index.html">
+                            Home
+                          </a>
+                        </li>
+                        <li className="nav-item">
+                          <a className="nav-link" href="./price.html">
+                            Price
+                          </a>
+                        </li>
+                        <li className="nav-item">
+                          <a className="nav-link" href="./app.html">
+                            App
+                          </a>
+                        </li>
+                        <li className="nav-item dropdown">
+                          <a
+                            className="nav-link dropdown-toggle"
+                            href="#"
+                            data-toggle="dropdown"
+                          >
+                            Company
+                          </a>
+                          <div className="dropdown-menu">
+                            <a className="dropdown-item" href="./about.html">
+                              About us
+                            </a>
+                            <a className="dropdown-item" href="./team.html">
+                              Team
+                            </a>
+                            <a className="dropdown-item" href="./blog.html">
+                              Blog
+                            </a>
+                            <a className="dropdown-item" href="./career.html">
+                              Career
+                            </a>
+                          </div>
+                        </li>
+                        <li className="nav-item dropdown">
+                          <a
+                            className="nav-link dropdown-toggle"
+                            href="#"
+                            data-toggle="dropdown"
+                          >
+                            Support
+                          </a>
+                          <div className="dropdown-menu">
+                            <a className="dropdown-item" href="./contact.html">
+                              Contact us
+                            </a>
+                            <a className="dropdown-item" href="./helpdesk.html">
+                              Help Desk
+                            </a>
+                            <a
+                              className="dropdown-item"
+                              href="./privacy-policy.html"
+                            >
+                              Privacy
+                            </a>
+                            <a className="dropdown-item" href="./faq.html">
+                              FAQ
+                            </a>
+                          </div>
+                        </li>
+                        <li className="nav-item">
+                          <a className="nav-link" href="./dashboard.html">
+                            Dashboard
+                          </a>
+                        </li>
+                      </ul>
                     </div>
-                  </div>
-                  <div className="Prices__CoinNameContainer-n3azef-11 jVbWjV">
-                    <p className="Text__Body1-sc-1fwf07x-7 Text__Body1Highlight-sc-1fwf07x-8 Prices__Text-n3azef-3 vvWMe kmtyGJ iRSNHM">
-                      Bitcoin
-                    </p>
-                    <p
-                      color="grey400"
-                      className="Text__Body1-sc-1fwf07x-7 Text__Body1Highlight-sc-1fwf07x-8 Prices__Text-n3azef-3 Prices__SymbolText-n3azef-12 vvWMe kmtyGJ kfPjgL kKWdjS"
-                    >
-                      BTC
-                    </p>
-                  </div>
-                  <div className="Prices__Info-n3azef-7 Prices__PriceInfo-n3azef-13 jXjlIz gkFfaz">
-                    <p className="Text__Body1-sc-1fwf07x-7 Text__Body1Highlight-sc-1fwf07x-8 Prices__Text-n3azef-3 vvWMe kmtyGJ iRSNHM">
-                      $41,264.80
-                    </p>
-                    <p
-                      color="grey400"
-                      className="Text__Body1-sc-1fwf07x-7 Text__Body1Highlight-sc-1fwf07x-8 Prices__Text-n3azef-3 Prices__PriceChangeText-n3azef-14 vvWMe kmtyGJ kfPjgL heAKQt"
-                    >
-                      +0.00%
-                    </p>
-                  </div>
-                  <div className="Prices__ChartContainer-n3azef-10 juWlis">
-                    <div style={{ width: "100%", height: "100%" }} />
-                  </div>
-                </a>
-                <a
-                  href="#"
-                  className="Link__CustomLink-sc-1p80yfz-0 hDjhKH Prices__CoinCardLink-n3azef-6 lhvJwz"
-                >
-                  <div className="Prices__Header-n3azef-15 gqAVrV">
-                    <div className="Prices__IconContainer-n3azef-16 eymRoB">
-                      <img
-                        alt="ETH icon"
-                        src={Price2}
-                        className="Prices__Icon-n3azef-17 evkPTr"
-                      />
+                    <div className="signin-btn">
+                      <a className="btn btn-primary" href="/auth/login">
+                        Sign in
+                      </a>
                     </div>
-                    <div className="Prices__Actions-n3azef-18 bwPenO">
-                      <button className="Prices__BaseButton-n3azef-8 eAgFyd">
-                        Buy
-                      </button>
-                      <button className="Prices__BaseButton-n3azef-8 Prices__TradeButton-n3azef-9 eAgFyd eyFFcP">
-                        Trade
-                      </button>
-                    </div>
-                  </div>
-                  <div className="Prices__CoinNameContainer-n3azef-11 jVbWjV">
-                    <p className="Text__Body1-sc-1fwf07x-7 Text__Body1Highlight-sc-1fwf07x-8 Prices__Text-n3azef-3 vvWMe kmtyGJ iRSNHM">
-                      Ethereum
-                    </p>
-                    <p
-                      color="grey400"
-                      className="Text__Body1-sc-1fwf07x-7 Text__Body1Highlight-sc-1fwf07x-8 Prices__Text-n3azef-3 Prices__SymbolText-n3azef-12 vvWMe kmtyGJ kfPjgL kKWdjS"
-                    >
-                      ETH
-                    </p>
-                  </div>
-                  <div className="Prices__Info-n3azef-7 Prices__PriceInfo-n3azef-13 jXjlIz gkFfaz">
-                    <p className="Text__Body1-sc-1fwf07x-7 Text__Body1Highlight-sc-1fwf07x-8 Prices__Text-n3azef-3 vvWMe kmtyGJ iRSNHM">
-                      $2,153.58
-                    </p>
-                    <p
-                      color="grey400"
-                      className="Text__Body1-sc-1fwf07x-7 Text__Body1Highlight-sc-1fwf07x-8 Prices__Text-n3azef-3 Prices__PriceChangeText-n3azef-14 vvWMe kmtyGJ kfPjgL heAKQt"
-                    >
-                      +0.00%
-                    </p>
-                  </div>
-                  <div className="Prices__ChartContainer-n3azef-10 juWlis">
-                    <div style={{ width: "100%", height: "100%" }} />
-                  </div>
-                </a>
-                <a
-                  href="#"
-                  className="Link__CustomLink-sc-1p80yfz-0 hDjhKH Prices__CoinCardLink-n3azef-6 lhvJwz"
-                >
-                  <div className="Prices__Header-n3azef-15 gqAVrV">
-                    <div className="Prices__IconContainer-n3azef-16 eymRoB">
-                      <img
-                        alt="XLM icon"
-                        src={Price3}
-                        className="Prices__Icon-n3azef-17 evkPTr"
-                      />
-                    </div>
-                    <div className="Prices__Actions-n3azef-18 bwPenO">
-                      <button className="Prices__BaseButton-n3azef-8 eAgFyd">
-                        Buy
-                      </button>
-                      <button className="Prices__BaseButton-n3azef-8 Prices__TradeButton-n3azef-9 eAgFyd eyFFcP">
-                        Trade
-                      </button>
-                    </div>
-                  </div>
-                  <div className="Prices__CoinNameContainer-n3azef-11 jVbWjV">
-                    <p className="Text__Body1-sc-1fwf07x-7 Text__Body1Highlight-sc-1fwf07x-8 Prices__Text-n3azef-3 vvWMe kmtyGJ iRSNHM">
-                      Stellar
-                    </p>
-                    <p
-                      color="grey400"
-                      className="Text__Body1-sc-1fwf07x-7 Text__Body1Highlight-sc-1fwf07x-8 Prices__Text-n3azef-3 Prices__SymbolText-n3azef-12 vvWMe kmtyGJ kfPjgL kKWdjS"
-                    >
-                      XLM
-                    </p>
-                  </div>
-                  <div className="Prices__Info-n3azef-7 Prices__PriceInfo-n3azef-13 jXjlIz gkFfaz">
-                    <p className="Text__Body1-sc-1fwf07x-7 Text__Body1Highlight-sc-1fwf07x-8 Prices__Text-n3azef-3 vvWMe kmtyGJ iRSNHM">
-                      $0.12
-                    </p>
-                    <p
-                      color="grey400"
-                      className="Text__Body1-sc-1fwf07x-7 Text__Body1Highlight-sc-1fwf07x-8 Prices__Text-n3azef-3 Prices__PriceChangeText-n3azef-14 vvWMe kmtyGJ kfPjgL heAKQt"
-                    >
-                      +0.00%
-                    </p>
-                  </div>
-                  <div className="Prices__ChartContainer-n3azef-10 juWlis">
-                    <div style={{ width: "100%", height: "100%" }} />
-                  </div>
-                </a>
-                <a
-                  href="#"
-                  className="Link__CustomLink-sc-1p80yfz-0 hDjhKH Prices__CoinCardLink-n3azef-6 lhvJwz"
-                >
-                  <div className="Prices__Header-n3azef-15 gqAVrV">
-                    <div className="Prices__IconContainer-n3azef-16 eymRoB">
-                      <img
-                        alt="SOL icon"
-                        src={Price4}
-                        className="Prices__Icon-n3azef-17 evkPTr"
-                      />
-                    </div>
-                    <div className="Prices__Actions-n3azef-18 bwPenO">
-                      <button className="Prices__BaseButton-n3azef-8 eAgFyd">
-                        Buy
-                      </button>
-                      <button className="Prices__BaseButton-n3azef-8 Prices__TradeButton-n3azef-9 eAgFyd eyFFcP">
-                        Trade
-                      </button>
-                    </div>
-                  </div>
-                  <div className="Prices__CoinNameContainer-n3azef-11 jVbWjV">
-                    <p className="Text__Body1-sc-1fwf07x-7 Text__Body1Highlight-sc-1fwf07x-8 Prices__Text-n3azef-3 vvWMe kmtyGJ iRSNHM">
-                      Solana
-                    </p>
-                    <p
-                      color="grey400"
-                      className="Text__Body1-sc-1fwf07x-7 Text__Body1Highlight-sc-1fwf07x-8 Prices__Text-n3azef-3 Prices__SymbolText-n3azef-12 vvWMe kmtyGJ kfPjgL kKWdjS"
-                    >
-                      SOL
-                    </p>
-                  </div>
-                  <div className="Prices__Info-n3azef-7 Prices__PriceInfo-n3azef-13 jXjlIz gkFfaz">
-                    <p className="Text__Body1-sc-1fwf07x-7 Text__Body1Highlight-sc-1fwf07x-8 Prices__Text-n3azef-3 vvWMe kmtyGJ iRSNHM">
-                      $70.71
-                    </p>
-                    <p
-                      color="grey400"
-                      className="Text__Body1-sc-1fwf07x-7 Text__Body1Highlight-sc-1fwf07x-8 Prices__Text-n3azef-3 Prices__PriceChangeText-n3azef-14 vvWMe kmtyGJ kfPjgL heAKQt"
-                    >
-                      +0.00%
-                    </p>
-                  </div>
-                  <div className="Prices__ChartContainer-n3azef-10 juWlis">
-                    <div style={{ width: "100%", height: "100%" }} />
-                  </div>
-                </a>
+                  </nav>
+                </div>
               </div>
             </div>
-            <div className="Prices__ButtonContainer-n3azef-21 cHgCcY">
-              <a
-                href="#"
-                className="Link__CustomLink-sc-1p80yfz-0 hDjhKH Button__BaseButton-sc-1e82yhp-0 Button__ButtonLink-sc-1e82yhp-1 evVLDw"
-              >
-                More Prices
-                <svg width={20} height={20} viewBox="0 0 20 20" fill="none">
-                  <path
-                    d="M4.16797 10H15.8346"
-                    stroke="currentColor"
-                    strokeWidth="1.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                  <path
-                    d="M10 4.16797L15.8333 10.0013L10 15.8346"
-                    stroke="currentColor"
-                    strokeWidth="1.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
+          </div>
+        </div>
+        <div className="intro bg-primary">
+          <div className="container">
+            <div className="row justify-content-between align-items-center">
+              <div className="col-xl-6 col-lg-6 col-12">
+                <div className="intro-content">
+                  <h1 className="text-white">
+                    Trade with <strong className="text-white">Tradee</strong>.{" "}
+                    <br /> Buy and sell cryptocurrency
+                  </h1>
+                  <p className="text-white">
+                    Fast and secure way to purchase or exchange 150+
+                    cryptocurrencies
+                  </p>
+                  <div className="intro-btn">
+                    <a href="#" className="btn btn-primary">
+                      Get Started
+                    </a>
+                    <a href="#" className="btn btn-outline-primary">
+                      Browse Now
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div className="col-xl-4 col-lg-6 col-12">
+                <div className="intro-form-exchange">
+                  <form
+                    method="post"
+                    name="myform"
+                    className="currency_validate trade-form row g-3"
+                  >
+                    <div className="col-12">
+                      <label className="form-label">Send</label>
+                      <div className="input-group">
+                        <select className="form-control" name="method">
+                          <option value="bank">USD</option>
+                          <option value="master">Euro</option>
+                        </select>
+                        <input
+                          type="text"
+                          name="currency_amount"
+                          className="form-control"
+                          placeholder="0.0214 BTC"
+                        />
+                      </div>
+                    </div>
+                    <div className="col-12">
+                      <label className="form-label">Receive</label>
+                      <div className="input-group">
+                        <select className="form-control" name="method">
+                          <option value="bank">BTC</option>
+                          <option value="master">ETH</option>
+                        </select>
+                        <input
+                          type="text"
+                          name="currency_amount"
+                          className="form-control"
+                          placeholder="0.0214 BTC"
+                        />
+                      </div>
+                    </div>
+                    <p className="mb-0">
+                      1 USD ~ 0.000088 BTC{" "}
+                      <a href="#">
+                        Expected rate <br />
+                        No extra fees
+                      </a>
+                    </p>
+                    <button type="button" className="btn btn-primary ">
+                      Buy Now
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="shape" />
+        </div>
+        <div className="getstart section-padding">
+          <div className="container">
+            <div className="row justify-content-center">
+              <div className="col-xl-8">
+                <div className="section-title">
+                  <h2>Get started in a few minutes</h2>
+                </div>
+              </div>
+            </div>
+            <div className="row">
+              <div className="col-xl-4 col-lg-4 col-md-4 col-sm-4">
+                <div className="getstart-content">
+                  <span>
+                    <i className="fas fa-user-circle" />
+                  </span>
+                  <h3>Create an account</h3>
+                </div>
+              </div>
+              <div className="col-xl-4 col-lg-4 col-md-4 col-sm-4">
+                <div className="getstart-content">
+                  <span>
+                    <i className="fas fa-university" />
+                  </span>
+                  <h3>Link your bank account</h3>
+                </div>
+              </div>
+              <div className="col-xl-4 col-lg-4 col-md-4 col-sm-4">
+                <div className="getstart-content">
+                  <span>
+                    <i className="fas fa-exchange-alt" />
+                  </span>
+                  <h3>Start buying &amp; selling</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="price-grid section-padding">
+          <div className="container">
+            <div className="row">
+              <div className="col-xxl-4 col-xl-4 col-lg-6 col-md-6 col-sm-6">
+                <div className="price-widget bg-btc">
+                  <a href="price-details.html" style={{ position: "relative" }}>
+                    <div className="price-content">
+                      <div className="icon-title">
+                        <i className="cc BTC" />
+                        <span>Bitcoin</span>
+                      </div>
+                      <h5>$ 11,785.10</h5>
+                    </div>
+                    <div id="chart" style={{ minHeight: 265 }}>
+                      <div
+                        id="apexchartslsjo9e42"
+                        className="apexcharts-canvas apexchartslsjo9e42 light"
+                        style={{ width: 410, height: 250 }}
+                      >
+                        <svg
+                          id="SvgjsSvg1254"
+                          width={410}
+                          height={250}
+                          xmlns="http://www.w3.org/2000/svg"
+                          version="1.1"
+                          xmlnsXlink="http://www.w3.org/1999/xlink"
+                          xmlnsSvgjs="http://svgjs.com/svgjs"
+                          className="apexcharts-svg"
+                          xmlnsData="ApexChartsNS"
+                          transform="translate(0, 0)"
+                          style={{ background: "transparent" }}
+                        >
+                          <g
+                            id="SvgjsG1256"
+                            className="apexcharts-inner apexcharts-graphical"
+                            transform="translate(12, 30)"
+                          >
+                            <defs id="SvgjsDefs1255">
+                              <clipPath id="gridRectMasklsjo9e42">
+                                <rect
+                                  id="SvgjsRect1260"
+                                  width={390}
+                                  height={182}
+                                  x={-1}
+                                  y={-1}
+                                  rx={0}
+                                  ry={0}
+                                  fill="#ffffff"
+                                  opacity={1}
+                                  strokeWidth={0}
+                                  stroke="none"
+                                  strokeDasharray={0}
+                                />
+                              </clipPath>
+                              <clipPath id="gridRectMarkerMasklsjo9e42">
+                                <rect
+                                  id="SvgjsRect1261"
+                                  width={390}
+                                  height={182}
+                                  x={-1}
+                                  y={-1}
+                                  rx={0}
+                                  ry={0}
+                                  fill="#ffffff"
+                                  opacity={1}
+                                  strokeWidth={0}
+                                  stroke="none"
+                                  strokeDasharray={0}
+                                />
+                              </clipPath>
+                            </defs>
+                            <line
+                              id="SvgjsLine1259"
+                              x1={0}
+                              y1={0}
+                              x2={0}
+                              y2={180}
+                              stroke="#b6b6b6"
+                              strokeDasharray={3}
+                              className="apexcharts-xcrosshairs"
+                              x={0}
+                              y={0}
+                              width={1}
+                              height={180}
+                              fill="#b1b9c4"
+                              filter="none"
+                              fillOpacity="0.9"
+                              strokeWidth={1}
+                            />
+                            <g
+                              id="SvgjsG1268"
+                              className="apexcharts-xaxis"
+                              transform="translate(0, 0)"
+                            >
+                              <g
+                                id="SvgjsG1269"
+                                className="apexcharts-xaxis-texts-g"
+                                transform="translate(0, -4)"
+                              />
+                            </g>
+                            <g id="SvgjsG1272" className="apexcharts-grid">
+                              <line
+                                id="SvgjsLine1274"
+                                x1={0}
+                                y1={180}
+                                x2={388}
+                                y2={180}
+                                stroke="transparent"
+                                strokeDasharray={0}
+                              />
+                              <line
+                                id="SvgjsLine1273"
+                                x1={0}
+                                y1={1}
+                                x2={0}
+                                y2={180}
+                                stroke="transparent"
+                                strokeDasharray={0}
+                              />
+                            </g>
+                            <g
+                              id="SvgjsG1263"
+                              className="apexcharts-line-series apexcharts-plot-series"
+                            >
+                              <g
+                                id="SvgjsG1264"
+                                className="apexcharts-series"
+                                seriesname="seriesx1"
+                                dataLongestseries="true"
+                                rel={1}
+                                dataRealindex={0}
+                              >
+                                <path
+                                  id="apexcharts-line-0"
+                                  d="M 0 142.0714285714286L 0.9700000000000001 137.05714285714288L 1.9400000000000002 139.1142857142857L 2.91 140.78571428571428L 5.82 141.42857142857144L 6.79 142.0714285714286L 7.760000000000001 138.34285714285716L 8.73 137.70000000000005L 9.700000000000001 130.5L 12.610000000000001 130.37142857142857L 13.58 124.97142857142859L 14.55 127.28571428571428L 15.520000000000001 120.21428571428572L 16.490000000000002 125.87142857142857L 19.400000000000002 124.07142857142856L 20.37 122.91428571428577L 21.34 122.65714285714284L 22.310000000000002 117.51428571428573L 23.28 118.92857142857144L 27.16 121.62857142857143L 28.130000000000003 124.32857142857148L 29.1 116.10000000000002L 30.07 110.44285714285718L 32.980000000000004 112.24285714285713L 33.95 112.24285714285713L 34.92 117.12857142857143L 35.89 114.42857142857144L 36.86 106.32857142857148L 39.77 112.8857142857143L 40.74 128.70000000000005L 41.71 123.30000000000007L 42.68 115.07142857142861L 43.65 107.48571428571427L 46.56 108.51428571428568L 47.53 100.02857142857147L 48.5 105.81428571428569L 49.47 100.67142857142858L 50.440000000000005 105.17142857142858L 53.35 96.30000000000001L 54.32 113.6571428571429L 55.29 108.51428571428568L 56.260000000000005 106.58571428571429L 57.230000000000004 105.29999999999995L 60.099583333333335 97.71428571428572L 61.069583333333334 94.75714285714281L 62.03958333333333 96.94285714285712L 63.00958333333334 96.68571428571431L 63.97958333333334 98.87142857142857L 66.88958333333333 93.85714285714283L 67.85958333333333 98.87142857142857L 68.82958333333333 109.80000000000001L 69.79958333333333 108.12857142857138L 73.67958333333334 112.8857142857143L 74.64958333333334 120.72857142857146L 75.61958333333334 115.58571428571435L 76.58958333333334 108.64285714285717L 77.55958333333334 113.40000000000003L 80.46958333333333 117.77142857142854L 81.43958333333333 104.91428571428565L 82.40958333333333 110.69999999999999L 83.37958333333333 116.87142857142862L 84.34958333333334 114.94285714285712L 87.25958333333334 120.60000000000002L 88.22958333333334 123.42857142857144L 89.19958333333334 114.04285714285714L 90.16958333333334 112.37142857142862L 91.13958333333333 108.25714285714287L 94.04958333333333 108.64285714285717L 95.01958333333333 105.81428571428569L 95.98958333333334 105.94285714285718L 96.95958333333334 111.60000000000002L 97.92958333333334 120.72857142857146L 100.83958333333334 121.88571428571424L 101.80958333333334 119.95714285714286L 102.77958333333333 121.88571428571424L 103.74958333333333 129.59999999999997L 104.71958333333333 125.99999999999994L 107.62958333333334 125.61428571428576L 108.59958333333334 124.32857142857148L 109.56958333333334 123.94285714285718L 110.53958333333334 128.44285714285718L 111.50958333333334 137.44285714285718L 114.41958333333334 128.44285714285718L 115.38958333333333 128.44285714285718L 116.35958333333333 126.25714285714287L 117.32958333333333 134.48571428571432L 118.29958333333333 133.71428571428572L 122.17958333333334 127.92857142857144L 123.14958333333334 137.70000000000005L 124.11958333333334 140.78571428571428L 125.08958333333334 156.60000000000002L 127.99958333333333 150.3L 128.96958333333333 145.28571428571428L 129.93958333333333 132.55714285714282L 130.90958333333333 137.31428571428575L 131.87958333333333 133.0714285714286L 134.78958333333333 139.75714285714287L 135.75958333333332 131.52857142857147L 136.72958333333335 131.2714285714286L 137.69958333333335 132.8142857142857L 138.66958333333335 123.55714285714288L 141.57958333333335 120.47142857142853L 142.54958333333335 117.12857142857143L 143.51958333333334 128.70000000000005L 144.48958333333334 138.4714285714286L 145.45958333333334 134.10000000000002L 148.36958333333334 143.48571428571427L 149.33958333333334 140.5285714285714L 150.30958333333334 136.15714285714284L 151.27958333333333 139.24285714285713L 152.24958333333333 123.81428571428575L 155.15958333333333 126.12857142857149L 156.12958333333333 122.01428571428573L 158.06958333333333 121.75714285714287L 159.03958333333333 136.67142857142858L 161.94958333333335 148.75714285714287L 162.91958333333335 148.62857142857143L 163.88958333333335 151.71428571428572L 164.85958333333335 152.48571428571427L 165.82958333333335 145.92857142857144L 168.73958333333334 149.14285714285717L 169.70958333333334 145.92857142857144L 170.67958333333334 135.90000000000003L 171.64958333333334 129.98571428571427L 172.61958333333334 136.54285714285714L 175.52958333333333 146.05714285714288L 176.49958333333333 154.02857142857147L 177.46958333333333 150.04285714285714L 178.43958333333333 142.0714285714286L 179.40958333333333 129.98571428571427L 182.31958333333333 141.3L 183.28958333333333 142.9714285714286L 184.25958333333335 145.4142857142857L 185.22958333333335 146.82857142857148L 186.19958333333335 128.3142857142857L 189.10958333333335 126.77142857142854L 190.07958333333335 123.81428571428575L 191.04958333333335 122.01428571428573L 192.01958333333334 120.21428571428572L 192.98958333333334 120.34285714285716L 195.89958333333334 125.09999999999997L 196.86958333333334 127.28571428571428L 197.83958333333334 116.87142857142862L 198.80958333333334 107.35714285714289L 199.77958333333333 105.42857142857144L 202.68958333333333 103.88571428571424L 203.65958333333333 106.07142857142856L 204.62958333333333 104.91428571428565L 205.59958333333333 109.28571428571428L 206.56958333333333 125.22857142857146L 209.47958333333335 124.45714285714286L 210.44958333333335 127.79999999999995L 211.41958333333335 129.0857142857143L 212.38958333333335 135.51428571428573L 213.35958333333335 137.95714285714286L 217.23958333333334 135.90000000000003L 218.20958333333334 125.22857142857146L 219.17958333333334 118.41428571428571L 220.14958333333334 122.65714285714284L 223.05958333333334 126.89999999999998L 224.02958333333333 123.04285714285714L 224.99958333333333 123.17142857142858L 225.96958333333333 118.15714285714284L 226.93958333333333 111.3428571428571L 229.84958333333333 110.44285714285718L 230.81958333333336 121.24285714285713L 231.78958333333335 114.17142857142863L 232.75958333333335 96.04285714285714L 233.72958333333335 105.04285714285714L 236.63958333333335 110.44285714285718L 237.60958333333335 117L 238.57958333333335 121.75714285714287L 239.54958333333335 118.28571428571433L 240.51958333333334 122.91428571428577L 243.42958333333334 120.60000000000002L 244.39958333333334 121.24285714285713L 245.36958333333334 120.85714285714283L 246.33958333333334 119.82857142857142L 247.30958333333334 122.52857142857147L 250.21958333333333 125.61428571428576L 251.18958333333333 132.6857142857143L 252.15958333333333 134.87142857142857L 253.12958333333333 131.39999999999998L 254.09958333333333 129.34285714285716L 257.00958333333335 124.32857142857148L 257.9795833333333 112.62857142857143L 258.94958333333335 110.05714285714288L 259.9195833333333 109.5428571428572L 260.88958333333335 112.62857142857143L 263.7995833333333 109.41428571428571L 264.76958333333334 111.7285714285714L 265.7395833333333 111.08571428571429L 266.70958333333334 110.57142857142861L 267.67958333333337 102.72857142857146L 272.57 102.59999999999997L 273.54 98.22857142857146L 274.51 97.84285714285716L 277.42 99.77142857142854L 278.39 97.84285714285716L 279.36 109.67142857142858L 280.33 115.97142857142865L 281.3 117L 284.21000000000004 119.57142857142856L 285.18 121.62857142857143L 286.15000000000003 125.61428571428576L 287.12 120.34285714285716L 288.09000000000003 120.21428571428572L 291 116.74285714285713L 291.97 120.34285714285716L 292.94 117.77142857142854L 294.88 110.57142857142861L 297.79 111.85714285714289L 298.76 113.40000000000003L 299.73 104.39999999999998L 300.7 101.69999999999999L 301.67 95.01428571428573L 304.58 93.85714285714283L 305.55 86.14285714285717L 306.52000000000004 84.85714285714289L 307.49 88.19999999999999L 308.46000000000004 83.82857142857148L 311.37 80.35714285714289L 312.34000000000003 83.05714285714288L 313.31 77.65714285714284L 314.28000000000003 83.18571428571425L 315.25 57.08571428571429L 318.16 58.88571428571424L 319.13 57.985714285714266L 320.1 50.271428571428544L 321.07 53.10000000000002L 322.04 55.157142857142844L 324.95 57.47142857142859L 326.89 57.21428571428578L 327.86 60.428571428571445L 328.83 65.57142857142861L 331.74 55.542857142857144L 333.68 47.05714285714282L 334.65000000000003 54.64285714285717L 335.62 49.75714285714281L 338.53000000000003 52.200000000000045L 339.5 49.62857142857143L 340.47 42.94285714285718L 341.44 43.45714285714291L 342.41 50.271428571428544L 345.32 49.37142857142862L 346.29 49.5L 347.26 52.97142857142853L 348.23 54.900000000000034L 349.2 51.68571428571431L 353.08 52.071428571428555L 354.05 48.21428571428572L 355.02000000000004 50.14285714285711L 355.99 47.314285714285745L 358.90000000000003 48.3428571428571L 359.87 44.74285714285713L 360.84000000000003 52.200000000000045L 361.81 53.61428571428576L 362.78000000000003 47.05714285714282L 365.69 50.14285714285711L 366.66 44.87142857142862L 367.63 46.285714285714334L 368.6 50.52857142857141L 369.57 37.02857142857147L 372.48 43.19999999999999L 373.45 39.985714285714266L 374.42 41.01428571428568L 375.39 43.58571428571429L 376.36 43.32857142857142L 380.24 38.69999999999999L 381.21000000000004 41.52857142857141L 382.18 47.05714285714282L 383.15000000000003 44.35714285714289L 386.06 50.014285714285734L 387.03000000000003 43.8428571428571L 388 30.857142857142833"
+                                  fill="none"
+                                  fillOpacity={1}
+                                  stroke="rgba(255,255,255,0.85)"
+                                  strokeOpacity={1}
+                                  strokeLinecap="butt"
+                                  strokeWidth={2}
+                                  strokeDasharray={0}
+                                  className="apexcharts-line"
+                                  index={0}
+                                  clipPath="url(#gridRectMasklsjo9e42)"
+                                  pathto="M 0 142.0714285714286L 0.9700000000000001 137.05714285714288L 1.9400000000000002 139.1142857142857L 2.91 140.78571428571428L 5.82 141.42857142857144L 6.79 142.0714285714286L 7.760000000000001 138.34285714285716L 8.73 137.70000000000005L 9.700000000000001 130.5L 12.610000000000001 130.37142857142857L 13.58 124.97142857142859L 14.55 127.28571428571428L 15.520000000000001 120.21428571428572L 16.490000000000002 125.87142857142857L 19.400000000000002 124.07142857142856L 20.37 122.91428571428577L 21.34 122.65714285714284L 22.310000000000002 117.51428571428573L 23.28 118.92857142857144L 27.16 121.62857142857143L 28.130000000000003 124.32857142857148L 29.1 116.10000000000002L 30.07 110.44285714285718L 32.980000000000004 112.24285714285713L 33.95 112.24285714285713L 34.92 117.12857142857143L 35.89 114.42857142857144L 36.86 106.32857142857148L 39.77 112.8857142857143L 40.74 128.70000000000005L 41.71 123.30000000000007L 42.68 115.07142857142861L 43.65 107.48571428571427L 46.56 108.51428571428568L 47.53 100.02857142857147L 48.5 105.81428571428569L 49.47 100.67142857142858L 50.440000000000005 105.17142857142858L 53.35 96.30000000000001L 54.32 113.6571428571429L 55.29 108.51428571428568L 56.260000000000005 106.58571428571429L 57.230000000000004 105.29999999999995L 60.099583333333335 97.71428571428572L 61.069583333333334 94.75714285714281L 62.03958333333333 96.94285714285712L 63.00958333333334 96.68571428571431L 63.97958333333334 98.87142857142857L 66.88958333333333 93.85714285714283L 67.85958333333333 98.87142857142857L 68.82958333333333 109.80000000000001L 69.79958333333333 108.12857142857138L 73.67958333333334 112.8857142857143L 74.64958333333334 120.72857142857146L 75.61958333333334 115.58571428571435L 76.58958333333334 108.64285714285717L 77.55958333333334 113.40000000000003L 80.46958333333333 117.77142857142854L 81.43958333333333 104.91428571428565L 82.40958333333333 110.69999999999999L 83.37958333333333 116.87142857142862L 84.34958333333334 114.94285714285712L 87.25958333333334 120.60000000000002L 88.22958333333334 123.42857142857144L 89.19958333333334 114.04285714285714L 90.16958333333334 112.37142857142862L 91.13958333333333 108.25714285714287L 94.04958333333333 108.64285714285717L 95.01958333333333 105.81428571428569L 95.98958333333334 105.94285714285718L 96.95958333333334 111.60000000000002L 97.92958333333334 120.72857142857146L 100.83958333333334 121.88571428571424L 101.80958333333334 119.95714285714286L 102.77958333333333 121.88571428571424L 103.74958333333333 129.59999999999997L 104.71958333333333 125.99999999999994L 107.62958333333334 125.61428571428576L 108.59958333333334 124.32857142857148L 109.56958333333334 123.94285714285718L 110.53958333333334 128.44285714285718L 111.50958333333334 137.44285714285718L 114.41958333333334 128.44285714285718L 115.38958333333333 128.44285714285718L 116.35958333333333 126.25714285714287L 117.32958333333333 134.48571428571432L 118.29958333333333 133.71428571428572L 122.17958333333334 127.92857142857144L 123.14958333333334 137.70000000000005L 124.11958333333334 140.78571428571428L 125.08958333333334 156.60000000000002L 127.99958333333333 150.3L 128.96958333333333 145.28571428571428L 129.93958333333333 132.55714285714282L 130.90958333333333 137.31428571428575L 131.87958333333333 133.0714285714286L 134.78958333333333 139.75714285714287L 135.75958333333332 131.52857142857147L 136.72958333333335 131.2714285714286L 137.69958333333335 132.8142857142857L 138.66958333333335 123.55714285714288L 141.57958333333335 120.47142857142853L 142.54958333333335 117.12857142857143L 143.51958333333334 128.70000000000005L 144.48958333333334 138.4714285714286L 145.45958333333334 134.10000000000002L 148.36958333333334 143.48571428571427L 149.33958333333334 140.5285714285714L 150.30958333333334 136.15714285714284L 151.27958333333333 139.24285714285713L 152.24958333333333 123.81428571428575L 155.15958333333333 126.12857142857149L 156.12958333333333 122.01428571428573L 158.06958333333333 121.75714285714287L 159.03958333333333 136.67142857142858L 161.94958333333335 148.75714285714287L 162.91958333333335 148.62857142857143L 163.88958333333335 151.71428571428572L 164.85958333333335 152.48571428571427L 165.82958333333335 145.92857142857144L 168.73958333333334 149.14285714285717L 169.70958333333334 145.92857142857144L 170.67958333333334 135.90000000000003L 171.64958333333334 129.98571428571427L 172.61958333333334 136.54285714285714L 175.52958333333333 146.05714285714288L 176.49958333333333 154.02857142857147L 177.46958333333333 150.04285714285714L 178.43958333333333 142.0714285714286L 179.40958333333333 129.98571428571427L 182.31958333333333 141.3L 183.28958333333333 142.9714285714286L 184.25958333333335 145.4142857142857L 185.22958333333335 146.82857142857148L 186.19958333333335 128.3142857142857L 189.10958333333335 126.77142857142854L 190.07958333333335 123.81428571428575L 191.04958333333335 122.01428571428573L 192.01958333333334 120.21428571428572L 192.98958333333334 120.34285714285716L 195.89958333333334 125.09999999999997L 196.86958333333334 127.28571428571428L 197.83958333333334 116.87142857142862L 198.80958333333334 107.35714285714289L 199.77958333333333 105.42857142857144L 202.68958333333333 103.88571428571424L 203.65958333333333 106.07142857142856L 204.62958333333333 104.91428571428565L 205.59958333333333 109.28571428571428L 206.56958333333333 125.22857142857146L 209.47958333333335 124.45714285714286L 210.44958333333335 127.79999999999995L 211.41958333333335 129.0857142857143L 212.38958333333335 135.51428571428573L 213.35958333333335 137.95714285714286L 217.23958333333334 135.90000000000003L 218.20958333333334 125.22857142857146L 219.17958333333334 118.41428571428571L 220.14958333333334 122.65714285714284L 223.05958333333334 126.89999999999998L 224.02958333333333 123.04285714285714L 224.99958333333333 123.17142857142858L 225.96958333333333 118.15714285714284L 226.93958333333333 111.3428571428571L 229.84958333333333 110.44285714285718L 230.81958333333336 121.24285714285713L 231.78958333333335 114.17142857142863L 232.75958333333335 96.04285714285714L 233.72958333333335 105.04285714285714L 236.63958333333335 110.44285714285718L 237.60958333333335 117L 238.57958333333335 121.75714285714287L 239.54958333333335 118.28571428571433L 240.51958333333334 122.91428571428577L 243.42958333333334 120.60000000000002L 244.39958333333334 121.24285714285713L 245.36958333333334 120.85714285714283L 246.33958333333334 119.82857142857142L 247.30958333333334 122.52857142857147L 250.21958333333333 125.61428571428576L 251.18958333333333 132.6857142857143L 252.15958333333333 134.87142857142857L 253.12958333333333 131.39999999999998L 254.09958333333333 129.34285714285716L 257.00958333333335 124.32857142857148L 257.9795833333333 112.62857142857143L 258.94958333333335 110.05714285714288L 259.9195833333333 109.5428571428572L 260.88958333333335 112.62857142857143L 263.7995833333333 109.41428571428571L 264.76958333333334 111.7285714285714L 265.7395833333333 111.08571428571429L 266.70958333333334 110.57142857142861L 267.67958333333337 102.72857142857146L 272.57 102.59999999999997L 273.54 98.22857142857146L 274.51 97.84285714285716L 277.42 99.77142857142854L 278.39 97.84285714285716L 279.36 109.67142857142858L 280.33 115.97142857142865L 281.3 117L 284.21000000000004 119.57142857142856L 285.18 121.62857142857143L 286.15000000000003 125.61428571428576L 287.12 120.34285714285716L 288.09000000000003 120.21428571428572L 291 116.74285714285713L 291.97 120.34285714285716L 292.94 117.77142857142854L 294.88 110.57142857142861L 297.79 111.85714285714289L 298.76 113.40000000000003L 299.73 104.39999999999998L 300.7 101.69999999999999L 301.67 95.01428571428573L 304.58 93.85714285714283L 305.55 86.14285714285717L 306.52000000000004 84.85714285714289L 307.49 88.19999999999999L 308.46000000000004 83.82857142857148L 311.37 80.35714285714289L 312.34000000000003 83.05714285714288L 313.31 77.65714285714284L 314.28000000000003 83.18571428571425L 315.25 57.08571428571429L 318.16 58.88571428571424L 319.13 57.985714285714266L 320.1 50.271428571428544L 321.07 53.10000000000002L 322.04 55.157142857142844L 324.95 57.47142857142859L 326.89 57.21428571428578L 327.86 60.428571428571445L 328.83 65.57142857142861L 331.74 55.542857142857144L 333.68 47.05714285714282L 334.65000000000003 54.64285714285717L 335.62 49.75714285714281L 338.53000000000003 52.200000000000045L 339.5 49.62857142857143L 340.47 42.94285714285718L 341.44 43.45714285714291L 342.41 50.271428571428544L 345.32 49.37142857142862L 346.29 49.5L 347.26 52.97142857142853L 348.23 54.900000000000034L 349.2 51.68571428571431L 353.08 52.071428571428555L 354.05 48.21428571428572L 355.02000000000004 50.14285714285711L 355.99 47.314285714285745L 358.90000000000003 48.3428571428571L 359.87 44.74285714285713L 360.84000000000003 52.200000000000045L 361.81 53.61428571428576L 362.78000000000003 47.05714285714282L 365.69 50.14285714285711L 366.66 44.87142857142862L 367.63 46.285714285714334L 368.6 50.52857142857141L 369.57 37.02857142857147L 372.48 43.19999999999999L 373.45 39.985714285714266L 374.42 41.01428571428568L 375.39 43.58571428571429L 376.36 43.32857142857142L 380.24 38.69999999999999L 381.21000000000004 41.52857142857141L 382.18 47.05714285714282L 383.15000000000003 44.35714285714289L 386.06 50.014285714285734L 387.03000000000003 43.8428571428571L 388 30.857142857142833"
+                                  pathfrom="M -1 540L -1 540L 0.9700000000000001 540L 1.9400000000000002 540L 2.91 540L 5.82 540L 6.79 540L 7.760000000000001 540L 8.73 540L 9.700000000000001 540L 12.610000000000001 540L 13.58 540L 14.55 540L 15.520000000000001 540L 16.490000000000002 540L 19.400000000000002 540L 20.37 540L 21.34 540L 22.310000000000002 540L 23.28 540L 27.16 540L 28.130000000000003 540L 29.1 540L 30.07 540L 32.980000000000004 540L 33.95 540L 34.92 540L 35.89 540L 36.86 540L 39.77 540L 40.74 540L 41.71 540L 42.68 540L 43.65 540L 46.56 540L 47.53 540L 48.5 540L 49.47 540L 50.440000000000005 540L 53.35 540L 54.32 540L 55.29 540L 56.260000000000005 540L 57.230000000000004 540L 60.099583333333335 540L 61.069583333333334 540L 62.03958333333333 540L 63.00958333333334 540L 63.97958333333334 540L 66.88958333333333 540L 67.85958333333333 540L 68.82958333333333 540L 69.79958333333333 540L 73.67958333333334 540L 74.64958333333334 540L 75.61958333333334 540L 76.58958333333334 540L 77.55958333333334 540L 80.46958333333333 540L 81.43958333333333 540L 82.40958333333333 540L 83.37958333333333 540L 84.34958333333334 540L 87.25958333333334 540L 88.22958333333334 540L 89.19958333333334 540L 90.16958333333334 540L 91.13958333333333 540L 94.04958333333333 540L 95.01958333333333 540L 95.98958333333334 540L 96.95958333333334 540L 97.92958333333334 540L 100.83958333333334 540L 101.80958333333334 540L 102.77958333333333 540L 103.74958333333333 540L 104.71958333333333 540L 107.62958333333334 540L 108.59958333333334 540L 109.56958333333334 540L 110.53958333333334 540L 111.50958333333334 540L 114.41958333333334 540L 115.38958333333333 540L 116.35958333333333 540L 117.32958333333333 540L 118.29958333333333 540L 122.17958333333334 540L 123.14958333333334 540L 124.11958333333334 540L 125.08958333333334 540L 127.99958333333333 540L 128.96958333333333 540L 129.93958333333333 540L 130.90958333333333 540L 131.87958333333333 540L 134.78958333333333 540L 135.75958333333332 540L 136.72958333333335 540L 137.69958333333335 540L 138.66958333333335 540L 141.57958333333335 540L 142.54958333333335 540L 143.51958333333334 540L 144.48958333333334 540L 145.45958333333334 540L 148.36958333333334 540L 149.33958333333334 540L 150.30958333333334 540L 151.27958333333333 540L 152.24958333333333 540L 155.15958333333333 540L 156.12958333333333 540L 158.06958333333333 540L 159.03958333333333 540L 161.94958333333335 540L 162.91958333333335 540L 163.88958333333335 540L 164.85958333333335 540L 165.82958333333335 540L 168.73958333333334 540L 169.70958333333334 540L 170.67958333333334 540L 171.64958333333334 540L 172.61958333333334 540L 175.52958333333333 540L 176.49958333333333 540L 177.46958333333333 540L 178.43958333333333 540L 179.40958333333333 540L 182.31958333333333 540L 183.28958333333333 540L 184.25958333333335 540L 185.22958333333335 540L 186.19958333333335 540L 189.10958333333335 540L 190.07958333333335 540L 191.04958333333335 540L 192.01958333333334 540L 192.98958333333334 540L 195.89958333333334 540L 196.86958333333334 540L 197.83958333333334 540L 198.80958333333334 540L 199.77958333333333 540L 202.68958333333333 540L 203.65958333333333 540L 204.62958333333333 540L 205.59958333333333 540L 206.56958333333333 540L 209.47958333333335 540L 210.44958333333335 540L 211.41958333333335 540L 212.38958333333335 540L 213.35958333333335 540L 217.23958333333334 540L 218.20958333333334 540L 219.17958333333334 540L 220.14958333333334 540L 223.05958333333334 540L 224.02958333333333 540L 224.99958333333333 540L 225.96958333333333 540L 226.93958333333333 540L 229.84958333333333 540L 230.81958333333336 540L 231.78958333333335 540L 232.75958333333335 540L 233.72958333333335 540L 236.63958333333335 540L 237.60958333333335 540L 238.57958333333335 540L 239.54958333333335 540L 240.51958333333334 540L 243.42958333333334 540L 244.39958333333334 540L 245.36958333333334 540L 246.33958333333334 540L 247.30958333333334 540L 250.21958333333333 540L 251.18958333333333 540L 252.15958333333333 540L 253.12958333333333 540L 254.09958333333333 540L 257.00958333333335 540L 257.9795833333333 540L 258.94958333333335 540L 259.9195833333333 540L 260.88958333333335 540L 263.7995833333333 540L 264.76958333333334 540L 265.7395833333333 540L 266.70958333333334 540L 267.67958333333337 540L 272.57 540L 273.54 540L 274.51 540L 277.42 540L 278.39 540L 279.36 540L 280.33 540L 281.3 540L 284.21000000000004 540L 285.18 540L 286.15000000000003 540L 287.12 540L 288.09000000000003 540L 291 540L 291.97 540L 292.94 540L 294.88 540L 297.79 540L 298.76 540L 299.73 540L 300.7 540L 301.67 540L 304.58 540L 305.55 540L 306.52000000000004 540L 307.49 540L 308.46000000000004 540L 311.37 540L 312.34000000000003 540L 313.31 540L 314.28000000000003 540L 315.25 540L 318.16 540L 319.13 540L 320.1 540L 321.07 540L 322.04 540L 324.95 540L 326.89 540L 327.86 540L 328.83 540L 331.74 540L 333.68 540L 334.65000000000003 540L 335.62 540L 338.53000000000003 540L 339.5 540L 340.47 540L 341.44 540L 342.41 540L 345.32 540L 346.29 540L 347.26 540L 348.23 540L 349.2 540L 353.08 540L 354.05 540L 355.02000000000004 540L 355.99 540L 358.90000000000003 540L 359.87 540L 360.84000000000003 540L 361.81 540L 362.78000000000003 540L 365.69 540L 366.66 540L 367.63 540L 368.6 540L 369.57 540L 372.48 540L 373.45 540L 374.42 540L 375.39 540L 376.36 540L 380.24 540L 381.21000000000004 540L 382.18 540L 383.15000000000003 540L 386.06 540L 387.03000000000003 540L 388 540"
+                                />
+                                <g
+                                  id="SvgjsG1265"
+                                  className="apexcharts-series-markers-wrap"
+                                />
+                                <g
+                                  id="SvgjsG1266"
+                                  className="apexcharts-datalabels"
+                                />
+                              </g>
+                            </g>
+                            <line
+                              id="SvgjsLine1275"
+                              x1={0}
+                              y1={0}
+                              x2={388}
+                              y2={0}
+                              stroke="#b6b6b6"
+                              strokeDasharray={0}
+                              strokeWidth={1}
+                              className="apexcharts-ycrosshairs"
+                            />
+                            <line
+                              id="SvgjsLine1276"
+                              x1={0}
+                              y1={0}
+                              x2={388}
+                              y2={0}
+                              strokeDasharray={0}
+                              strokeWidth={0}
+                              className="apexcharts-ycrosshairs-hidden"
+                            />
+                            <g
+                              id="SvgjsG1277"
+                              className="apexcharts-yaxis-annotations"
+                            />
+                            <g
+                              id="SvgjsG1278"
+                              className="apexcharts-xaxis-annotations"
+                            />
+                            <g
+                              id="SvgjsG1279"
+                              className="apexcharts-point-annotations"
+                            />
+                          </g>
+                          <rect
+                            id="SvgjsRect1258"
+                            width={0}
+                            height={0}
+                            x={0}
+                            y={0}
+                            rx={0}
+                            ry={0}
+                            fill="#fefefe"
+                            opacity={1}
+                            strokeWidth={0}
+                            stroke="none"
+                            strokeDasharray={0}
+                          />
+                          <g
+                            id="SvgjsG1270"
+                            className="apexcharts-yaxis"
+                            rel={0}
+                            transform="translate(-21, 0)"
+                          >
+                            <g
+                              id="SvgjsG1271"
+                              className="apexcharts-yaxis-texts-g"
+                            />
+                          </g>
+                        </svg>
+                        <div className="apexcharts-legend" />
+                      </div>
+                    </div>
+                    <div className="resize-triggers">
+                      <div className="expand-trigger">
+                        <div style={{ width: 411, height: 266 }} />
+                      </div>
+                      <div className="contract-trigger" />
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div className="col-xxl-4 col-xl-4 col-lg-6 col-md-6 col-sm-6">
+                <div className="price-widget bg-eth">
+                  <a href="price-details.html" style={{ position: "relative" }}>
+                    <div className="price-content">
+                      <div className="icon-title">
+                        <i className="cc ETH" />
+                        <span>Ethereum</span>
+                      </div>
+                      <h5>$ 11,785.10</h5>
+                    </div>
+                    <div id="chart2" style={{ minHeight: 265 }}>
+                      <div
+                        id="apexcharts4ve3q1u1i"
+                        className="apexcharts-canvas apexcharts4ve3q1u1i light"
+                        style={{ width: 410, height: 250 }}
+                      >
+                        <svg
+                          id="SvgjsSvg1282"
+                          width={410}
+                          height={250}
+                          xmlns="http://www.w3.org/2000/svg"
+                          version="1.1"
+                          xmlnsXlink="http://www.w3.org/1999/xlink"
+                          xmlnsSvgjs="http://svgjs.com/svgjs"
+                          className="apexcharts-svg"
+                          xmlnsData="ApexChartsNS"
+                          transform="translate(0, 0)"
+                          style={{ background: "transparent" }}
+                        >
+                          <g
+                            id="SvgjsG1284"
+                            className="apexcharts-inner apexcharts-graphical"
+                            transform="translate(12, 30)"
+                          >
+                            <defs id="SvgjsDefs1283">
+                              <clipPath id="gridRectMask4ve3q1u1i">
+                                <rect
+                                  id="SvgjsRect1288"
+                                  width={390}
+                                  height={182}
+                                  x={-1}
+                                  y={-1}
+                                  rx={0}
+                                  ry={0}
+                                  fill="#ffffff"
+                                  opacity={1}
+                                  strokeWidth={0}
+                                  stroke="none"
+                                  strokeDasharray={0}
+                                />
+                              </clipPath>
+                              <clipPath id="gridRectMarkerMask4ve3q1u1i">
+                                <rect
+                                  id="SvgjsRect1289"
+                                  width={390}
+                                  height={182}
+                                  x={-1}
+                                  y={-1}
+                                  rx={0}
+                                  ry={0}
+                                  fill="#ffffff"
+                                  opacity={1}
+                                  strokeWidth={0}
+                                  stroke="none"
+                                  strokeDasharray={0}
+                                />
+                              </clipPath>
+                            </defs>
+                            <line
+                              id="SvgjsLine1287"
+                              x1={0}
+                              y1={0}
+                              x2={0}
+                              y2={180}
+                              stroke="#b6b6b6"
+                              strokeDasharray={3}
+                              className="apexcharts-xcrosshairs"
+                              x={0}
+                              y={0}
+                              width={1}
+                              height={180}
+                              fill="#b1b9c4"
+                              filter="none"
+                              fillOpacity="0.9"
+                              strokeWidth={1}
+                            />
+                            <g
+                              id="SvgjsG1296"
+                              className="apexcharts-xaxis"
+                              transform="translate(0, 0)"
+                            >
+                              <g
+                                id="SvgjsG1297"
+                                className="apexcharts-xaxis-texts-g"
+                                transform="translate(0, -4)"
+                              />
+                            </g>
+                            <g id="SvgjsG1300" className="apexcharts-grid">
+                              <line
+                                id="SvgjsLine1302"
+                                x1={0}
+                                y1={180}
+                                x2={388}
+                                y2={180}
+                                stroke="transparent"
+                                strokeDasharray={0}
+                              />
+                              <line
+                                id="SvgjsLine1301"
+                                x1={0}
+                                y1={1}
+                                x2={0}
+                                y2={180}
+                                stroke="transparent"
+                                strokeDasharray={0}
+                              />
+                            </g>
+                            <g
+                              id="SvgjsG1291"
+                              className="apexcharts-line-series apexcharts-plot-series"
+                            >
+                              <g
+                                id="SvgjsG1292"
+                                className="apexcharts-series"
+                                seriesname="seriesx1"
+                                dataLongestseries="true"
+                                rel={1}
+                                dataRealindex={0}
+                              >
+                                <path
+                                  id="apexcharts-line-0"
+                                  d="M 0 142.0714285714286L 0.9700000000000001 137.05714285714288L 1.9400000000000002 139.1142857142857L 2.91 140.78571428571428L 5.82 141.42857142857144L 6.79 142.0714285714286L 7.760000000000001 138.34285714285716L 8.73 137.70000000000005L 9.700000000000001 130.5L 12.610000000000001 130.37142857142857L 13.58 124.97142857142859L 14.55 127.28571428571428L 15.520000000000001 120.21428571428572L 16.490000000000002 125.87142857142857L 19.400000000000002 124.07142857142856L 20.37 122.91428571428577L 21.34 122.65714285714284L 22.310000000000002 117.51428571428573L 23.28 118.92857142857144L 27.16 121.62857142857143L 28.130000000000003 124.32857142857148L 29.1 116.10000000000002L 30.07 110.44285714285718L 32.980000000000004 112.24285714285713L 33.95 112.24285714285713L 34.92 117.12857142857143L 35.89 114.42857142857144L 36.86 106.32857142857148L 39.77 112.8857142857143L 40.74 128.70000000000005L 41.71 123.30000000000007L 42.68 115.07142857142861L 43.65 107.48571428571427L 46.56 108.51428571428568L 47.53 100.02857142857147L 48.5 105.81428571428569L 49.47 100.67142857142858L 50.440000000000005 105.17142857142858L 53.35 96.30000000000001L 54.32 113.6571428571429L 55.29 108.51428571428568L 56.260000000000005 106.58571428571429L 57.230000000000004 105.29999999999995L 60.099583333333335 97.71428571428572L 61.069583333333334 94.75714285714281L 62.03958333333333 96.94285714285712L 63.00958333333334 96.68571428571431L 63.97958333333334 98.87142857142857L 66.88958333333333 93.85714285714283L 67.85958333333333 98.87142857142857L 68.82958333333333 109.80000000000001L 69.79958333333333 108.12857142857138L 73.67958333333334 112.8857142857143L 74.64958333333334 120.72857142857146L 75.61958333333334 115.58571428571435L 76.58958333333334 108.64285714285717L 77.55958333333334 113.40000000000003L 80.46958333333333 117.77142857142854L 81.43958333333333 104.91428571428565L 82.40958333333333 110.69999999999999L 83.37958333333333 116.87142857142862L 84.34958333333334 114.94285714285712L 87.25958333333334 120.60000000000002L 88.22958333333334 123.42857142857144L 89.19958333333334 114.04285714285714L 90.16958333333334 112.37142857142862L 91.13958333333333 108.25714285714287L 94.04958333333333 108.64285714285717L 95.01958333333333 105.81428571428569L 95.98958333333334 105.94285714285718L 96.95958333333334 111.60000000000002L 97.92958333333334 120.72857142857146L 100.83958333333334 121.88571428571424L 101.80958333333334 119.95714285714286L 102.77958333333333 121.88571428571424L 103.74958333333333 129.59999999999997L 104.71958333333333 125.99999999999994L 107.62958333333334 125.61428571428576L 108.59958333333334 124.32857142857148L 109.56958333333334 123.94285714285718L 110.53958333333334 128.44285714285718L 111.50958333333334 137.44285714285718L 114.41958333333334 128.44285714285718L 115.38958333333333 128.44285714285718L 116.35958333333333 126.25714285714287L 117.32958333333333 134.48571428571432L 118.29958333333333 133.71428571428572L 122.17958333333334 127.92857142857144L 123.14958333333334 137.70000000000005L 124.11958333333334 140.78571428571428L 125.08958333333334 156.60000000000002L 127.99958333333333 150.3L 128.96958333333333 145.28571428571428L 129.93958333333333 132.55714285714282L 130.90958333333333 137.31428571428575L 131.87958333333333 133.0714285714286L 134.78958333333333 139.75714285714287L 135.75958333333332 131.52857142857147L 136.72958333333335 131.2714285714286L 137.69958333333335 132.8142857142857L 138.66958333333335 123.55714285714288L 141.57958333333335 120.47142857142853L 142.54958333333335 117.12857142857143L 143.51958333333334 128.70000000000005L 144.48958333333334 138.4714285714286L 145.45958333333334 134.10000000000002L 148.36958333333334 143.48571428571427L 149.33958333333334 140.5285714285714L 150.30958333333334 136.15714285714284L 151.27958333333333 139.24285714285713L 152.24958333333333 123.81428571428575L 155.15958333333333 126.12857142857149L 156.12958333333333 122.01428571428573L 158.06958333333333 121.75714285714287L 159.03958333333333 136.67142857142858L 161.94958333333335 148.75714285714287L 162.91958333333335 148.62857142857143L 163.88958333333335 151.71428571428572L 164.85958333333335 152.48571428571427L 165.82958333333335 145.92857142857144L 168.73958333333334 149.14285714285717L 169.70958333333334 145.92857142857144L 170.67958333333334 135.90000000000003L 171.64958333333334 129.98571428571427L 172.61958333333334 136.54285714285714L 175.52958333333333 146.05714285714288L 176.49958333333333 154.02857142857147L 177.46958333333333 150.04285714285714L 178.43958333333333 142.0714285714286L 179.40958333333333 129.98571428571427L 182.31958333333333 141.3L 183.28958333333333 142.9714285714286L 184.25958333333335 145.4142857142857L 185.22958333333335 146.82857142857148L 186.19958333333335 128.3142857142857L 189.10958333333335 126.77142857142854L 190.07958333333335 123.81428571428575L 191.04958333333335 122.01428571428573L 192.01958333333334 120.21428571428572L 192.98958333333334 120.34285714285716L 195.89958333333334 125.09999999999997L 196.86958333333334 127.28571428571428L 197.83958333333334 116.87142857142862L 198.80958333333334 107.35714285714289L 199.77958333333333 105.42857142857144L 202.68958333333333 103.88571428571424L 203.65958333333333 106.07142857142856L 204.62958333333333 104.91428571428565L 205.59958333333333 109.28571428571428L 206.56958333333333 125.22857142857146L 209.47958333333335 124.45714285714286L 210.44958333333335 127.79999999999995L 211.41958333333335 129.0857142857143L 212.38958333333335 135.51428571428573L 213.35958333333335 137.95714285714286L 217.23958333333334 135.90000000000003L 218.20958333333334 125.22857142857146L 219.17958333333334 118.41428571428571L 220.14958333333334 122.65714285714284L 223.05958333333334 126.89999999999998L 224.02958333333333 123.04285714285714L 224.99958333333333 123.17142857142858L 225.96958333333333 118.15714285714284L 226.93958333333333 111.3428571428571L 229.84958333333333 110.44285714285718L 230.81958333333336 121.24285714285713L 231.78958333333335 114.17142857142863L 232.75958333333335 96.04285714285714L 233.72958333333335 105.04285714285714L 236.63958333333335 110.44285714285718L 237.60958333333335 117L 238.57958333333335 121.75714285714287L 239.54958333333335 118.28571428571433L 240.51958333333334 122.91428571428577L 243.42958333333334 120.60000000000002L 244.39958333333334 121.24285714285713L 245.36958333333334 120.85714285714283L 246.33958333333334 119.82857142857142L 247.30958333333334 122.52857142857147L 250.21958333333333 125.61428571428576L 251.18958333333333 132.6857142857143L 252.15958333333333 134.87142857142857L 253.12958333333333 131.39999999999998L 254.09958333333333 129.34285714285716L 257.00958333333335 124.32857142857148L 257.9795833333333 112.62857142857143L 258.94958333333335 110.05714285714288L 259.9195833333333 109.5428571428572L 260.88958333333335 112.62857142857143L 263.7995833333333 109.41428571428571L 264.76958333333334 111.7285714285714L 265.7395833333333 111.08571428571429L 266.70958333333334 110.57142857142861L 267.67958333333337 102.72857142857146L 272.57 102.59999999999997L 273.54 98.22857142857146L 274.51 97.84285714285716L 277.42 99.77142857142854L 278.39 97.84285714285716L 279.36 109.67142857142858L 280.33 115.97142857142865L 281.3 117L 284.21000000000004 119.57142857142856L 285.18 121.62857142857143L 286.15000000000003 125.61428571428576L 287.12 120.34285714285716L 288.09000000000003 120.21428571428572L 291 116.74285714285713L 291.97 120.34285714285716L 292.94 117.77142857142854L 294.88 110.57142857142861L 297.79 111.85714285714289L 298.76 113.40000000000003L 299.73 104.39999999999998L 300.7 101.69999999999999L 301.67 95.01428571428573L 304.58 93.85714285714283L 305.55 86.14285714285717L 306.52000000000004 84.85714285714289L 307.49 88.19999999999999L 308.46000000000004 83.82857142857148L 311.37 80.35714285714289L 312.34000000000003 83.05714285714288L 313.31 77.65714285714284L 314.28000000000003 83.18571428571425L 315.25 57.08571428571429L 318.16 58.88571428571424L 319.13 57.985714285714266L 320.1 50.271428571428544L 321.07 53.10000000000002L 322.04 55.157142857142844L 324.95 57.47142857142859L 326.89 57.21428571428578L 327.86 60.428571428571445L 328.83 65.57142857142861L 331.74 55.542857142857144L 333.68 47.05714285714282L 334.65000000000003 54.64285714285717L 335.62 49.75714285714281L 338.53000000000003 52.200000000000045L 339.5 49.62857142857143L 340.47 42.94285714285718L 341.44 43.45714285714291L 342.41 50.271428571428544L 345.32 49.37142857142862L 346.29 49.5L 347.26 52.97142857142853L 348.23 54.900000000000034L 349.2 51.68571428571431L 353.08 52.071428571428555L 354.05 48.21428571428572L 355.02000000000004 50.14285714285711L 355.99 47.314285714285745L 358.90000000000003 48.3428571428571L 359.87 44.74285714285713L 360.84000000000003 52.200000000000045L 361.81 53.61428571428576L 362.78000000000003 47.05714285714282L 365.69 50.14285714285711L 366.66 44.87142857142862L 367.63 46.285714285714334L 368.6 50.52857142857141L 369.57 37.02857142857147L 372.48 43.19999999999999L 373.45 39.985714285714266L 374.42 41.01428571428568L 375.39 43.58571428571429L 376.36 43.32857142857142L 380.24 38.69999999999999L 381.21000000000004 41.52857142857141L 382.18 47.05714285714282L 383.15000000000003 44.35714285714289L 386.06 50.014285714285734L 387.03000000000003 43.8428571428571L 388 30.857142857142833"
+                                  fill="none"
+                                  fillOpacity={1}
+                                  stroke="rgba(255,255,255,0.85)"
+                                  strokeOpacity={1}
+                                  strokeLinecap="butt"
+                                  strokeWidth={2}
+                                  strokeDasharray={0}
+                                  className="apexcharts-line"
+                                  index={0}
+                                  clipPath="url(#gridRectMask4ve3q1u1i)"
+                                  pathto="M 0 142.0714285714286L 0.9700000000000001 137.05714285714288L 1.9400000000000002 139.1142857142857L 2.91 140.78571428571428L 5.82 141.42857142857144L 6.79 142.0714285714286L 7.760000000000001 138.34285714285716L 8.73 137.70000000000005L 9.700000000000001 130.5L 12.610000000000001 130.37142857142857L 13.58 124.97142857142859L 14.55 127.28571428571428L 15.520000000000001 120.21428571428572L 16.490000000000002 125.87142857142857L 19.400000000000002 124.07142857142856L 20.37 122.91428571428577L 21.34 122.65714285714284L 22.310000000000002 117.51428571428573L 23.28 118.92857142857144L 27.16 121.62857142857143L 28.130000000000003 124.32857142857148L 29.1 116.10000000000002L 30.07 110.44285714285718L 32.980000000000004 112.24285714285713L 33.95 112.24285714285713L 34.92 117.12857142857143L 35.89 114.42857142857144L 36.86 106.32857142857148L 39.77 112.8857142857143L 40.74 128.70000000000005L 41.71 123.30000000000007L 42.68 115.07142857142861L 43.65 107.48571428571427L 46.56 108.51428571428568L 47.53 100.02857142857147L 48.5 105.81428571428569L 49.47 100.67142857142858L 50.440000000000005 105.17142857142858L 53.35 96.30000000000001L 54.32 113.6571428571429L 55.29 108.51428571428568L 56.260000000000005 106.58571428571429L 57.230000000000004 105.29999999999995L 60.099583333333335 97.71428571428572L 61.069583333333334 94.75714285714281L 62.03958333333333 96.94285714285712L 63.00958333333334 96.68571428571431L 63.97958333333334 98.87142857142857L 66.88958333333333 93.85714285714283L 67.85958333333333 98.87142857142857L 68.82958333333333 109.80000000000001L 69.79958333333333 108.12857142857138L 73.67958333333334 112.8857142857143L 74.64958333333334 120.72857142857146L 75.61958333333334 115.58571428571435L 76.58958333333334 108.64285714285717L 77.55958333333334 113.40000000000003L 80.46958333333333 117.77142857142854L 81.43958333333333 104.91428571428565L 82.40958333333333 110.69999999999999L 83.37958333333333 116.87142857142862L 84.34958333333334 114.94285714285712L 87.25958333333334 120.60000000000002L 88.22958333333334 123.42857142857144L 89.19958333333334 114.04285714285714L 90.16958333333334 112.37142857142862L 91.13958333333333 108.25714285714287L 94.04958333333333 108.64285714285717L 95.01958333333333 105.81428571428569L 95.98958333333334 105.94285714285718L 96.95958333333334 111.60000000000002L 97.92958333333334 120.72857142857146L 100.83958333333334 121.88571428571424L 101.80958333333334 119.95714285714286L 102.77958333333333 121.88571428571424L 103.74958333333333 129.59999999999997L 104.71958333333333 125.99999999999994L 107.62958333333334 125.61428571428576L 108.59958333333334 124.32857142857148L 109.56958333333334 123.94285714285718L 110.53958333333334 128.44285714285718L 111.50958333333334 137.44285714285718L 114.41958333333334 128.44285714285718L 115.38958333333333 128.44285714285718L 116.35958333333333 126.25714285714287L 117.32958333333333 134.48571428571432L 118.29958333333333 133.71428571428572L 122.17958333333334 127.92857142857144L 123.14958333333334 137.70000000000005L 124.11958333333334 140.78571428571428L 125.08958333333334 156.60000000000002L 127.99958333333333 150.3L 128.96958333333333 145.28571428571428L 129.93958333333333 132.55714285714282L 130.90958333333333 137.31428571428575L 131.87958333333333 133.0714285714286L 134.78958333333333 139.75714285714287L 135.75958333333332 131.52857142857147L 136.72958333333335 131.2714285714286L 137.69958333333335 132.8142857142857L 138.66958333333335 123.55714285714288L 141.57958333333335 120.47142857142853L 142.54958333333335 117.12857142857143L 143.51958333333334 128.70000000000005L 144.48958333333334 138.4714285714286L 145.45958333333334 134.10000000000002L 148.36958333333334 143.48571428571427L 149.33958333333334 140.5285714285714L 150.30958333333334 136.15714285714284L 151.27958333333333 139.24285714285713L 152.24958333333333 123.81428571428575L 155.15958333333333 126.12857142857149L 156.12958333333333 122.01428571428573L 158.06958333333333 121.75714285714287L 159.03958333333333 136.67142857142858L 161.94958333333335 148.75714285714287L 162.91958333333335 148.62857142857143L 163.88958333333335 151.71428571428572L 164.85958333333335 152.48571428571427L 165.82958333333335 145.92857142857144L 168.73958333333334 149.14285714285717L 169.70958333333334 145.92857142857144L 170.67958333333334 135.90000000000003L 171.64958333333334 129.98571428571427L 172.61958333333334 136.54285714285714L 175.52958333333333 146.05714285714288L 176.49958333333333 154.02857142857147L 177.46958333333333 150.04285714285714L 178.43958333333333 142.0714285714286L 179.40958333333333 129.98571428571427L 182.31958333333333 141.3L 183.28958333333333 142.9714285714286L 184.25958333333335 145.4142857142857L 185.22958333333335 146.82857142857148L 186.19958333333335 128.3142857142857L 189.10958333333335 126.77142857142854L 190.07958333333335 123.81428571428575L 191.04958333333335 122.01428571428573L 192.01958333333334 120.21428571428572L 192.98958333333334 120.34285714285716L 195.89958333333334 125.09999999999997L 196.86958333333334 127.28571428571428L 197.83958333333334 116.87142857142862L 198.80958333333334 107.35714285714289L 199.77958333333333 105.42857142857144L 202.68958333333333 103.88571428571424L 203.65958333333333 106.07142857142856L 204.62958333333333 104.91428571428565L 205.59958333333333 109.28571428571428L 206.56958333333333 125.22857142857146L 209.47958333333335 124.45714285714286L 210.44958333333335 127.79999999999995L 211.41958333333335 129.0857142857143L 212.38958333333335 135.51428571428573L 213.35958333333335 137.95714285714286L 217.23958333333334 135.90000000000003L 218.20958333333334 125.22857142857146L 219.17958333333334 118.41428571428571L 220.14958333333334 122.65714285714284L 223.05958333333334 126.89999999999998L 224.02958333333333 123.04285714285714L 224.99958333333333 123.17142857142858L 225.96958333333333 118.15714285714284L 226.93958333333333 111.3428571428571L 229.84958333333333 110.44285714285718L 230.81958333333336 121.24285714285713L 231.78958333333335 114.17142857142863L 232.75958333333335 96.04285714285714L 233.72958333333335 105.04285714285714L 236.63958333333335 110.44285714285718L 237.60958333333335 117L 238.57958333333335 121.75714285714287L 239.54958333333335 118.28571428571433L 240.51958333333334 122.91428571428577L 243.42958333333334 120.60000000000002L 244.39958333333334 121.24285714285713L 245.36958333333334 120.85714285714283L 246.33958333333334 119.82857142857142L 247.30958333333334 122.52857142857147L 250.21958333333333 125.61428571428576L 251.18958333333333 132.6857142857143L 252.15958333333333 134.87142857142857L 253.12958333333333 131.39999999999998L 254.09958333333333 129.34285714285716L 257.00958333333335 124.32857142857148L 257.9795833333333 112.62857142857143L 258.94958333333335 110.05714285714288L 259.9195833333333 109.5428571428572L 260.88958333333335 112.62857142857143L 263.7995833333333 109.41428571428571L 264.76958333333334 111.7285714285714L 265.7395833333333 111.08571428571429L 266.70958333333334 110.57142857142861L 267.67958333333337 102.72857142857146L 272.57 102.59999999999997L 273.54 98.22857142857146L 274.51 97.84285714285716L 277.42 99.77142857142854L 278.39 97.84285714285716L 279.36 109.67142857142858L 280.33 115.97142857142865L 281.3 117L 284.21000000000004 119.57142857142856L 285.18 121.62857142857143L 286.15000000000003 125.61428571428576L 287.12 120.34285714285716L 288.09000000000003 120.21428571428572L 291 116.74285714285713L 291.97 120.34285714285716L 292.94 117.77142857142854L 294.88 110.57142857142861L 297.79 111.85714285714289L 298.76 113.40000000000003L 299.73 104.39999999999998L 300.7 101.69999999999999L 301.67 95.01428571428573L 304.58 93.85714285714283L 305.55 86.14285714285717L 306.52000000000004 84.85714285714289L 307.49 88.19999999999999L 308.46000000000004 83.82857142857148L 311.37 80.35714285714289L 312.34000000000003 83.05714285714288L 313.31 77.65714285714284L 314.28000000000003 83.18571428571425L 315.25 57.08571428571429L 318.16 58.88571428571424L 319.13 57.985714285714266L 320.1 50.271428571428544L 321.07 53.10000000000002L 322.04 55.157142857142844L 324.95 57.47142857142859L 326.89 57.21428571428578L 327.86 60.428571428571445L 328.83 65.57142857142861L 331.74 55.542857142857144L 333.68 47.05714285714282L 334.65000000000003 54.64285714285717L 335.62 49.75714285714281L 338.53000000000003 52.200000000000045L 339.5 49.62857142857143L 340.47 42.94285714285718L 341.44 43.45714285714291L 342.41 50.271428571428544L 345.32 49.37142857142862L 346.29 49.5L 347.26 52.97142857142853L 348.23 54.900000000000034L 349.2 51.68571428571431L 353.08 52.071428571428555L 354.05 48.21428571428572L 355.02000000000004 50.14285714285711L 355.99 47.314285714285745L 358.90000000000003 48.3428571428571L 359.87 44.74285714285713L 360.84000000000003 52.200000000000045L 361.81 53.61428571428576L 362.78000000000003 47.05714285714282L 365.69 50.14285714285711L 366.66 44.87142857142862L 367.63 46.285714285714334L 368.6 50.52857142857141L 369.57 37.02857142857147L 372.48 43.19999999999999L 373.45 39.985714285714266L 374.42 41.01428571428568L 375.39 43.58571428571429L 376.36 43.32857142857142L 380.24 38.69999999999999L 381.21000000000004 41.52857142857141L 382.18 47.05714285714282L 383.15000000000003 44.35714285714289L 386.06 50.014285714285734L 387.03000000000003 43.8428571428571L 388 30.857142857142833"
+                                  pathfrom="M -1 540L -1 540L 0.9700000000000001 540L 1.9400000000000002 540L 2.91 540L 5.82 540L 6.79 540L 7.760000000000001 540L 8.73 540L 9.700000000000001 540L 12.610000000000001 540L 13.58 540L 14.55 540L 15.520000000000001 540L 16.490000000000002 540L 19.400000000000002 540L 20.37 540L 21.34 540L 22.310000000000002 540L 23.28 540L 27.16 540L 28.130000000000003 540L 29.1 540L 30.07 540L 32.980000000000004 540L 33.95 540L 34.92 540L 35.89 540L 36.86 540L 39.77 540L 40.74 540L 41.71 540L 42.68 540L 43.65 540L 46.56 540L 47.53 540L 48.5 540L 49.47 540L 50.440000000000005 540L 53.35 540L 54.32 540L 55.29 540L 56.260000000000005 540L 57.230000000000004 540L 60.099583333333335 540L 61.069583333333334 540L 62.03958333333333 540L 63.00958333333334 540L 63.97958333333334 540L 66.88958333333333 540L 67.85958333333333 540L 68.82958333333333 540L 69.79958333333333 540L 73.67958333333334 540L 74.64958333333334 540L 75.61958333333334 540L 76.58958333333334 540L 77.55958333333334 540L 80.46958333333333 540L 81.43958333333333 540L 82.40958333333333 540L 83.37958333333333 540L 84.34958333333334 540L 87.25958333333334 540L 88.22958333333334 540L 89.19958333333334 540L 90.16958333333334 540L 91.13958333333333 540L 94.04958333333333 540L 95.01958333333333 540L 95.98958333333334 540L 96.95958333333334 540L 97.92958333333334 540L 100.83958333333334 540L 101.80958333333334 540L 102.77958333333333 540L 103.74958333333333 540L 104.71958333333333 540L 107.62958333333334 540L 108.59958333333334 540L 109.56958333333334 540L 110.53958333333334 540L 111.50958333333334 540L 114.41958333333334 540L 115.38958333333333 540L 116.35958333333333 540L 117.32958333333333 540L 118.29958333333333 540L 122.17958333333334 540L 123.14958333333334 540L 124.11958333333334 540L 125.08958333333334 540L 127.99958333333333 540L 128.96958333333333 540L 129.93958333333333 540L 130.90958333333333 540L 131.87958333333333 540L 134.78958333333333 540L 135.75958333333332 540L 136.72958333333335 540L 137.69958333333335 540L 138.66958333333335 540L 141.57958333333335 540L 142.54958333333335 540L 143.51958333333334 540L 144.48958333333334 540L 145.45958333333334 540L 148.36958333333334 540L 149.33958333333334 540L 150.30958333333334 540L 151.27958333333333 540L 152.24958333333333 540L 155.15958333333333 540L 156.12958333333333 540L 158.06958333333333 540L 159.03958333333333 540L 161.94958333333335 540L 162.91958333333335 540L 163.88958333333335 540L 164.85958333333335 540L 165.82958333333335 540L 168.73958333333334 540L 169.70958333333334 540L 170.67958333333334 540L 171.64958333333334 540L 172.61958333333334 540L 175.52958333333333 540L 176.49958333333333 540L 177.46958333333333 540L 178.43958333333333 540L 179.40958333333333 540L 182.31958333333333 540L 183.28958333333333 540L 184.25958333333335 540L 185.22958333333335 540L 186.19958333333335 540L 189.10958333333335 540L 190.07958333333335 540L 191.04958333333335 540L 192.01958333333334 540L 192.98958333333334 540L 195.89958333333334 540L 196.86958333333334 540L 197.83958333333334 540L 198.80958333333334 540L 199.77958333333333 540L 202.68958333333333 540L 203.65958333333333 540L 204.62958333333333 540L 205.59958333333333 540L 206.56958333333333 540L 209.47958333333335 540L 210.44958333333335 540L 211.41958333333335 540L 212.38958333333335 540L 213.35958333333335 540L 217.23958333333334 540L 218.20958333333334 540L 219.17958333333334 540L 220.14958333333334 540L 223.05958333333334 540L 224.02958333333333 540L 224.99958333333333 540L 225.96958333333333 540L 226.93958333333333 540L 229.84958333333333 540L 230.81958333333336 540L 231.78958333333335 540L 232.75958333333335 540L 233.72958333333335 540L 236.63958333333335 540L 237.60958333333335 540L 238.57958333333335 540L 239.54958333333335 540L 240.51958333333334 540L 243.42958333333334 540L 244.39958333333334 540L 245.36958333333334 540L 246.33958333333334 540L 247.30958333333334 540L 250.21958333333333 540L 251.18958333333333 540L 252.15958333333333 540L 253.12958333333333 540L 254.09958333333333 540L 257.00958333333335 540L 257.9795833333333 540L 258.94958333333335 540L 259.9195833333333 540L 260.88958333333335 540L 263.7995833333333 540L 264.76958333333334 540L 265.7395833333333 540L 266.70958333333334 540L 267.67958333333337 540L 272.57 540L 273.54 540L 274.51 540L 277.42 540L 278.39 540L 279.36 540L 280.33 540L 281.3 540L 284.21000000000004 540L 285.18 540L 286.15000000000003 540L 287.12 540L 288.09000000000003 540L 291 540L 291.97 540L 292.94 540L 294.88 540L 297.79 540L 298.76 540L 299.73 540L 300.7 540L 301.67 540L 304.58 540L 305.55 540L 306.52000000000004 540L 307.49 540L 308.46000000000004 540L 311.37 540L 312.34000000000003 540L 313.31 540L 314.28000000000003 540L 315.25 540L 318.16 540L 319.13 540L 320.1 540L 321.07 540L 322.04 540L 324.95 540L 326.89 540L 327.86 540L 328.83 540L 331.74 540L 333.68 540L 334.65000000000003 540L 335.62 540L 338.53000000000003 540L 339.5 540L 340.47 540L 341.44 540L 342.41 540L 345.32 540L 346.29 540L 347.26 540L 348.23 540L 349.2 540L 353.08 540L 354.05 540L 355.02000000000004 540L 355.99 540L 358.90000000000003 540L 359.87 540L 360.84000000000003 540L 361.81 540L 362.78000000000003 540L 365.69 540L 366.66 540L 367.63 540L 368.6 540L 369.57 540L 372.48 540L 373.45 540L 374.42 540L 375.39 540L 376.36 540L 380.24 540L 381.21000000000004 540L 382.18 540L 383.15000000000003 540L 386.06 540L 387.03000000000003 540L 388 540"
+                                />
+                                <g
+                                  id="SvgjsG1293"
+                                  className="apexcharts-series-markers-wrap"
+                                />
+                                <g
+                                  id="SvgjsG1294"
+                                  className="apexcharts-datalabels"
+                                />
+                              </g>
+                            </g>
+                            <line
+                              id="SvgjsLine1303"
+                              x1={0}
+                              y1={0}
+                              x2={388}
+                              y2={0}
+                              stroke="#b6b6b6"
+                              strokeDasharray={0}
+                              strokeWidth={1}
+                              className="apexcharts-ycrosshairs"
+                            />
+                            <line
+                              id="SvgjsLine1304"
+                              x1={0}
+                              y1={0}
+                              x2={388}
+                              y2={0}
+                              strokeDasharray={0}
+                              strokeWidth={0}
+                              className="apexcharts-ycrosshairs-hidden"
+                            />
+                            <g
+                              id="SvgjsG1305"
+                              className="apexcharts-yaxis-annotations"
+                            />
+                            <g
+                              id="SvgjsG1306"
+                              className="apexcharts-xaxis-annotations"
+                            />
+                            <g
+                              id="SvgjsG1307"
+                              className="apexcharts-point-annotations"
+                            />
+                          </g>
+                          <rect
+                            id="SvgjsRect1286"
+                            width={0}
+                            height={0}
+                            x={0}
+                            y={0}
+                            rx={0}
+                            ry={0}
+                            fill="#fefefe"
+                            opacity={1}
+                            strokeWidth={0}
+                            stroke="none"
+                            strokeDasharray={0}
+                          />
+                          <g
+                            id="SvgjsG1298"
+                            className="apexcharts-yaxis"
+                            rel={0}
+                            transform="translate(-21, 0)"
+                          >
+                            <g
+                              id="SvgjsG1299"
+                              className="apexcharts-yaxis-texts-g"
+                            />
+                          </g>
+                        </svg>
+                        <div className="apexcharts-legend" />
+                      </div>
+                    </div>
+                    <div className="resize-triggers">
+                      <div className="expand-trigger">
+                        <div style={{ width: 411, height: 266 }} />
+                      </div>
+                      <div className="contract-trigger" />
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div className="col-xxl-4 col-xl-4 col-lg-6 col-md-6 col-sm-6">
+                <div className="price-widget bg-usdt">
+                  <a href="price-details.html" style={{ position: "relative" }}>
+                    <div className="price-content">
+                      <div className="icon-title">
+                        <i className="cc USDT" />
+                        <span>Tether</span>
+                      </div>
+                      <h5>$ 11,785.10</h5>
+                    </div>
+                    <div id="chart3" style={{ minHeight: 265 }}>
+                      <div
+                        id="apexchartscb2o80gd"
+                        className="apexcharts-canvas apexchartscb2o80gd light"
+                        style={{ width: 410, height: 250 }}
+                      >
+                        <svg
+                          id="SvgjsSvg1310"
+                          width={410}
+                          height={250}
+                          xmlns="http://www.w3.org/2000/svg"
+                          version="1.1"
+                          xmlnsXlink="http://www.w3.org/1999/xlink"
+                          xmlnsSvgjs="http://svgjs.com/svgjs"
+                          className="apexcharts-svg"
+                          xmlnsData="ApexChartsNS"
+                          transform="translate(0, 0)"
+                          style={{ background: "transparent" }}
+                        >
+                          <g
+                            id="SvgjsG1312"
+                            className="apexcharts-inner apexcharts-graphical"
+                            transform="translate(12, 30)"
+                          >
+                            <defs id="SvgjsDefs1311">
+                              <clipPath id="gridRectMaskcb2o80gd">
+                                <rect
+                                  id="SvgjsRect1316"
+                                  width={390}
+                                  height={182}
+                                  x={-1}
+                                  y={-1}
+                                  rx={0}
+                                  ry={0}
+                                  fill="#ffffff"
+                                  opacity={1}
+                                  strokeWidth={0}
+                                  stroke="none"
+                                  strokeDasharray={0}
+                                />
+                              </clipPath>
+                              <clipPath id="gridRectMarkerMaskcb2o80gd">
+                                <rect
+                                  id="SvgjsRect1317"
+                                  width={390}
+                                  height={182}
+                                  x={-1}
+                                  y={-1}
+                                  rx={0}
+                                  ry={0}
+                                  fill="#ffffff"
+                                  opacity={1}
+                                  strokeWidth={0}
+                                  stroke="none"
+                                  strokeDasharray={0}
+                                />
+                              </clipPath>
+                            </defs>
+                            <line
+                              id="SvgjsLine1315"
+                              x1={0}
+                              y1={0}
+                              x2={0}
+                              y2={180}
+                              stroke="#b6b6b6"
+                              strokeDasharray={3}
+                              className="apexcharts-xcrosshairs"
+                              x={0}
+                              y={0}
+                              width={1}
+                              height={180}
+                              fill="#b1b9c4"
+                              filter="none"
+                              fillOpacity="0.9"
+                              strokeWidth={1}
+                            />
+                            <g
+                              id="SvgjsG1324"
+                              className="apexcharts-xaxis"
+                              transform="translate(0, 0)"
+                            >
+                              <g
+                                id="SvgjsG1325"
+                                className="apexcharts-xaxis-texts-g"
+                                transform="translate(0, -4)"
+                              />
+                            </g>
+                            <g id="SvgjsG1328" className="apexcharts-grid">
+                              <line
+                                id="SvgjsLine1330"
+                                x1={0}
+                                y1={180}
+                                x2={388}
+                                y2={180}
+                                stroke="transparent"
+                                strokeDasharray={0}
+                              />
+                              <line
+                                id="SvgjsLine1329"
+                                x1={0}
+                                y1={1}
+                                x2={0}
+                                y2={180}
+                                stroke="transparent"
+                                strokeDasharray={0}
+                              />
+                            </g>
+                            <g
+                              id="SvgjsG1319"
+                              className="apexcharts-line-series apexcharts-plot-series"
+                            >
+                              <g
+                                id="SvgjsG1320"
+                                className="apexcharts-series"
+                                seriesname="seriesx1"
+                                dataLongestseries="true"
+                                rel={1}
+                                dataRealindex={0}
+                              >
+                                <path
+                                  id="apexcharts-line-0"
+                                  d="M 0 142.0714285714286L 0.9700000000000001 137.05714285714288L 1.9400000000000002 139.1142857142857L 2.91 140.78571428571428L 5.82 141.42857142857144L 6.79 142.0714285714286L 7.760000000000001 138.34285714285716L 8.73 137.70000000000005L 9.700000000000001 130.5L 12.610000000000001 130.37142857142857L 13.58 124.97142857142859L 14.55 127.28571428571428L 15.520000000000001 120.21428571428572L 16.490000000000002 125.87142857142857L 19.400000000000002 124.07142857142856L 20.37 122.91428571428577L 21.34 122.65714285714284L 22.310000000000002 117.51428571428573L 23.28 118.92857142857144L 27.16 121.62857142857143L 28.130000000000003 124.32857142857148L 29.1 116.10000000000002L 30.07 110.44285714285718L 32.980000000000004 112.24285714285713L 33.95 112.24285714285713L 34.92 117.12857142857143L 35.89 114.42857142857144L 36.86 106.32857142857148L 39.77 112.8857142857143L 40.74 128.70000000000005L 41.71 123.30000000000007L 42.68 115.07142857142861L 43.65 107.48571428571427L 46.56 108.51428571428568L 47.53 100.02857142857147L 48.5 105.81428571428569L 49.47 100.67142857142858L 50.440000000000005 105.17142857142858L 53.35 96.30000000000001L 54.32 113.6571428571429L 55.29 108.51428571428568L 56.260000000000005 106.58571428571429L 57.230000000000004 105.29999999999995L 60.099583333333335 97.71428571428572L 61.069583333333334 94.75714285714281L 62.03958333333333 96.94285714285712L 63.00958333333334 96.68571428571431L 63.97958333333334 98.87142857142857L 66.88958333333333 93.85714285714283L 67.85958333333333 98.87142857142857L 68.82958333333333 109.80000000000001L 69.79958333333333 108.12857142857138L 73.67958333333334 112.8857142857143L 74.64958333333334 120.72857142857146L 75.61958333333334 115.58571428571435L 76.58958333333334 108.64285714285717L 77.55958333333334 113.40000000000003L 80.46958333333333 117.77142857142854L 81.43958333333333 104.91428571428565L 82.40958333333333 110.69999999999999L 83.37958333333333 116.87142857142862L 84.34958333333334 114.94285714285712L 87.25958333333334 120.60000000000002L 88.22958333333334 123.42857142857144L 89.19958333333334 114.04285714285714L 90.16958333333334 112.37142857142862L 91.13958333333333 108.25714285714287L 94.04958333333333 108.64285714285717L 95.01958333333333 105.81428571428569L 95.98958333333334 105.94285714285718L 96.95958333333334 111.60000000000002L 97.92958333333334 120.72857142857146L 100.83958333333334 121.88571428571424L 101.80958333333334 119.95714285714286L 102.77958333333333 121.88571428571424L 103.74958333333333 129.59999999999997L 104.71958333333333 125.99999999999994L 107.62958333333334 125.61428571428576L 108.59958333333334 124.32857142857148L 109.56958333333334 123.94285714285718L 110.53958333333334 128.44285714285718L 111.50958333333334 137.44285714285718L 114.41958333333334 128.44285714285718L 115.38958333333333 128.44285714285718L 116.35958333333333 126.25714285714287L 117.32958333333333 134.48571428571432L 118.29958333333333 133.71428571428572L 122.17958333333334 127.92857142857144L 123.14958333333334 137.70000000000005L 124.11958333333334 140.78571428571428L 125.08958333333334 156.60000000000002L 127.99958333333333 150.3L 128.96958333333333 145.28571428571428L 129.93958333333333 132.55714285714282L 130.90958333333333 137.31428571428575L 131.87958333333333 133.0714285714286L 134.78958333333333 139.75714285714287L 135.75958333333332 131.52857142857147L 136.72958333333335 131.2714285714286L 137.69958333333335 132.8142857142857L 138.66958333333335 123.55714285714288L 141.57958333333335 120.47142857142853L 142.54958333333335 117.12857142857143L 143.51958333333334 128.70000000000005L 144.48958333333334 138.4714285714286L 145.45958333333334 134.10000000000002L 148.36958333333334 143.48571428571427L 149.33958333333334 140.5285714285714L 150.30958333333334 136.15714285714284L 151.27958333333333 139.24285714285713L 152.24958333333333 123.81428571428575L 155.15958333333333 126.12857142857149L 156.12958333333333 122.01428571428573L 158.06958333333333 121.75714285714287L 159.03958333333333 136.67142857142858L 161.94958333333335 148.75714285714287L 162.91958333333335 148.62857142857143L 163.88958333333335 151.71428571428572L 164.85958333333335 152.48571428571427L 165.82958333333335 145.92857142857144L 168.73958333333334 149.14285714285717L 169.70958333333334 145.92857142857144L 170.67958333333334 135.90000000000003L 171.64958333333334 129.98571428571427L 172.61958333333334 136.54285714285714L 175.52958333333333 146.05714285714288L 176.49958333333333 154.02857142857147L 177.46958333333333 150.04285714285714L 178.43958333333333 142.0714285714286L 179.40958333333333 129.98571428571427L 182.31958333333333 141.3L 183.28958333333333 142.9714285714286L 184.25958333333335 145.4142857142857L 185.22958333333335 146.82857142857148L 186.19958333333335 128.3142857142857L 189.10958333333335 126.77142857142854L 190.07958333333335 123.81428571428575L 191.04958333333335 122.01428571428573L 192.01958333333334 120.21428571428572L 192.98958333333334 120.34285714285716L 195.89958333333334 125.09999999999997L 196.86958333333334 127.28571428571428L 197.83958333333334 116.87142857142862L 198.80958333333334 107.35714285714289L 199.77958333333333 105.42857142857144L 202.68958333333333 103.88571428571424L 203.65958333333333 106.07142857142856L 204.62958333333333 104.91428571428565L 205.59958333333333 109.28571428571428L 206.56958333333333 125.22857142857146L 209.47958333333335 124.45714285714286L 210.44958333333335 127.79999999999995L 211.41958333333335 129.0857142857143L 212.38958333333335 135.51428571428573L 213.35958333333335 137.95714285714286L 217.23958333333334 135.90000000000003L 218.20958333333334 125.22857142857146L 219.17958333333334 118.41428571428571L 220.14958333333334 122.65714285714284L 223.05958333333334 126.89999999999998L 224.02958333333333 123.04285714285714L 224.99958333333333 123.17142857142858L 225.96958333333333 118.15714285714284L 226.93958333333333 111.3428571428571L 229.84958333333333 110.44285714285718L 230.81958333333336 121.24285714285713L 231.78958333333335 114.17142857142863L 232.75958333333335 96.04285714285714L 233.72958333333335 105.04285714285714L 236.63958333333335 110.44285714285718L 237.60958333333335 117L 238.57958333333335 121.75714285714287L 239.54958333333335 118.28571428571433L 240.51958333333334 122.91428571428577L 243.42958333333334 120.60000000000002L 244.39958333333334 121.24285714285713L 245.36958333333334 120.85714285714283L 246.33958333333334 119.82857142857142L 247.30958333333334 122.52857142857147L 250.21958333333333 125.61428571428576L 251.18958333333333 132.6857142857143L 252.15958333333333 134.87142857142857L 253.12958333333333 131.39999999999998L 254.09958333333333 129.34285714285716L 257.00958333333335 124.32857142857148L 257.9795833333333 112.62857142857143L 258.94958333333335 110.05714285714288L 259.9195833333333 109.5428571428572L 260.88958333333335 112.62857142857143L 263.7995833333333 109.41428571428571L 264.76958333333334 111.7285714285714L 265.7395833333333 111.08571428571429L 266.70958333333334 110.57142857142861L 267.67958333333337 102.72857142857146L 272.57 102.59999999999997L 273.54 98.22857142857146L 274.51 97.84285714285716L 277.42 99.77142857142854L 278.39 97.84285714285716L 279.36 109.67142857142858L 280.33 115.97142857142865L 281.3 117L 284.21000000000004 119.57142857142856L 285.18 121.62857142857143L 286.15000000000003 125.61428571428576L 287.12 120.34285714285716L 288.09000000000003 120.21428571428572L 291 116.74285714285713L 291.97 120.34285714285716L 292.94 117.77142857142854L 294.88 110.57142857142861L 297.79 111.85714285714289L 298.76 113.40000000000003L 299.73 104.39999999999998L 300.7 101.69999999999999L 301.67 95.01428571428573L 304.58 93.85714285714283L 305.55 86.14285714285717L 306.52000000000004 84.85714285714289L 307.49 88.19999999999999L 308.46000000000004 83.82857142857148L 311.37 80.35714285714289L 312.34000000000003 83.05714285714288L 313.31 77.65714285714284L 314.28000000000003 83.18571428571425L 315.25 57.08571428571429L 318.16 58.88571428571424L 319.13 57.985714285714266L 320.1 50.271428571428544L 321.07 53.10000000000002L 322.04 55.157142857142844L 324.95 57.47142857142859L 326.89 57.21428571428578L 327.86 60.428571428571445L 328.83 65.57142857142861L 331.74 55.542857142857144L 333.68 47.05714285714282L 334.65000000000003 54.64285714285717L 335.62 49.75714285714281L 338.53000000000003 52.200000000000045L 339.5 49.62857142857143L 340.47 42.94285714285718L 341.44 43.45714285714291L 342.41 50.271428571428544L 345.32 49.37142857142862L 346.29 49.5L 347.26 52.97142857142853L 348.23 54.900000000000034L 349.2 51.68571428571431L 353.08 52.071428571428555L 354.05 48.21428571428572L 355.02000000000004 50.14285714285711L 355.99 47.314285714285745L 358.90000000000003 48.3428571428571L 359.87 44.74285714285713L 360.84000000000003 52.200000000000045L 361.81 53.61428571428576L 362.78000000000003 47.05714285714282L 365.69 50.14285714285711L 366.66 44.87142857142862L 367.63 46.285714285714334L 368.6 50.52857142857141L 369.57 37.02857142857147L 372.48 43.19999999999999L 373.45 39.985714285714266L 374.42 41.01428571428568L 375.39 43.58571428571429L 376.36 43.32857142857142L 380.24 38.69999999999999L 381.21000000000004 41.52857142857141L 382.18 47.05714285714282L 383.15000000000003 44.35714285714289L 386.06 50.014285714285734L 387.03000000000003 43.8428571428571L 388 30.857142857142833"
+                                  fill="none"
+                                  fillOpacity={1}
+                                  stroke="rgba(255,255,255,0.85)"
+                                  strokeOpacity={1}
+                                  strokeLinecap="butt"
+                                  strokeWidth={2}
+                                  strokeDasharray={0}
+                                  className="apexcharts-line"
+                                  index={0}
+                                  clipPath="url(#gridRectMaskcb2o80gd)"
+                                  pathto="M 0 142.0714285714286L 0.9700000000000001 137.05714285714288L 1.9400000000000002 139.1142857142857L 2.91 140.78571428571428L 5.82 141.42857142857144L 6.79 142.0714285714286L 7.760000000000001 138.34285714285716L 8.73 137.70000000000005L 9.700000000000001 130.5L 12.610000000000001 130.37142857142857L 13.58 124.97142857142859L 14.55 127.28571428571428L 15.520000000000001 120.21428571428572L 16.490000000000002 125.87142857142857L 19.400000000000002 124.07142857142856L 20.37 122.91428571428577L 21.34 122.65714285714284L 22.310000000000002 117.51428571428573L 23.28 118.92857142857144L 27.16 121.62857142857143L 28.130000000000003 124.32857142857148L 29.1 116.10000000000002L 30.07 110.44285714285718L 32.980000000000004 112.24285714285713L 33.95 112.24285714285713L 34.92 117.12857142857143L 35.89 114.42857142857144L 36.86 106.32857142857148L 39.77 112.8857142857143L 40.74 128.70000000000005L 41.71 123.30000000000007L 42.68 115.07142857142861L 43.65 107.48571428571427L 46.56 108.51428571428568L 47.53 100.02857142857147L 48.5 105.81428571428569L 49.47 100.67142857142858L 50.440000000000005 105.17142857142858L 53.35 96.30000000000001L 54.32 113.6571428571429L 55.29 108.51428571428568L 56.260000000000005 106.58571428571429L 57.230000000000004 105.29999999999995L 60.099583333333335 97.71428571428572L 61.069583333333334 94.75714285714281L 62.03958333333333 96.94285714285712L 63.00958333333334 96.68571428571431L 63.97958333333334 98.87142857142857L 66.88958333333333 93.85714285714283L 67.85958333333333 98.87142857142857L 68.82958333333333 109.80000000000001L 69.79958333333333 108.12857142857138L 73.67958333333334 112.8857142857143L 74.64958333333334 120.72857142857146L 75.61958333333334 115.58571428571435L 76.58958333333334 108.64285714285717L 77.55958333333334 113.40000000000003L 80.46958333333333 117.77142857142854L 81.43958333333333 104.91428571428565L 82.40958333333333 110.69999999999999L 83.37958333333333 116.87142857142862L 84.34958333333334 114.94285714285712L 87.25958333333334 120.60000000000002L 88.22958333333334 123.42857142857144L 89.19958333333334 114.04285714285714L 90.16958333333334 112.37142857142862L 91.13958333333333 108.25714285714287L 94.04958333333333 108.64285714285717L 95.01958333333333 105.81428571428569L 95.98958333333334 105.94285714285718L 96.95958333333334 111.60000000000002L 97.92958333333334 120.72857142857146L 100.83958333333334 121.88571428571424L 101.80958333333334 119.95714285714286L 102.77958333333333 121.88571428571424L 103.74958333333333 129.59999999999997L 104.71958333333333 125.99999999999994L 107.62958333333334 125.61428571428576L 108.59958333333334 124.32857142857148L 109.56958333333334 123.94285714285718L 110.53958333333334 128.44285714285718L 111.50958333333334 137.44285714285718L 114.41958333333334 128.44285714285718L 115.38958333333333 128.44285714285718L 116.35958333333333 126.25714285714287L 117.32958333333333 134.48571428571432L 118.29958333333333 133.71428571428572L 122.17958333333334 127.92857142857144L 123.14958333333334 137.70000000000005L 124.11958333333334 140.78571428571428L 125.08958333333334 156.60000000000002L 127.99958333333333 150.3L 128.96958333333333 145.28571428571428L 129.93958333333333 132.55714285714282L 130.90958333333333 137.31428571428575L 131.87958333333333 133.0714285714286L 134.78958333333333 139.75714285714287L 135.75958333333332 131.52857142857147L 136.72958333333335 131.2714285714286L 137.69958333333335 132.8142857142857L 138.66958333333335 123.55714285714288L 141.57958333333335 120.47142857142853L 142.54958333333335 117.12857142857143L 143.51958333333334 128.70000000000005L 144.48958333333334 138.4714285714286L 145.45958333333334 134.10000000000002L 148.36958333333334 143.48571428571427L 149.33958333333334 140.5285714285714L 150.30958333333334 136.15714285714284L 151.27958333333333 139.24285714285713L 152.24958333333333 123.81428571428575L 155.15958333333333 126.12857142857149L 156.12958333333333 122.01428571428573L 158.06958333333333 121.75714285714287L 159.03958333333333 136.67142857142858L 161.94958333333335 148.75714285714287L 162.91958333333335 148.62857142857143L 163.88958333333335 151.71428571428572L 164.85958333333335 152.48571428571427L 165.82958333333335 145.92857142857144L 168.73958333333334 149.14285714285717L 169.70958333333334 145.92857142857144L 170.67958333333334 135.90000000000003L 171.64958333333334 129.98571428571427L 172.61958333333334 136.54285714285714L 175.52958333333333 146.05714285714288L 176.49958333333333 154.02857142857147L 177.46958333333333 150.04285714285714L 178.43958333333333 142.0714285714286L 179.40958333333333 129.98571428571427L 182.31958333333333 141.3L 183.28958333333333 142.9714285714286L 184.25958333333335 145.4142857142857L 185.22958333333335 146.82857142857148L 186.19958333333335 128.3142857142857L 189.10958333333335 126.77142857142854L 190.07958333333335 123.81428571428575L 191.04958333333335 122.01428571428573L 192.01958333333334 120.21428571428572L 192.98958333333334 120.34285714285716L 195.89958333333334 125.09999999999997L 196.86958333333334 127.28571428571428L 197.83958333333334 116.87142857142862L 198.80958333333334 107.35714285714289L 199.77958333333333 105.42857142857144L 202.68958333333333 103.88571428571424L 203.65958333333333 106.07142857142856L 204.62958333333333 104.91428571428565L 205.59958333333333 109.28571428571428L 206.56958333333333 125.22857142857146L 209.47958333333335 124.45714285714286L 210.44958333333335 127.79999999999995L 211.41958333333335 129.0857142857143L 212.38958333333335 135.51428571428573L 213.35958333333335 137.95714285714286L 217.23958333333334 135.90000000000003L 218.20958333333334 125.22857142857146L 219.17958333333334 118.41428571428571L 220.14958333333334 122.65714285714284L 223.05958333333334 126.89999999999998L 224.02958333333333 123.04285714285714L 224.99958333333333 123.17142857142858L 225.96958333333333 118.15714285714284L 226.93958333333333 111.3428571428571L 229.84958333333333 110.44285714285718L 230.81958333333336 121.24285714285713L 231.78958333333335 114.17142857142863L 232.75958333333335 96.04285714285714L 233.72958333333335 105.04285714285714L 236.63958333333335 110.44285714285718L 237.60958333333335 117L 238.57958333333335 121.75714285714287L 239.54958333333335 118.28571428571433L 240.51958333333334 122.91428571428577L 243.42958333333334 120.60000000000002L 244.39958333333334 121.24285714285713L 245.36958333333334 120.85714285714283L 246.33958333333334 119.82857142857142L 247.30958333333334 122.52857142857147L 250.21958333333333 125.61428571428576L 251.18958333333333 132.6857142857143L 252.15958333333333 134.87142857142857L 253.12958333333333 131.39999999999998L 254.09958333333333 129.34285714285716L 257.00958333333335 124.32857142857148L 257.9795833333333 112.62857142857143L 258.94958333333335 110.05714285714288L 259.9195833333333 109.5428571428572L 260.88958333333335 112.62857142857143L 263.7995833333333 109.41428571428571L 264.76958333333334 111.7285714285714L 265.7395833333333 111.08571428571429L 266.70958333333334 110.57142857142861L 267.67958333333337 102.72857142857146L 272.57 102.59999999999997L 273.54 98.22857142857146L 274.51 97.84285714285716L 277.42 99.77142857142854L 278.39 97.84285714285716L 279.36 109.67142857142858L 280.33 115.97142857142865L 281.3 117L 284.21000000000004 119.57142857142856L 285.18 121.62857142857143L 286.15000000000003 125.61428571428576L 287.12 120.34285714285716L 288.09000000000003 120.21428571428572L 291 116.74285714285713L 291.97 120.34285714285716L 292.94 117.77142857142854L 294.88 110.57142857142861L 297.79 111.85714285714289L 298.76 113.40000000000003L 299.73 104.39999999999998L 300.7 101.69999999999999L 301.67 95.01428571428573L 304.58 93.85714285714283L 305.55 86.14285714285717L 306.52000000000004 84.85714285714289L 307.49 88.19999999999999L 308.46000000000004 83.82857142857148L 311.37 80.35714285714289L 312.34000000000003 83.05714285714288L 313.31 77.65714285714284L 314.28000000000003 83.18571428571425L 315.25 57.08571428571429L 318.16 58.88571428571424L 319.13 57.985714285714266L 320.1 50.271428571428544L 321.07 53.10000000000002L 322.04 55.157142857142844L 324.95 57.47142857142859L 326.89 57.21428571428578L 327.86 60.428571428571445L 328.83 65.57142857142861L 331.74 55.542857142857144L 333.68 47.05714285714282L 334.65000000000003 54.64285714285717L 335.62 49.75714285714281L 338.53000000000003 52.200000000000045L 339.5 49.62857142857143L 340.47 42.94285714285718L 341.44 43.45714285714291L 342.41 50.271428571428544L 345.32 49.37142857142862L 346.29 49.5L 347.26 52.97142857142853L 348.23 54.900000000000034L 349.2 51.68571428571431L 353.08 52.071428571428555L 354.05 48.21428571428572L 355.02000000000004 50.14285714285711L 355.99 47.314285714285745L 358.90000000000003 48.3428571428571L 359.87 44.74285714285713L 360.84000000000003 52.200000000000045L 361.81 53.61428571428576L 362.78000000000003 47.05714285714282L 365.69 50.14285714285711L 366.66 44.87142857142862L 367.63 46.285714285714334L 368.6 50.52857142857141L 369.57 37.02857142857147L 372.48 43.19999999999999L 373.45 39.985714285714266L 374.42 41.01428571428568L 375.39 43.58571428571429L 376.36 43.32857142857142L 380.24 38.69999999999999L 381.21000000000004 41.52857142857141L 382.18 47.05714285714282L 383.15000000000003 44.35714285714289L 386.06 50.014285714285734L 387.03000000000003 43.8428571428571L 388 30.857142857142833"
+                                  pathfrom="M -1 540L -1 540L 0.9700000000000001 540L 1.9400000000000002 540L 2.91 540L 5.82 540L 6.79 540L 7.760000000000001 540L 8.73 540L 9.700000000000001 540L 12.610000000000001 540L 13.58 540L 14.55 540L 15.520000000000001 540L 16.490000000000002 540L 19.400000000000002 540L 20.37 540L 21.34 540L 22.310000000000002 540L 23.28 540L 27.16 540L 28.130000000000003 540L 29.1 540L 30.07 540L 32.980000000000004 540L 33.95 540L 34.92 540L 35.89 540L 36.86 540L 39.77 540L 40.74 540L 41.71 540L 42.68 540L 43.65 540L 46.56 540L 47.53 540L 48.5 540L 49.47 540L 50.440000000000005 540L 53.35 540L 54.32 540L 55.29 540L 56.260000000000005 540L 57.230000000000004 540L 60.099583333333335 540L 61.069583333333334 540L 62.03958333333333 540L 63.00958333333334 540L 63.97958333333334 540L 66.88958333333333 540L 67.85958333333333 540L 68.82958333333333 540L 69.79958333333333 540L 73.67958333333334 540L 74.64958333333334 540L 75.61958333333334 540L 76.58958333333334 540L 77.55958333333334 540L 80.46958333333333 540L 81.43958333333333 540L 82.40958333333333 540L 83.37958333333333 540L 84.34958333333334 540L 87.25958333333334 540L 88.22958333333334 540L 89.19958333333334 540L 90.16958333333334 540L 91.13958333333333 540L 94.04958333333333 540L 95.01958333333333 540L 95.98958333333334 540L 96.95958333333334 540L 97.92958333333334 540L 100.83958333333334 540L 101.80958333333334 540L 102.77958333333333 540L 103.74958333333333 540L 104.71958333333333 540L 107.62958333333334 540L 108.59958333333334 540L 109.56958333333334 540L 110.53958333333334 540L 111.50958333333334 540L 114.41958333333334 540L 115.38958333333333 540L 116.35958333333333 540L 117.32958333333333 540L 118.29958333333333 540L 122.17958333333334 540L 123.14958333333334 540L 124.11958333333334 540L 125.08958333333334 540L 127.99958333333333 540L 128.96958333333333 540L 129.93958333333333 540L 130.90958333333333 540L 131.87958333333333 540L 134.78958333333333 540L 135.75958333333332 540L 136.72958333333335 540L 137.69958333333335 540L 138.66958333333335 540L 141.57958333333335 540L 142.54958333333335 540L 143.51958333333334 540L 144.48958333333334 540L 145.45958333333334 540L 148.36958333333334 540L 149.33958333333334 540L 150.30958333333334 540L 151.27958333333333 540L 152.24958333333333 540L 155.15958333333333 540L 156.12958333333333 540L 158.06958333333333 540L 159.03958333333333 540L 161.94958333333335 540L 162.91958333333335 540L 163.88958333333335 540L 164.85958333333335 540L 165.82958333333335 540L 168.73958333333334 540L 169.70958333333334 540L 170.67958333333334 540L 171.64958333333334 540L 172.61958333333334 540L 175.52958333333333 540L 176.49958333333333 540L 177.46958333333333 540L 178.43958333333333 540L 179.40958333333333 540L 182.31958333333333 540L 183.28958333333333 540L 184.25958333333335 540L 185.22958333333335 540L 186.19958333333335 540L 189.10958333333335 540L 190.07958333333335 540L 191.04958333333335 540L 192.01958333333334 540L 192.98958333333334 540L 195.89958333333334 540L 196.86958333333334 540L 197.83958333333334 540L 198.80958333333334 540L 199.77958333333333 540L 202.68958333333333 540L 203.65958333333333 540L 204.62958333333333 540L 205.59958333333333 540L 206.56958333333333 540L 209.47958333333335 540L 210.44958333333335 540L 211.41958333333335 540L 212.38958333333335 540L 213.35958333333335 540L 217.23958333333334 540L 218.20958333333334 540L 219.17958333333334 540L 220.14958333333334 540L 223.05958333333334 540L 224.02958333333333 540L 224.99958333333333 540L 225.96958333333333 540L 226.93958333333333 540L 229.84958333333333 540L 230.81958333333336 540L 231.78958333333335 540L 232.75958333333335 540L 233.72958333333335 540L 236.63958333333335 540L 237.60958333333335 540L 238.57958333333335 540L 239.54958333333335 540L 240.51958333333334 540L 243.42958333333334 540L 244.39958333333334 540L 245.36958333333334 540L 246.33958333333334 540L 247.30958333333334 540L 250.21958333333333 540L 251.18958333333333 540L 252.15958333333333 540L 253.12958333333333 540L 254.09958333333333 540L 257.00958333333335 540L 257.9795833333333 540L 258.94958333333335 540L 259.9195833333333 540L 260.88958333333335 540L 263.7995833333333 540L 264.76958333333334 540L 265.7395833333333 540L 266.70958333333334 540L 267.67958333333337 540L 272.57 540L 273.54 540L 274.51 540L 277.42 540L 278.39 540L 279.36 540L 280.33 540L 281.3 540L 284.21000000000004 540L 285.18 540L 286.15000000000003 540L 287.12 540L 288.09000000000003 540L 291 540L 291.97 540L 292.94 540L 294.88 540L 297.79 540L 298.76 540L 299.73 540L 300.7 540L 301.67 540L 304.58 540L 305.55 540L 306.52000000000004 540L 307.49 540L 308.46000000000004 540L 311.37 540L 312.34000000000003 540L 313.31 540L 314.28000000000003 540L 315.25 540L 318.16 540L 319.13 540L 320.1 540L 321.07 540L 322.04 540L 324.95 540L 326.89 540L 327.86 540L 328.83 540L 331.74 540L 333.68 540L 334.65000000000003 540L 335.62 540L 338.53000000000003 540L 339.5 540L 340.47 540L 341.44 540L 342.41 540L 345.32 540L 346.29 540L 347.26 540L 348.23 540L 349.2 540L 353.08 540L 354.05 540L 355.02000000000004 540L 355.99 540L 358.90000000000003 540L 359.87 540L 360.84000000000003 540L 361.81 540L 362.78000000000003 540L 365.69 540L 366.66 540L 367.63 540L 368.6 540L 369.57 540L 372.48 540L 373.45 540L 374.42 540L 375.39 540L 376.36 540L 380.24 540L 381.21000000000004 540L 382.18 540L 383.15000000000003 540L 386.06 540L 387.03000000000003 540L 388 540"
+                                />
+                                <g
+                                  id="SvgjsG1321"
+                                  className="apexcharts-series-markers-wrap"
+                                />
+                                <g
+                                  id="SvgjsG1322"
+                                  className="apexcharts-datalabels"
+                                />
+                              </g>
+                            </g>
+                            <line
+                              id="SvgjsLine1331"
+                              x1={0}
+                              y1={0}
+                              x2={388}
+                              y2={0}
+                              stroke="#b6b6b6"
+                              strokeDasharray={0}
+                              strokeWidth={1}
+                              className="apexcharts-ycrosshairs"
+                            />
+                            <line
+                              id="SvgjsLine1332"
+                              x1={0}
+                              y1={0}
+                              x2={388}
+                              y2={0}
+                              strokeDasharray={0}
+                              strokeWidth={0}
+                              className="apexcharts-ycrosshairs-hidden"
+                            />
+                            <g
+                              id="SvgjsG1333"
+                              className="apexcharts-yaxis-annotations"
+                            />
+                            <g
+                              id="SvgjsG1334"
+                              className="apexcharts-xaxis-annotations"
+                            />
+                            <g
+                              id="SvgjsG1335"
+                              className="apexcharts-point-annotations"
+                            />
+                          </g>
+                          <rect
+                            id="SvgjsRect1314"
+                            width={0}
+                            height={0}
+                            x={0}
+                            y={0}
+                            rx={0}
+                            ry={0}
+                            fill="#fefefe"
+                            opacity={1}
+                            strokeWidth={0}
+                            stroke="none"
+                            strokeDasharray={0}
+                          />
+                          <g
+                            id="SvgjsG1326"
+                            className="apexcharts-yaxis"
+                            rel={0}
+                            transform="translate(-21, 0)"
+                          >
+                            <g
+                              id="SvgjsG1327"
+                              className="apexcharts-yaxis-texts-g"
+                            />
+                          </g>
+                        </svg>
+                        <div className="apexcharts-legend" />
+                      </div>
+                    </div>
+                    <div className="resize-triggers">
+                      <div className="expand-trigger">
+                        <div style={{ width: 411, height: 266 }} />
+                      </div>
+                      <div className="contract-trigger" />
+                    </div>
+                  </a>
+                </div>
+              </div>
+              {/* <div class="col-xxl-4 col-xl-4 col-lg-6 col-md-6 col-sm-6">
+          <div class="price-widget bg-dark">
+              <a href="price-details.html">
+                  <div class="price-content">
+                      <div class="icon-title">
+                          <i class="cc XRP"></i>
+                          <span>Ripple</span>
+                      </div>
+                      <h5>$ 11,785.10</h5>
+                  </div>
+                  <div id="chart4"></div>
               </a>
+          </div>
+      </div>
+      <div class="col-xxl-4 col-xl-4 col-lg-6 col-md-6 col-sm-6">
+          <div class="price-widget bg-dark">
+              <a href="price-details.html">
+                  <div class="price-content">
+                      <div class="icon-title">
+                          <i class="cc LTC"></i>
+                          <span>Litecoin</span>
+                      </div>
+                      <h5>$ 11,785.10</h5>
+                  </div>
+                  <div id="chart5"></div>
+              </a>
+          </div>
+      </div>
+      <div class="col-xxl-4 col-xl-4 col-lg-6 col-md-6 col-sm-6">
+          <div class="price-widget bg-dark">
+              <a href="price-details.html">
+                  <div class="price-content">
+                      <div class="icon-title">
+                          <i class="cc ADA"></i>
+                          <span>Cardano</span>
+                      </div>
+                      <h5>$ 11,785.10</h5>
+                  </div>
+                  <div id="chart6"></div>
+              </a>
+          </div>
+      </div> */}
+            </div>
+          </div>
+        </div>
+        <div className="portfolio section-padding bg-gradient-primary">
+          <div className="container">
+            <div className="row py-lg-5 justify-content-center">
+              <div className="col-xl-7">
+                <div className="section-title text-center">
+                  <h2 className="text-white">
+                    Create your cryptocurrency portfolio today
+                  </h2>
+                  <p className="text-white">
+                    Tradee has a variety of features that make it the best place
+                    to start trading
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="row align-items-center justify-content-between">
+              <div className="col-xl-4 col-lg-6">
+                <div className="portfolio_list">
+                  <div className="media">
+                    <span className="port-icon">
+                      {" "}
+                      <i className="fas fa-user-circle" />
+                    </span>
+                    <div className="media-body">
+                      <h4>Manage your portfolio</h4>
+                      <p>
+                        Buy and sell popular digital currencies, keep track of
+                        them in the one place.
+                      </p>
+                    </div>
+                  </div>
+                  <div className="media">
+                    <span className="port-icon">
+                      {" "}
+                      <i className="fas fa-shopping-bag" />
+                    </span>
+                    <div className="media-body">
+                      <h4>Recurring buys</h4>
+                      <p>
+                        Invest in cryptocurrency slowly over time by scheduling
+                        buys daily, weekly, or monthly.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="col-xl-4 col-lg-6">
+                <div className="portfolio_img">
+                  {/* <img src={portfolio} alt className="img-fluid" /> */}
+                </div>
+              </div>
+              <div className="col-xl-4 col-lg-6">
+                <div className="portfolio_list">
+                  <div className="media">
+                    <span className="port-icon">
+                      {" "}
+                      <i className="fas fa-shield-virus" />
+                    </span>
+                    <div className="media-body">
+                      <h4>Vault protection</h4>
+                      <p>
+                        For added security, store your funds in a vault with
+                        time delayed withdrawals.
+                      </p>
+                    </div>
+                  </div>
+                  <div className="media">
+                    <span className="port-icon">
+                      {" "}
+                      <i className="fas fa-mobile" />
+                    </span>
+                    <div className="media-body">
+                      <h4>Mobile apps</h4>
+                      <p>
+                        Stay on top of the markets with the Tradee app for{" "}
+                        <a href="#">Android</a>
+                        or
+                        <a href="#">iOS</a>.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="trade-app section-padding">
+          <div className="container">
+            <div className="row justify-content-center">
+              <div className="col-xl-6">
+                <div className="section-title text-center">
+                  <h2>Trade. Anywhere</h2>
+                  <p>
+                    {" "}
+                    All of our products are ready to go, easy to use and offer
+                    great value to any kind of business
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="row">
+              <div className="col-xl-4 col-lg-4 col-md-12">
+                <div className="card trade-app-content">
+                  <div className="card-body">
+                    <span>
+                      <i className="fas fa-mobile" />
+                    </span>
+                    <h4 className="card-title">Mobile</h4>
+                    <p>
+                      All the power of Tradee's cryptocurrency exchange, in the
+                      palm of your hand. Download the Tradee mobile crypto
+                      trading app today
+                    </p>
+                    <a href="#"> Know More </a>
+                  </div>
+                </div>
+              </div>
+              <div className="col-xl-4 col-lg-4 col-md-12">
+                <div className="card trade-app-content">
+                  <div className="card-body">
+                    <span>
+                      <i className="fas fa-desktop" />
+                    </span>
+                    <h4 className="card-title">Desktop</h4>
+                    <p>
+                      Powerful crypto trading platform for those who mean
+                      business. The Tradee crypto trading experience,
+                      tailor-made for your Windows or MacOS device.
+                    </p>
+                    <a href="#"> Know More </a>
+                  </div>
+                </div>
+              </div>
+              <div className="col-xl-4 col-lg-4 col-md-12">
+                <div className="card trade-app-content">
+                  <div className="card-body">
+                    <span>
+                      <i className="fas fa-database" />
+                    </span>
+                    <h4 className="card-title">API</h4>
+                    <p>
+                      The Tradee API is designed to provide an easy and
+                      efficient way to integrate your trading application into
+                      our platform.
+                    </p>
+                    <a href="#"> Know More </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="brand  bg-light section-padding">
+          <div className="container">
+            <div className="row">
+              <div className="col-xl-12">
+                <div className="trusted-business pb-5 text-center">
+                  <h3>
+                    Trusted by over <strong>10.000 users</strong>
+                  </h3>
+                </div>
+                {/* <div className="row justify-content-center">
+                  <div className="col-auto">
+                    <div className="trusted-logo">
+                      <a href="#">
+                        <img className="img-fluid" src={image} alt />
+                      </a>
+                    </div>
+                  </div>
+                  <div className="col-auto">
+                    <div className="trusted-logo">
+                      <a href="#">
+                        <img className="img-fluid" src={image1} alt />
+                      </a>
+                    </div>
+                  </div>
+                  <div className="col-auto">
+                    <div className="trusted-logo">
+                      <a href="#">
+                        <img className="img-fluid" src={image2} alt />
+                      </a>
+                    </div>
+                  </div>
+                  <div className="col-auto">
+                    <div className="trusted-logo">
+                      <a href="#">
+                        <img className="img-fluid" src={image3} alt />
+                      </a>
+                    </div>
+                  </div>
+                  <div className="col-auto">
+                    <div className="trusted-logo">
+                      <a href="#">
+                        <img className="img-fluid" src={image4} alt />
+                      </a>
+                    </div>
+                  </div>
+                  <div className="col-auto">
+                    <div className="trusted-logo">
+                      <a href="#">
+                        <img className="img-fluid" src={image5} alt />
+                      </a>
+                    </div>
+                  </div>
+                </div> */}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="appss section-padding">
+          <div className="container">
+            <div className="row align-items-center justify-content-between">
+              <div className="col-xl-7 col-lg-6 col-md-6">
+                <div className="appss-content">
+                  <h2>The secure app to store crypto yourself</h2>
+                  <ul>
+                    <li>
+                      <i className="la la-check" /> All your digital assets in
+                      one place
+                    </li>
+                    <li>
+                      <i className="la la-check" /> Use Decentralized Apps
+                    </li>
+                    <li>
+                      <i className="la la-check" /> Pay friends, not addresses
+                    </li>
+                  </ul>
+                  <div className="mt-4">
+                    <a href="#" className="btn btn-primary my-1 waves-effect">
+                      <img src={android} alt />
+                    </a>
+                    <a href="#" className="btn btn-primary my-1 waves-effect">
+                      <img src={apple} alt />
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div className="col-xl-4 col-lg-6 col-md-6">
+                <div className="appss-img">
+                  <img className="img-fluid" src={app} alt />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="blog bg-light section-padding">
+          <div className="container">
+            <div className="row justify-content-center">
+              <div className="col-xl-6">
+                <div className="section-title text-center">
+                  <h2>Blog</h2>
+                </div>
+              </div>
+            </div>
+            <div className="row">
+              <div className="col-xl-4 col-lg-4 col-md-12">
+                <div className="blog-grid">
+                  <div className="card">
+                    <img className="img-fluid card-img-top" src={image6} alt />
+                    <div className="card-body">
+                      <a href="blog-single.html">
+                        <h4 className="card-title">
+                          Why does Litecoin need MimbleWimble?
+                        </h4>
+                      </a>
+                      <p className="card-text">
+                        Cras chinwag brown bread Eaton cracking goal so I said a
+                        load of old tosh baking cakes.!
+                      </p>
+                    </div>
+                    <div className="card-footer">
+                      <div className="meta-info">
+                        <a href="#" className="author">
+                          <img src={image7} alt /> Admin
+                        </a>
+                        <a href="#" className="post-date">
+                          <i className="la la-calendar" /> 31 July, 2019
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="col-xl-4 col-lg-4 col-md-12">
+                <div className="blog-grid">
+                  <div className="card">
+                    <img className="img-fluid card-img-top" src={image8} alt />
+                    <div className="card-body">
+                      <a href="blog-single.html">
+                        <h4 className="card-title">
+                          How to securely store your HD wallet seeds?
+                        </h4>
+                      </a>
+                      <p className="card-text">
+                        Cras chinwag brown bread Eaton cracking goal so I said a
+                        load of old tosh baking cakes.!
+                      </p>
+                    </div>
+                    <div className="card-footer">
+                      <div className="meta-info">
+                        <a href="#" className="author">
+                          <img src={image9} alt /> Admin
+                        </a>
+                        <a href="#" className="post-date">
+                          <i className="la la-calendar" /> 31 July, 2019
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="col-xl-4 col-lg-4 col-md-12">
+                <div className="blog-grid">
+                  <div className="card">
+                    <img className="img-fluid card-img-top" src={image10} alt />
+                    <div className="card-body">
+                      <a href="blog-single.html">
+                        <h4 className="card-title">
+                          Exclusive Interview With Xinxi Wang Of Litecoin
+                        </h4>
+                      </a>
+                      <p className="card-text">
+                        Cras chinwag brown bread Eaton cracking goal so I said a
+                        load of old tosh baking cakes.!
+                      </p>
+                    </div>
+                    <div className="card-footer">
+                      <div className="meta-info">
+                        <a href="#" className="author">
+                          <img src={image11} alt /> Admin
+                        </a>
+                        <a href="#" className="post-date">
+                          <i className="la la-calendar" /> 31 July, 2019
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="get-touch section-padding">
+          <div className="container">
+            <div className="row justify-content-center">
+              <div className="col-xl-6">
+                <div className="section-title">
+                  <h2>Get in touch. Stay in touch.</h2>
+                </div>
+              </div>
+            </div>
+            <div className="row">
+              <div className="col-xl-3 col-lg-6 col-md-6">
+                <div className="get-touch-content">
+                  <span>
+                    <i className="fas fa-headset" />
+                  </span>
+                  <h4>24 / 7 Support</h4>
+                  <p>
+                    Got a problem? Just get in touch. Our support team is
+                    available 24/7.
+                  </p>
+                </div>
+              </div>
+              <div className="col-xl-3 col-lg-6 col-md-6">
+                <div className="get-touch-content">
+                  <span>
+                    <i className="fas fa-blog" />
+                  </span>
+                  <h4>Tradee Blog</h4>
+                  <p>
+                    News and updates from the world’s leading cryptocurrency
+                    exchange.
+                  </p>
+                </div>
+              </div>
+              <div className="col-xl-3 col-lg-6 col-md-6">
+                <div className="get-touch-content">
+                  <span>
+                    <i className="fas fa-briefcase" />
+                  </span>
+                  <h4>Careers</h4>
+                  <p>
+                    Help build the future of technology. Start your new career
+                    at Tradee.
+                  </p>
+                </div>
+              </div>
+              <div className="col-xl-3 col-lg-6 col-md-6">
+                <div className="get-touch-content">
+                  <span>
+                    <i className="fas fa-users" />
+                  </span>
+                  <h4>Community</h4>
+                  <p>
+                    Tradee is global. Join the discussion in our worldwide
+                    communities.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="bottom section-padding">
+          <div className="container">
+            <div className="row">
+              <div className="col-xl-4">
+                <div className="bottom-logo">
+                  <img className="pb-3" src={logow} alt />
+                  <p>
+                    Tradee is a unique and beautiful collection of UI elements
+                    that are all flexible and modular. A complete and
+                    customizable solution to building the website of your
+                    dreams.
+                  </p>
+                </div>
+              </div>
+              <div className="col-xl-2">
+                <div className="bottom-widget">
+                  <h4 className="widget-title">Company</h4>
+                  <ul>
+                    <li>
+                      <a href="#">About</a>
+                    </li>
+                    <li>
+                      <a href="#">Career</a>
+                    </li>
+                    <li>
+                      <a href="#">Affiliate</a>
+                    </li>
+                    <li>
+                      <a href="#">Our Partner</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div className="col-xl-2">
+                <div className="bottom-widget">
+                  <h4 className="widget-title">Support</h4>
+                  <ul>
+                    <li>
+                      <a href="#">Ticket</a>
+                    </li>
+                    <li>
+                      <a href="#">FAQ</a>
+                    </li>
+                    <li>
+                      <a href="#">Blog</a>
+                    </li>
+                    <li>
+                      <a href="#">Helpdesk</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div className="col-xl-4">
+                <div className="bottom-widget">
+                  <h4 className="widget-title">Exchange Pair</h4>
+                  <div className="row">
+                    <div className="col-xl-6">
+                      <ul>
+                        <li>
+                          <a href="#">ETH to BTC</a>
+                        </li>
+                        <li>
+                          <a href="#">BTC to ETH</a>
+                        </li>
+                        <li>
+                          <a href="#">LTC to ETH</a>
+                        </li>
+                        <li>
+                          <a href="#">USDT to BTC</a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div className="col-xl-6">
+                      <ul>
+                        <li>
+                          <a href="#">BTC to USDT</a>
+                        </li>
+                        <li>
+                          <a href="#">LTC to BTC</a>
+                        </li>
+                        <li>
+                          <a href="#">XMR to BTC</a>
+                        </li>
+                        <li>
+                          <a href="#">ETC to DASH</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="footer">
+          <div className="container">
+            <div className="row">
+              <div className="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                <div className="copyright">
+                  <p>
+                    © Copyright 2019 <a href="#">Tradee</a> I All Rights
+                    Reserved
+                  </p>
+                </div>
+              </div>
+              <div className="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                <div className="footer-social">
+                  <ul>
+                    <li>
+                      <a href="#">
+                        <i className="fab fa-facebook" />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <i className="fab fa-twitter" />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <i className="fab fa-linkedin" />
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <i className="fab fa-youtube" />
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
