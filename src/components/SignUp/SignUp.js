@@ -155,13 +155,13 @@ const SignUp = () => {
           ></div>
           <seokit />
           <div className="dark:bg-muted-800 flex min-h-screen bg-white">
-            <div className="user-bg   relative hidden w-0 flex-1 items-center justify-center lg:flex lg:w-50">
+            <div className="bg-primary   relative hidden w-0 flex-1 items-center justify-center lg:flex lg:w-50">
               <div className="mx-auto w-full h-full flex items-center justify-center max-w-4xl">
                 <img className="max-w-xl " src={MobileApp} alt="" width="400" />
               </div>
             </div>
-            <div className="relative  user-bg flex flex-1 flex-col justify-center px-6 py-12 lg:w-50 lg:flex-none">
-              <div className=" relative mb:mx-auto w-full max-w-sm ">
+            <div className="relative  bg-primary flex flex-1 flex-col justify-center px-6 py-12 lg:w-50 lg:flex-none">
+              <div className=" relative mb:mx-auto w-full max-w-sm form-logon ">
                 <div className="flex w-full items-center justify-between">
                   <NavLink
                     to="/"
@@ -179,19 +179,19 @@ const SignUp = () => {
                       viewBox="0 0 24 24"
                     >
                       <path
-                        fill="currentColor"
+                        fill="#8492a6"
                         d="m1.027 11.993l4.235 4.25L6.68 14.83l-1.821-1.828L22.974 13v-2l-18.12.002L6.69 9.174L5.277 7.757z"
                       ></path>
                     </svg>
-                    <span>Back to Home</span>
+                    <span className="p-color">Back to Home</span>
                   </NavLink>
                 </div>
                 <div>
-                  <h2 className="text-muted-400 font-heading txts font-medium mt-6">
+                  <h2 className="p-color font-heading txts font-medium mt-6">
                     {" "}
                     Create Your Blockchain.com Account
                   </h2>
-                  <p className="font-alt text-sm font-normal leading-normal leading-normal text-muted-400 mb-6">
+                  <p className="font-alt text-sm font-normal leading-normal leading-normal l-color mb-6">
                     Get Started For Free by Signing Up Now.
                   </p>
                 </div>
@@ -201,7 +201,7 @@ const SignUp = () => {
                       <div className="space-y-4">
                         <div className="relative">
                           <label
-                            className="nui-label w-full pb-1 text-[0.825rem]"
+                            className="nui-label w-full pb-1 l-color font-bold text-[0.825rem]"
                             htmlFor="ninja-input-12"
                           >
                             First Name
@@ -212,7 +212,7 @@ const SignUp = () => {
                               onChange={handleInput}
                               value={userData.firstName}
                               name="firstName"
-                              className="nui-focus border-muted-300 text-muted-600 placeholder:text-muted-300 dark:border-muted-700 dark:bg-muted-900/75 dark:text-muted-200 dark:placeholder:text-muted-500 dark:focus:border-muted-700 peer w-full border bg-white font-sans transition-all duration-300 disabled:cursor-not-allowed disabled:opacity-75 px-2 h-10 py-2 text-sm leading-5 pe-4 ps-9 rounded-xl"
+                              className="nui-focus button-bg  placeholder:text-muted-300 dark:border-muted-700 dark:bg-muted-900/75 dark:text-muted-200 dark:placeholder:text-muted-500 dark:focus:border-muted-700 peer w-full border bg-white font-sans transition-all duration-300 disabled:cursor-not-allowed disabled:opacity-75 px-2 h-10 py-2 text-sm leading-5 pe-4 ps-9 rounded-xl"
                               placeholder="Ex: John "
                             />
                             {/**/}
@@ -240,7 +240,7 @@ const SignUp = () => {
                         </div>
                         <div className="relative">
                           <label
-                            className="nui-label w-full pb-1 text-[0.825rem]"
+                            className="nui-label l-color font-bold w-full pb-1 text-[0.825rem]"
                             htmlFor="ninja-input-12"
                           >
                             Last Name
@@ -251,7 +251,7 @@ const SignUp = () => {
                               onChange={handleInput}
                               value={userData.lastName}
                               name="lastName"
-                              className="nui-focus border-muted-300 text-muted-600 placeholder:text-muted-300 dark:border-muted-700 dark:bg-muted-900/75 dark:text-muted-200 dark:placeholder:text-muted-500 dark:focus:border-muted-700 peer w-full border bg-white font-sans transition-all duration-300 disabled:cursor-not-allowed disabled:opacity-75 px-2 h-10 py-2 text-sm leading-5 pe-4 ps-9 rounded-xl"
+                              className="nui-focus button-bg border-muted-300 text-muted-600 placeholder:text-muted-300 dark:border-muted-700 dark:bg-muted-900/75 dark:text-muted-200 dark:placeholder:text-muted-500 dark:focus:border-muted-700 peer w-full border bg-white font-sans transition-all duration-300 disabled:cursor-not-allowed disabled:opacity-75 px-2 h-10 py-2 text-sm leading-5 pe-4 ps-9 rounded-xl"
                               placeholder="Ex: Doe"
                             />
                             {/**/}
@@ -279,7 +279,7 @@ const SignUp = () => {
                         </div>
                         <div className="relative">
                           <label
-                            className="nui-label w-full pb-1 text-[0.825rem]"
+                            className="nui-label l-color font-bold w-full pb-1 text-[0.825rem]"
                             htmlFor="ninja-input-14"
                           >
                             Email address
@@ -291,7 +291,7 @@ const SignUp = () => {
                               onChange={handleInput}
                               value={userData.email}
                               name="email"
-                              className="nui-focus border-muted-300 text-muted-600 placeholder:text-muted-300 dark:border-muted-700 dark:bg-muted-900/75 dark:text-muted-200 dark:placeholder:text-muted-500 dark:focus:border-muted-700 peer w-full border bg-white font-sans transition-all duration-300 disabled:cursor-not-allowed disabled:opacity-75 px-2 h-10 py-2 text-sm leading-5 pe-4 ps-9 rounded-xl"
+                              className="nui-focus button-bg border-muted-300 text-muted-600 placeholder:text-muted-300 dark:border-muted-700 dark:bg-muted-900/75 dark:text-muted-200 dark:placeholder:text-muted-500 dark:focus:border-muted-700 peer w-full border bg-white font-sans transition-all duration-300 disabled:cursor-not-allowed disabled:opacity-75 px-2 h-10 py-2 text-sm leading-5 pe-4 ps-9 rounded-xl"
                               placeholder="Ex: johndoe@company.com"
                             />
                             {/**/}
@@ -319,7 +319,7 @@ const SignUp = () => {
                         </div>
                         <div className="relative">
                           <label
-                            className="nui-label w-full pb-1 text-[0.825rem]"
+                            className="nui-label l-color font-bold w-full pb-1 text-[0.825rem]"
                             htmlFor="ninja-input-12"
                           >
                             Phone
@@ -345,7 +345,7 @@ const SignUp = () => {
                               }
                               value={userData.phone}
                               name="phone"
-                              className="nui-focus border-muted-300 text-muted-600 placeholder:text-muted-300 dark:border-muted-700 dark:bg-muted-900/75 dark:text-muted-200 dark:placeholder:text-muted-500 dark:focus:border-muted-700 peer w-full border bg-white font-sans transition-all duration-300 disabled:cursor-not-allowed disabled:opacity-75 px-2 h-10 py-2 text-sm leading-5 pe-4 ps-9 rounded-xl"
+                              className="nui-focus button-bg placeholder:text-muted-300 dark:border-muted-700 dark:bg-muted-900/75 dark:text-muted-200 dark:placeholder:text-muted-500 dark:focus:border-muted-700 peer w-full border bg-white font-sans transition-all duration-300 disabled:cursor-not-allowed disabled:opacity-75 px-2 h-10 py-2 text-sm leading-5 pe-4 ps-9 rounded-xl"
                               placeholder="Ex: 1 234 5678"
                             />
                             {/**/}
@@ -368,7 +368,7 @@ const SignUp = () => {
                         </div>
                         <div className="relative">
                           <label
-                            className="nui-label w-full pb-1 text-[0.825rem]"
+                            className="nui-label l-color font-bold w-full pb-1 text-[0.825rem]"
                             htmlFor="ninja-input-15"
                           >
                             Password
@@ -380,7 +380,7 @@ const SignUp = () => {
                               onChange={handleInput}
                               value={userData.password}
                               name="password"
-                              className="nui-focus border-muted-300 text-muted-600 placeholder:text-muted-300 dark:border-muted-700 dark:bg-muted-900/75 dark:text-muted-200 dark:placeholder:text-muted-500 dark:focus:border-muted-700 peer w-full border bg-white font-sans transition-all duration-300 disabled:cursor-not-allowed disabled:opacity-75 px-2 h-10 py-2 text-sm leading-5 pe-4 ps-9 rounded-xl"
+                              className="nui-focus button-bg placeholder:text-muted-300 dark:border-muted-700 dark:bg-muted-900/75 dark:text-muted-200 dark:placeholder:text-muted-500 dark:focus:border-muted-700 peer w-full border bg-white font-sans transition-all duration-300 disabled:cursor-not-allowed disabled:opacity-75 px-2 h-10 py-2 text-sm leading-5 pe-4 ps-9 rounded-xl"
                               placeholder="********"
                             />
                             {/**/}
@@ -459,7 +459,7 @@ const SignUp = () => {
                         </div>
                         <div className="relative">
                           <label
-                            className="nui-label w-full pb-1 text-[0.825rem]"
+                            className="nui-label l-color font-bold w-full pb-1 text-[0.825rem]"
                             htmlFor="ninja-input-15"
                           >
                             Confirm password
@@ -471,7 +471,7 @@ const SignUp = () => {
                               onChange={handleInput}
                               value={userData.cpassword}
                               name="cpassword"
-                              className="nui-focus border-muted-300 text-muted-600 placeholder:text-muted-300 dark:border-muted-700 dark:bg-muted-900/75 dark:text-muted-200 dark:placeholder:text-muted-500 dark:focus:border-muted-700 peer w-full border bg-white font-sans transition-all duration-300 disabled:cursor-not-allowed disabled:opacity-75 px-2 h-10 py-2 text-sm leading-5 pe-4 ps-9 rounded-xl"
+                              className="nui-focus button-bg border-muted-300 text-muted-600 placeholder:text-muted-300 dark:border-muted-700 dark:bg-muted-900/75 dark:text-muted-200 dark:placeholder:text-muted-500 dark:focus:border-muted-700 peer w-full border bg-white font-sans transition-all duration-300 disabled:cursor-not-allowed disabled:opacity-75 px-2 h-10 py-2 text-sm leading-5 pe-4 ps-9 rounded-xl"
                               placeholder="********"
                             />
                             {/**/}
@@ -602,7 +602,7 @@ const SignUp = () => {
                           </div>
                         </div>
                         <div className="relative">
-                          <label className="nui-label w-full pb-1 text-[0.825rem]">
+                          <label className="nui-label l-color font-bold w-full pb-1 text-[0.825rem]">
                             Country
                           </label>
                           <div className="group/nui-input relative">
@@ -611,7 +611,7 @@ const SignUp = () => {
                               onChange={handleInput}
                               value={userData.country}
                               name="country"
-                              className="nui-focus border-muted-300 text-muted-600 placeholder:text-muted-300 dark:border-muted-700 dark:bg-muted-900/75 dark:text-muted-200 dark:placeholder:text-muted-500 dark:focus:border-muted-700 peer w-full border bg-white font-sans transition-all duration-300 disabled:cursor-not-allowed disabled:opacity-75 px-2 h-10 py-2 text-sm leading-5 pe-4 ps-9 rounded-xl"
+                              className="nui-focus button-bg border-muted-300 text-muted-600 placeholder:text-muted-300 dark:border-muted-700 dark:bg-muted-900/75 dark:text-muted-200 dark:placeholder:text-muted-500 dark:focus:border-muted-700 peer w-full border bg-white font-sans transition-all duration-300 disabled:cursor-not-allowed disabled:opacity-75 px-2 h-10 py-2 text-sm leading-5 pe-4 ps-9 rounded-xl"
                               placeholder="Your Coutry"
                             />
                             {/**/}
@@ -642,7 +642,7 @@ const SignUp = () => {
                           </div>
                         </div>
                         <div className="relative">
-                          <label className="nui-label w-full pb-1 text-[0.825rem]">
+                          <label className="nui-label l-color font-bold w-full pb-1 text-[0.825rem]">
                             Postal Code
                           </label>
                           <div className="group/nui-input relative">
@@ -651,7 +651,7 @@ const SignUp = () => {
                               onChange={handleInput}
                               value={userData.postalCode}
                               name="postalCode"
-                              className="nui-focus border-muted-300 text-muted-600 placeholder:text-muted-300 dark:border-muted-700 dark:bg-muted-900/75 dark:text-muted-200 dark:placeholder:text-muted-500 dark:focus:border-muted-700 peer w-full border bg-white font-sans transition-all duration-300 disabled:cursor-not-allowed disabled:opacity-75 px-2 h-10 py-2 text-sm leading-5 pe-4 ps-9 rounded-xl"
+                              className="nui-focus button-bg border-muted-300 text-muted-600 placeholder:text-muted-300 dark:border-muted-700 dark:bg-muted-900/75 dark:text-muted-200 dark:placeholder:text-muted-500 dark:focus:border-muted-700 peer w-full border bg-white font-sans transition-all duration-300 disabled:cursor-not-allowed disabled:opacity-75 px-2 h-10 py-2 text-sm leading-5 pe-4 ps-9 rounded-xl"
                               placeholder="Your Postal Code"
                             />
                             {/**/}
@@ -682,7 +682,7 @@ const SignUp = () => {
                           </div>
                         </div>
                         <div className="relative">
-                          <label className="nui-label w-full pb-1 text-[0.825rem]">
+                          <label className="nui-label l-color font-bold  w-full pb-1 text-[0.825rem]">
                             City
                           </label>
                           <div className="group/nui-input relative">
@@ -691,7 +691,7 @@ const SignUp = () => {
                               onChange={handleInput}
                               value={userData.city}
                               name="city"
-                              className="nui-focus border-muted-300 text-muted-600 placeholder:text-muted-300 dark:border-muted-700 dark:bg-muted-900/75 dark:text-muted-200 dark:placeholder:text-muted-500 dark:focus:border-muted-700 peer w-full border bg-white font-sans transition-all duration-300 disabled:cursor-not-allowed disabled:opacity-75 px-2 h-10 py-2 text-sm leading-5 pe-4 ps-9 rounded-xl"
+                              className="nui-focus button-bg border-muted-300 text-muted-600 placeholder:text-muted-300 dark:border-muted-700 dark:bg-muted-900/75 dark:text-muted-200 dark:placeholder:text-muted-500 dark:focus:border-muted-700 peer w-full border bg-white font-sans transition-all duration-300 disabled:cursor-not-allowed disabled:opacity-75 px-2 h-10 py-2 text-sm leading-5 pe-4 ps-9 rounded-xl"
                               placeholder="Your City"
                             />
                             {/**/}
@@ -722,7 +722,7 @@ const SignUp = () => {
                           </div>
                         </div>
                         <div className="relative">
-                          <label className="nui-label w-full pb-1 text-[0.825rem]">
+                          <label className="nui-label w-full l-color font-bold  pb-1 text-[0.825rem]">
                             Address
                           </label>
                           <div className="group/nui-input relative">
@@ -731,7 +731,7 @@ const SignUp = () => {
                               onChange={handleInput}
                               value={userData.address}
                               name="address"
-                              className="nui-focus border-muted-300 text-muted-600 placeholder:text-muted-300 dark:border-muted-700 dark:bg-muted-900/75 dark:text-muted-200 dark:placeholder:text-muted-500 dark:focus:border-muted-700 peer w-full border bg-white font-sans transition-all duration-300 disabled:cursor-not-allowed disabled:opacity-75 px-2 h-10 py-2 text-sm leading-5 pe-4 ps-9 rounded-xl"
+                              className="nui-focus button-bg border-muted-300 text-muted-600 placeholder:text-muted-300 dark:border-muted-700 dark:bg-muted-900/75 dark:text-muted-200 dark:placeholder:text-muted-500 dark:focus:border-muted-700 peer w-full border bg-white font-sans transition-all duration-300 disabled:cursor-not-allowed disabled:opacity-75 px-2 h-10 py-2 text-sm leading-5 pe-4 ps-9 rounded-xl"
                               placeholder="Your Address"
                             />
                             {/**/}
@@ -767,12 +767,12 @@ const SignUp = () => {
                           <div className="nui-focus group/nui-checkbox relative flex h-5 w-5 shrink-0 cursor-pointer items-center justify-center overflow-hidden rounded-md">
                             <input
                               id="ninja-input-16"
-                              className="peer absolute z-20 h-5 w-5 cursor-pointer opacity-0"
+                              className="peer absolute button-bg z-20 h-5 w-5 cursor-pointer opacity-0"
                               type="checkbox"
                               onClick={toggleagree}
                               name="checkbox"
                             />
-                            <div className="border-muted-400 dark:border-muted-700 dark:bg-muted-700 absolute start-0 top-0 z-0 h-full w-full border-2 bg-white peer-checked:border-current peer-indeterminate:border-current peer-checked:dark:border-current peer-indeterminate:dark:border-current rounded-md"></div>
+                            <div className="button-bg absolute start-0 top-0 z-0 h-full w-full border-2 bg-white peer-checked:border-current peer-indeterminate:border-current peer-checked:dark:border-current peer-indeterminate:dark:border-current rounded-md"></div>
                             <svg
                               aria-hidden="true"
                               viewBox="0 0 17 12"
@@ -801,7 +801,7 @@ const SignUp = () => {
                           <div className="inline-flex flex-col">
                             <label
                               htmlFor="ninja-input-16"
-                              className="text-muted-400 ms-1 cursor-pointer select-none font-sans text-sm"
+                              className="text-muted-400 ms-1 p-color font-bold  cursor-pointer select-none font-sans text-sm"
                             >
                               I Agree to the Terms &amp; Conditions
                             </label>
@@ -816,11 +816,11 @@ const SignUp = () => {
                             data-v-71bb21a6
                             disabled={isloading}
                             type="submit"
-                            className="is-button rounded-xl bg-primary-500 dark:bg-primary-500 hover:enabled:bg-primary-400 dark:hover:enabled:bg-primary-400 text-white hover:enabled:shadow-lg hover:enabled:shadow-primary-500/50 dark:hover:enabled:shadow-primary-800/20 focus-visible:outline-primary-400/70 focus-within:outline-primary-400/70 focus-visible:bg-primary-500 active:enabled:bg-primary-500 dark:focus-visible:outline-primary-400 dark:focus-within:outline-primary-400 dark:focus-visible:bg-primary-500 dark:active:enabled:bg-primary-500 !h-11 w-full"
+                            className="is-button btn-primarys rounded-xl bg-primary-500 dark:bg-primary-500 hover:enabled:bg-primary-400 dark:hover:enabled:bg-primary-400 text-white hover:enabled:shadow-lg hover:enabled:shadow-primary-500/50 dark:hover:enabled:shadow-primary-800/20 focus-visible:outline-primary-400/70 focus-within:outline-primary-400/70 focus-visible:bg-primary-500 active:enabled:bg-primary-500 dark:focus-visible:outline-primary-400 dark:focus-within:outline-primary-400 dark:focus-visible:bg-primary-500 dark:active:enabled:bg-primary-500 !h-11 w-full"
                           >
                             {isloading ? (
                               <div>
-                                <div className="nui-placeload animate-nui-placeload h-4 w-8 rounded mx-auto"></div>
+                                <div className="nui-placeload  animate-nui-placeload h-4 w-8 rounded mx-auto"></div>
                               </div>
                             ) : (
                               "Create Account"
@@ -829,8 +829,10 @@ const SignUp = () => {
                         </div>
                       </div>
                     </form>
-                    <p className="text-muted-400 mt-4 flex justify-between font-sans text-xs leading-5">
-                      <span>Already have a Blockchain.com Account? </span>
+                    <p className="p-color mt-4 flex justify-between font-sans text-xs leading-5">
+                      <span className="p-color font-bold">
+                        Already have a Blockchain.com Account?{" "}
+                      </span>
                       <NavLink
                         to="/auth/login"
                         className="text-primary-600 hover:text-primary-500 font-medium underline-offset-4 transition duration-150 ease-in-out hover:underline"

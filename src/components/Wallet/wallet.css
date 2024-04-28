@@ -3,7 +3,28 @@
   margin: 0;
   box-sizing: border-box;
 }
-
+.form-logon {
+  background-color: white;
+  padding: 30px;
+  border-radius: 5px;
+  box-sizing: content-box;
+}
+.p-color {
+  color: #8492a6;
+}
+.btn-primarys {
+  color: #fff !important;
+  background-color: #6e00ff !important;
+  border-color: #6e00ff !important;
+}
+.button-bg {
+  color: #273444 !important;
+  background: white !important;
+  border: 1px solid #dadde1 !important;
+}
+.l-color {
+  color: #273444;
+}
 .eVUBqp {
   display: flex;
   flex-direction: column;

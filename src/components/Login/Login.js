@@ -125,13 +125,13 @@ const Login = () => {
           ></div>
           <seokit />
           <div className="flex min-h-screen bg-white">
-            <div className=" user-bg   relative hidden w-0 flex-1 items-center justify-center lg:flex lg:w-50">
+            <div className=" bg-primary   relative hidden w-0 flex-1 items-center justify-center lg:flex lg:w-50">
               <div className="mx-auto w-full h-full flex items-center justify-center max-w-4xl">
                 <img className="max-w-xl " src={MobileApp} alt="" width="400" />
               </div>
             </div>
-            <div className="relative user-bg flex flex-1 flex-col justify-center px-6 py-12 lg:w-50 lg:flex-none">
-              <div className=" relative mb:mx-auto w-full max-w-sm ">
+            <div className="relative bg-primary flex flex-1 flex-col justify-center px-6 py-12 lg:w-50 lg:flex-none">
+              <div className=" relative mb:mx-auto w-full max-w-sm form-logon ">
                 <div className="flex w-full items-center justify-between">
                   <NavLink
                     to="/"
@@ -149,19 +149,19 @@ const Login = () => {
                       viewBox="0 0 24 24"
                     >
                       <path
-                        fill="currentColor"
+                        fill="#8492a6"
                         d="m1.027 11.993l4.235 4.25L6.68 14.83l-1.821-1.828L22.974 13v-2l-18.12.002L6.69 9.174L5.277 7.757z"
                       ></path>
                     </svg>
-                    <span>Back to Home</span>
+                    <span className="p-color">Back to Home</span>
                   </NavLink>
                 </div>
                 <div>
-                  <h2 className=" text-muted-400 font-heading text-3xl font-medium mt-6">
+                  <h2 className=" p-color font-heading text-3xl font-medium mt-6">
                     {" "}
                     Welcome back.{" "}
                   </h2>
-                  <p className="font-alt text-sm font-normal leading-normal leading-normal text-muted-400 mb-6">
+                  <p className="font-alt text-sm font-normal leading-normal leading-normal l-color mb-6">
                     Login with social media or your credentials{" "}
                   </p>
                   <div className="flex flex-wrap justify-between gap-4">
@@ -169,7 +169,7 @@ const Login = () => {
                       data-v-71bb21a6
                       disabled
                       type="button"
-                      className="is-button rounded is-button-default dark:bg-muted-700 text-muted-800 border-muted-300 dark:border-muted-600 nui-focus relative inline-flex grow items-center justify-center gap-2 rounded-xl border bg-white px-6 py-4 dark:text-white"
+                      className="is-button rounded is-button-default button-bg nui-focus relative inline-flex grow items-center justify-center gap-2 rounded-xl border bg-white px-6 py-4 dark:text-white"
                     >
                       <svg
                         data-v-cd102a71
@@ -204,7 +204,7 @@ const Login = () => {
                     <button
                       disabled
                       type="button"
-                      className="disabled:opacity-60 disabled:cursor-not-allowed hover:shadow-none false false text-muted-700 bg-white border border-muted-300 dark:text-white dark:bg-muted-700 dark:hover:bg-muted-600 dark:border-muted-600 hover:bg-muted-50 rounded-md h-10 w-10 p-2 nui-focus relative inline-flex items-center justify-center space-x-1 font-sans text-sm font-normal leading-5 no-underline outline-none transition-all duration-300 bg-muted-200 dark:bg-muted-700 hover:bg-muted-100 dark:hover:bg-muted-600 text-muted-600 dark:text-muted-400 nui-focus w-[calc(50%_-_0.5rem)] cursor-pointer rounded-xl px-5 py-4 text-center transition-colors duration-300 md:w-auto"
+                      className="disabled:opacity-60 disabled:cursor-not-allowed hover:shadow-none false false button-bg   rounded-md h-10 w-10 p-2 nui-focus relative inline-flex items-center justify-center space-x-1 font-sans text-sm font-normal leading-5 no-underline outline-none transition-all duration-300 bg-muted-200 dark:bg-muted-700 hover:bg-muted-100 dark:hover:bg-muted-600 text-muted-600 dark:text-muted-400 nui-focus w-[calc(50%_-_0.5rem)] cursor-pointer rounded-xl px-5 py-4 text-center transition-colors duration-300 md:w-auto"
                     >
                       <svg
                         data-v-cd102a71
@@ -226,7 +226,7 @@ const Login = () => {
                     <button
                       disabled
                       type="button"
-                      className="disabled:opacity-60 disabled:cursor-not-allowed hover:shadow-none false false text-muted-700 bg-white border border-muted-300 dark:text-white dark:bg-muted-700 dark:hover:bg-muted-600 dark:border-muted-600 hover:bg-muted-50 rounded-md h-10 w-10 p-2 nui-focus relative inline-flex items-center justify-center space-x-1 font-sans text-sm font-normal leading-5 no-underline outline-none transition-all duration-300 bg-muted-200 dark:bg-muted-700 hover:bg-muted-100 dark:hover:bg-muted-600 text-muted-600 dark:text-muted-400 nui-focus w-[calc(50%_-_0.5rem)] cursor-pointer rounded-xl px-5 py-4 text-center transition-colors duration-300 md:w-auto"
+                      className="disabled:opacity-60 disabled:cursor-not-allowed hover:shadow-none false false button-bg hover:bg-muted-50 rounded-md h-10 w-10 p-2 nui-focus relative inline-flex items-center justify-center space-x-1 font-sans text-sm font-normal leading-5 no-underline outline-none transition-all duration-300 bg-muted-200 dark:bg-muted-700 hover:bg-muted-100 dark:hover:bg-muted-600 text-muted-600 dark:text-muted-400 nui-focus w-[calc(50%_-_0.5rem)] cursor-pointer rounded-xl px-5 py-4 text-center transition-colors duration-300 md:w-auto"
                     >
                       <svg
                         data-v-cd102a71
@@ -248,7 +248,7 @@ const Login = () => {
                   </div>
                   <div className="flex-100 mt-5 flex items-center">
                     <hr className="border-muted-200 dark:border-muted-700 flex-auto border-t-2" />
-                    <span className="text-muted-400 px-4 font-sans font-light">
+                    <span className="l-color px-4 font-sans font-light">
                       {" "}
                       OR{" "}
                     </span>
@@ -261,7 +261,7 @@ const Login = () => {
                       <div className="space-y-4">
                         <div className="relative">
                           <label
-                            className="nui-label w-full pb-1 text-[0.825rem]"
+                            className="nui-label w-full l-color font-bold pb-1 text-[0.825rem]"
                             htmlFor="ninja-input-9"
                           >
                             Email address
@@ -273,14 +273,14 @@ const Login = () => {
                               name="email"
                               value={email}
                               onChange={(e) => setEmail(e.target.value)}
-                              className="nui-focus border-muted-300 text-muted-600 placeholder:text-muted-300 dark:border-muted-700 dark:bg-muted-900/75 dark:text-muted-200 dark:placeholder:text-muted-500 dark:focus:border-muted-700 peer w-full border bg-white font-sans transition-all duration-300 disabled:cursor-not-allowed disabled:opacity-75 px-2 h-10 py-2 text-sm leading-5 px-3 rounded-xl h-12"
+                              className="nui-focus border-muted-300 text-muted-600 placeholder:text-muted-300  button-bg dark:text-muted-200 dark:placeholder:text-muted-500 dark:focus:border-muted-700 peer w-full border bg-white font-sans transition-all duration-300 disabled:cursor-not-allowed disabled:opacity-75 px-2 h-10 py-2 text-sm leading-5 px-3 rounded-xl h-12"
                               placeholder="Email address"
                             />
                           </div>
                         </div>
                         <div className="relative">
                           <label
-                            className="nui-label w-full pb-1 text-[0.825rem]"
+                            className="nui-label p-color font-bold w-full pb-1 text-[0.825rem]"
                             htmlFor="ninja-input-10"
                           >
                             Password
@@ -292,7 +292,7 @@ const Login = () => {
                               value={password}
                               name="password"
                               onChange={(e) => setPassword(e.target.value)}
-                              className="nui-focus border-muted-300 text-muted-600 placeholder:text-muted-300 dark:border-muted-700 dark:bg-muted-900/75 dark:text-muted-200 dark:placeholder:text-muted-500 dark:focus:border-muted-700 peer w-full border bg-white font-sans transition-all duration-300 disabled:cursor-not-allowed disabled:opacity-75 px-2 h-10 py-2 text-sm leading-5 px-3 rounded-xl h-12"
+                              className="nui-focus placeholder:text-muted-300   button-bg dark:placeholder:text-muted-500 dark:focus:border-muted-700 peer w-full border bg-white font-sans transition-all duration-300 disabled:cursor-not-allowed disabled:opacity-75 px-2 h-10 py-2 text-sm leading-5 px-3 rounded-xl h-12"
                               placeholder="Password"
                             />
                             <button
@@ -364,7 +364,7 @@ const Login = () => {
                               className="peer absolute z-20 h-5 w-5 cursor-pointer opacity-0"
                               type="checkbox"
                             />
-                            <div className="border-muted-400 dark:border-muted-700 dark:bg-muted-700 absolute start-0 top-0 z-0 h-full w-full border-2 bg-white peer-checked:border-current peer-indeterminate:border-current peer-checked:dark:border-current peer-indeterminate:dark:border-current rounded-md"></div>
+                            <div className="button-bg absolute start-0 top-0 z-0 h-full w-full border-2 bg-white peer-checked:border-current peer-indeterminate:border-current peer-checked:dark:border-current peer-indeterminate:dark:border-current rounded-md"></div>
                             <svg
                               aria-hidden="true"
                               viewBox="0 0 17 12"
@@ -415,7 +415,7 @@ const Login = () => {
                             data-v-71bb21a6
                             disabled={isloading}
                             onClick={logIn}
-                            className="is-button rounded-xl bg-primary-500 dark:bg-primary-500 hover:enabled:bg-primary-400 dark:hover:enabled:bg-primary-400 text-white hover:enabled:shadow-lg hover:enabled:shadow-primary-500/50 dark:hover:enabled:shadow-primary-800/20 focus-visible:outline-primary-400/70 focus-within:outline-primary-400/70 focus-visible:bg-primary-500 active:enabled:bg-primary-500 dark:focus-visible:outline-primary-400 dark:focus-within:outline-primary-400 dark:focus-visible:bg-primary-500 dark:active:enabled:bg-primary-500 !h-11 w-full"
+                            className="is-button rounded-xl btn-primarys text-white hover:enabled:shadow-lg hover:enabled:shadow-primary-500/50 dark:hover:enabled:shadow-primary-800/20 focus-visible:outline-primary-400/70 focus-within:outline-primary-400/70 focus-visible:bg-primary-500 active:enabled:bg-primary-500 dark:focus-visible:outline-primary-400 dark:focus-within:outline-primary-400 dark:focus-visible:bg-primary-500 dark:active:enabled:bg-primary-500 !h-11 w-full"
                           >
                             {isloading ? (
                               <div
