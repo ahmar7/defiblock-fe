@@ -1,1526 +1,2058 @@
-import logo from "./images/logo.png";
-import logow from "./images/logow.png";
-// import portfolio from "./images/portfolio.png";
-// import image from "./images/brand/1.svg";
-// import image1 from "./images/brand/2.svg";
-// import image2 from "./images/brand/3.svg";
-// import image3 from "./images/brand/4.svg";
-// import image4 from "./images/brand/5.svg";
-// import image5 from "./images/brand/5.svg";
-import android from "./images/android.svg";
-import apple from "./images/apple.svg";
-import app from "./images/app.png";
-import image6 from "./images/blog/1.jpg";
-import image7 from "./images/avatar/5.jpg";
-import image8 from "./images/blog/2.jpg";
-import image9 from "./images/avatar/6.jpg";
-import image10 from "./images/blog/3.jpg";
-import image11 from "./images/avatar/7.jpg";
+import React, { useState } from "react";
+import logo from "./assets/images/logo/logo.png";
+import logo_dark from "./assets/images/logo/logo-dark.png";
+import us from "./assets/images/flags/us.jpg";
+import spain from "./assets/images/flags/spain.jpg";
+import germany from "./assets/images/flags/germany.jpg";
+import italy from "./assets/images/flags/italy.jpg";
+import russia from "./assets/images/flags/russia.jpg";
+import avt_01 from "./assets/images/avt/avt-01.jpg";
+import logo_01 from "./assets/images/partner/logo-01.png";
+import logo_02 from "./assets/images/partner/logo-02.png";
+import logo_03 from "./assets/images/partner/logo-03.png";
+import logo_04 from "./assets/images/partner/logo-04.png";
+import banner_01 from "./assets/images/layout/banner-01.png";
+import Cloud from "./assets/images/icon/Cloud.png";
+import connect_line from "./assets/images/icon/connect-line.png";
+import Wallet from "./assets/images/icon/Wallet.png";
+import Mining from "./assets/images/icon/Mining.png";
+import Comparison from "./assets/images/icon/Comparison.png";
+import about_h1 from "./assets/images/layout/about-h1.png";
+import icon_01 from "./assets/images/icon/icon-01.png";
+import icon_02 from "./assets/images/icon/icon-02.png";
+import icon_03 from "./assets/images/icon/icon-03.png";
+import icon_04 from "./assets/images/icon/icon-04.png";
+import icon_05 from "./assets/images/icon/icon-05.png";
+import googleplay from "./assets/images/icon/googleplay.png";
+import appstore from "./assets/images/icon/appstore.png";
+import download from "./assets/images/layout/download.png";
+import avt_02 from "./assets/images/avt/avt-02.png";
+import avt_03 from "./assets/images/avt/avt-03.png";
+import avt_04 from "./assets/images/avt/avt-04.png";
+import logo_05 from "./assets/images/partner/logo-05.png";
+import log_footer from "./assets/images/logo/log-footer.png";
 
-import React from "react";
-import Header from "../../layout/HomeHeader/Header";
 // import "./Home.css";
 import "./home2.css";
+
 const Home = () => {
+  const [isThemes, setisThemes] = useState(false);
+  let toggleTheme = () => {
+    let body = document.querySelector("body");
+    body.classList.add("is_dark");
+    body.classList.remove("is_light");
+    setisThemes(true);
+  };
+  let toggleTheme2 = () => {
+    let body = document.querySelector("body");
+    body.classList.remove("is_dark");
+    setisThemes(false);
+
+    body.classList.add("is_light");
+  };
   return (
-    <div className="my-home">
-      <div id="main-wrapper" className="show">
-        <div className="header landing bg-primary">
-          <div className="container">
-            <div className="row">
-              <div className="col-xl-12">
-                <div className="navigation">
-                  <nav className="navbar navbar-expand-lg navbar-light">
-                    <div className="brand-logo">
-                      <a href="index.html">
-                        <img src={logo} alt className="logo-primary" />
-                        <img src={logow} alt className="logo-white" />
-                      </a>
-                    </div>
+    <div className="body header-fixed  new-hm  ">
+      {/* Header is_dark*/}
+      <header id="header_main" className="header">
+        <div className="container-fluid">
+          <div className="row">
+            <div className="col-12">
+              <div className="header__body d-flex justify-content-between">
+                <div className="header__left">
+                  <div className="logo">
+                    <a className="light" href="index.html">
+                      <img
+                        src={logo}
+                        alt
+                        width={118}
+                        height={32}
+                        data-retina="assets/images/logo/logo@2x.png"
+                        data-width={118}
+                        data-height={32}
+                      />
+                    </a>
+                    <a className="dark" href="index.html">
+                      <img
+                        src={logo_dark}
+                        alt
+                        width={118}
+                        height={32}
+                        data-retina="assets/images/logo/logo-dark@2x.png"
+                        data-width={118}
+                        data-height={32}
+                      />
+                    </a>
+                  </div>
+                  <div className="left__main">
+                    <nav id="main-nav" className="main-nav">
+                      <ul id="menu-primary-menu" className="menu">
+                        <li className="menu-item-has-children current-menu-item">
+                          <a href="#">Homepage </a>
+                          <ul className="sub-menu">
+                            <li className="menu-item current-item">
+                              <a href="index.html">Home 01</a>
+                            </li>
+                            <li className="menu-item">
+                              <a href="home-v2.html">Home 02</a>
+                            </li>
+                            <li className="menu-item">
+                              <a href="home-v3.html">Home 03</a>
+                            </li>
+                          </ul>
+                        </li>
+                        <li className="menu-item-has-children">
+                          <a href="#">Buy Crypto</a>
+                          <ul className="sub-menu">
+                            <li className="menu-item">
+                              <a href="buy-crypto-select.html">
+                                Buy Crypto Select
+                              </a>
+                            </li>
+                            <li className="menu-item">
+                              <a href="buy-crypto-confirm.html">
+                                Buy Crypto Confirm
+                              </a>
+                            </li>
+                            <li className="menu-item">
+                              <a href="buy-crypto-details.html">
+                                Buy Crypto Details
+                              </a>
+                            </li>
+                          </ul>
+                        </li>
+                        <li className="menu-item">
+                          <a href="markets.html">Markets </a>
+                        </li>
+                        <li className="menu-item-has-children">
+                          <a href="#">Sell Crypto</a>
+                          <ul className="sub-menu">
+                            <li className="menu-item">
+                              <a href="sell-crypto.html">Sell Select</a>
+                            </li>
+                            <li className="menu-item">
+                              <a href="sell-crypto-amount.html">
+                                Sell Crypto Amount
+                              </a>
+                            </li>
+                            <li className="menu-item">
+                              <a href="sell-crypto-confirm.html">
+                                Sell Crypto Confirm
+                              </a>
+                            </li>
+                            <li className="menu-item">
+                              <a href="sell-crypto-details.html">
+                                Sell Crypto Details
+                              </a>
+                            </li>
+                          </ul>
+                        </li>
+                        <li className="menu-item-has-children">
+                          <a href="#">Blog</a>
+                          <ul className="sub-menu">
+                            <li className="menu-item">
+                              <a href="blog-default.html">Blog Default</a>
+                            </li>
+                            <li className="menu-item">
+                              <a href="blog-grid-v1.html">Blog Grid v1</a>
+                            </li>
+                            <li className="menu-item">
+                              <a href="blog-grid-v2.html">Blog Grid v2</a>
+                            </li>
+                            <li className="menu-item">
+                              <a href="blog-list.html">Blog List</a>
+                            </li>
+                            <li className="menu-item">
+                              <a href="blog-details.html">Blog Details</a>
+                            </li>
+                          </ul>
+                        </li>
+                        <li className="menu-item">
+                          <a
+                            style={{
+                              display: "flex",
+                              justifyContent: "center",
+                              alignItems: "center",
+                            }}
+                            href="wallet.html"
+                          >
+                            BITUSDT
+                            <svg
+                              className="s1"
+                              width={8}
+                              height={10}
+                              viewBox="0 0 8 10"
+                              fill="none"
+                              xmlns="http://www.w3.org/2000/svg"
+                            >
+                              <path
+                                d="M6.75979 3.20154C6.69318 3.13681 6.59973 3.10739 6.50828 3.12243C6.41666 3.13741 6.33754 3.19493 6.29504 3.27747C6.14887 3.56144 5.9632 3.82239 5.74477 4.05308C5.76654 3.88644 5.7775 3.7188 5.7775 3.55072C5.7775 3.2282 5.73428 2.8963 5.64898 2.56413C5.36855 1.4731 4.6332 0.550422 3.63154 0.0327073C3.54434 -0.0123512 3.44043 -0.0107692 3.35463 0.0369261C3.26883 0.0846409 3.21264 0.172121 3.20494 0.269973C3.12686 1.26146 2.61615 2.16349 1.80301 2.74536C1.79225 2.75312 1.78156 2.76097 1.77088 2.76878C1.74875 2.78497 1.72789 2.80029 1.7084 2.81314C1.70535 2.81517 1.70232 2.81724 1.69936 2.81937C1.18795 3.18552 0.765977 3.67361 0.479004 4.23101C0.187402 4.79798 0.0395508 5.4064 0.0395508 6.03931C0.0395508 6.36173 0.0827734 6.69362 0.168027 7.02585C0.61793 8.77697 2.19379 9.99997 4.00023 9.99997C6.18404 9.99997 7.96068 8.22322 7.96068 6.03931C7.96068 4.96236 7.5342 3.95454 6.75979 3.20154Z"
+                                fill="#3772FF"
+                              />
+                            </svg>
+                          </a>
+                        </li>
+                        <li className="menu-item-has-children">
+                          <a href="#"> Pages </a>
+                          <ul className="sub-menu">
+                            <li className="menu-item">
+                              <a href="user-profile.html">User Profile</a>
+                            </li>
+                            <li className="menu-item">
+                              <a href="login.html">Login</a>
+                            </li>
+                            <li className="menu-item">
+                              <a href="register.html">Register</a>
+                            </li>
+                            <li className="menu-item">
+                              <a href="contact.html">Contact</a>
+                            </li>
+                            <li className="menu-item">
+                              <a href="faq.html">FAQ</a>
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </nav>
+                    {/* /#main-nav */}
+                  </div>
+                </div>
+                <div className="header__right">
+                  <div className="dropdown">
                     <button
-                      className="navbar-toggler"
+                      className="btn dropdown-toggle"
                       type="button"
-                      data-toggle="collapse"
-                      data-target="#navbarNavDropdown"
-                      aria-controls="navbarNavDropdown"
+                      id="dropdownMenuButton"
+                      data-toggle="dropdown"
+                      aria-haspopup="true"
                       aria-expanded="false"
-                      aria-label="Toggle navigation"
                     >
-                      <span className="navbar-toggler-icon" />
+                      Assets
                     </button>
                     <div
-                      className="collapse navbar-collapse"
-                      id="navbarNavDropdown"
+                      className="dropdown-menu"
+                      aria-labelledby="dropdownMenuButton"
                     >
-                      <ul className="navbar-nav">
-                        {/* <li class="nav-item dropdown">
-                              <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Home
-                              </a>
-                              <div class="dropdown-menu">
-                                  <a class="dropdown-item" href="./index.html">Home 1</a>
-                                  <a class="dropdown-item" href="./index2.html">Home 2</a>
-                                  <a class="dropdown-item" href="./index3.html">Home 3</a>
-                                  <a class="dropdown-item" href="./index4.html">Home 4</a>
-                                  <a class="dropdown-item" href="./index5.html">Home 5</a>
-                                  <a class="dropdown-item" href="./index6.html">Home 6</a>
-                                  <a class="dropdown-item" href="./index7.html">Home 7</a>
-                              </div>
-                          </li> */}
-                        <li className="nav-item">
-                          <a className="nav-link" href="./index.html">
-                            Home
-                          </a>
-                        </li>
-                        <li className="nav-item">
-                          <a className="nav-link" href="./price.html">
-                            Price
-                          </a>
-                        </li>
-                        <li className="nav-item">
-                          <a className="nav-link" href="./app.html">
-                            App
-                          </a>
-                        </li>
-                        <li className="nav-item dropdown">
-                          <a
-                            className="nav-link dropdown-toggle"
-                            href="#"
-                            data-toggle="dropdown"
-                          >
-                            Company
-                          </a>
-                          <div className="dropdown-menu">
-                            <a className="dropdown-item" href="./about.html">
-                              About us
-                            </a>
-                            <a className="dropdown-item" href="./team.html">
-                              Team
-                            </a>
-                            <a className="dropdown-item" href="./blog.html">
-                              Blog
-                            </a>
-                            <a className="dropdown-item" href="./career.html">
-                              Career
-                            </a>
-                          </div>
-                        </li>
-                        <li className="nav-item dropdown">
-                          <a
-                            className="nav-link dropdown-toggle"
-                            href="#"
-                            data-toggle="dropdown"
-                          >
-                            Support
-                          </a>
-                          <div className="dropdown-menu">
-                            <a className="dropdown-item" href="./contact.html">
-                              Contact us
-                            </a>
-                            <a className="dropdown-item" href="./helpdesk.html">
-                              Help Desk
-                            </a>
-                            <a
-                              className="dropdown-item"
-                              href="./privacy-policy.html"
-                            >
-                              Privacy
-                            </a>
-                            <a className="dropdown-item" href="./faq.html">
-                              FAQ
-                            </a>
-                          </div>
-                        </li>
-                        <li className="nav-item">
-                          <a className="nav-link" href="./dashboard.html">
-                            Dashboard
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                    <div className="signin-btn">
-                      <a className="btn btn-primary" href="/auth/login">
-                        Sign in
+                      <a className="dropdown-item" href="#">
+                        Binance Visa Card
+                      </a>
+                      <a className="dropdown-item" href="#">
+                        Crypto Loans
+                      </a>
+                      <a className="dropdown-item" href="#">
+                        Binance Pay
                       </a>
                     </div>
-                  </nav>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="intro bg-primary">
-          <div className="container">
-            <div className="row justify-content-between align-items-center">
-              <div className="col-xl-6 col-lg-6 col-12">
-                <div className="intro-content">
-                  <h1 className="text-white">
-                    Trade with <strong className="text-white">Tradee</strong>.{" "}
-                    <br /> Buy and sell cryptocurrency
-                  </h1>
-                  <p className="text-white">
-                    Fast and secure way to purchase or exchange 150+
-                    cryptocurrencies
-                  </p>
-                  <div className="intro-btn">
-                    <a href="#" className="btn btn-primary">
-                      Get Started
-                    </a>
-                    <a href="#" className="btn btn-outline-primary">
-                      Browse Now
-                    </a>
                   </div>
-                </div>
-              </div>
-              <div className="col-xl-4 col-lg-6 col-12">
-                <div className="intro-form-exchange">
-                  <form
-                    method="post"
-                    name="myform"
-                    className="currency_validate trade-form row g-3"
-                  >
-                    <div className="col-12">
-                      <label className="form-label">Send</label>
-                      <div className="input-group">
-                        <select className="form-control" name="method">
-                          <option value="bank">USD</option>
-                          <option value="master">Euro</option>
-                        </select>
-                        <input
-                          type="text"
-                          name="currency_amount"
-                          className="form-control"
-                          placeholder="0.0214 BTC"
-                        />
-                      </div>
-                    </div>
-                    <div className="col-12">
-                      <label className="form-label">Receive</label>
-                      <div className="input-group">
-                        <select className="form-control" name="method">
-                          <option value="bank">BTC</option>
-                          <option value="master">ETH</option>
-                        </select>
-                        <input
-                          type="text"
-                          name="currency_amount"
-                          className="form-control"
-                          placeholder="0.0214 BTC"
-                        />
-                      </div>
-                    </div>
-                    <p className="mb-0">
-                      1 USD ~ 0.000088 BTC{" "}
-                      <a href="#">
-                        Expected rate <br />
-                        No extra fees
-                      </a>
-                    </p>
-                    <button type="button" className="btn btn-primary ">
-                      Buy Now
+                  <div className="dropdown">
+                    <button
+                      className="btn dropdown-toggle"
+                      type="button"
+                      id="dropdownMenuButton1"
+                      data-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                    >
+                      Orders &amp; Trades
                     </button>
-                  </form>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="shape" />
-        </div>
-        <div className="getstart section-padding">
-          <div className="container">
-            <div className="row justify-content-center">
-              <div className="col-xl-8">
-                <div className="section-title">
-                  <h2>Get started in a few minutes</h2>
-                </div>
-              </div>
-            </div>
-            <div className="row">
-              <div className="col-xl-4 col-lg-4 col-md-4 col-sm-4">
-                <div className="getstart-content">
-                  <span>
-                    <i className="fas fa-user-circle" />
-                  </span>
-                  <h3>Create an account</h3>
-                </div>
-              </div>
-              <div className="col-xl-4 col-lg-4 col-md-4 col-sm-4">
-                <div className="getstart-content">
-                  <span>
-                    <i className="fas fa-university" />
-                  </span>
-                  <h3>Link your bank account</h3>
-                </div>
-              </div>
-              <div className="col-xl-4 col-lg-4 col-md-4 col-sm-4">
-                <div className="getstart-content">
-                  <span>
-                    <i className="fas fa-exchange-alt" />
-                  </span>
-                  <h3>Start buying &amp; selling</h3>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="price-grid section-padding">
-          <div className="container">
-            <div className="row">
-              <div className="col-xxl-4 col-xl-4 col-lg-6 col-md-6 col-sm-6">
-                <div className="price-widget bg-btc">
-                  <a href="price-details.html" style={{ position: "relative" }}>
-                    <div className="price-content">
-                      <div className="icon-title">
-                        <i className="cc BTC" />
-                        <span>Bitcoin</span>
-                      </div>
-                      <h5>$ 11,785.10</h5>
+                    <div
+                      className="dropdown-menu"
+                      aria-labelledby="dropdownMenuButton1"
+                    >
+                      <a className="dropdown-item" href="#">
+                        Binance Convert
+                      </a>
+                      <a className="dropdown-item" href="#">
+                        Spot
+                      </a>
+                      <a className="dropdown-item" href="#">
+                        Margin
+                      </a>
+                      <a className="dropdown-item" href="#">
+                        P2P
+                      </a>
                     </div>
-                    <div id="chart" style={{ minHeight: 265 }}>
-                      <div
-                        id="apexchartslsjo9e42"
-                        className="apexcharts-canvas apexchartslsjo9e42 light"
-                        style={{ width: 410, height: 250 }}
+                  </div>
+                  <div className="dropdown">
+                    <button
+                      className="btn dropdown-toggle"
+                      type="button"
+                      id="dropdownMenuButton2"
+                      data-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                    >
+                      EN/USD
+                    </button>
+                    <div
+                      className="dropdown-menu"
+                      aria-labelledby="dropdownMenuButton2"
+                    >
+                      <a
+                        href="javascript:void(0);"
+                        className="dropdown-item notify-item language"
+                        data-lang="en"
                       >
-                        <svg
-                          id="SvgjsSvg1254"
-                          width={410}
-                          height={250}
-                          xmlns="http://www.w3.org/2000/svg"
-                          version="1.1"
-                          xmlnsXlink="http://www.w3.org/1999/xlink"
-                          xmlnsSvgjs="http://svgjs.com/svgjs"
-                          className="apexcharts-svg"
-                          xmlnsData="ApexChartsNS"
-                          transform="translate(0, 0)"
-                          style={{ background: "transparent" }}
-                        >
-                          <g
-                            id="SvgjsG1256"
-                            className="apexcharts-inner apexcharts-graphical"
-                            transform="translate(12, 30)"
-                          >
-                            <defs id="SvgjsDefs1255">
-                              <clipPath id="gridRectMasklsjo9e42">
-                                <rect
-                                  id="SvgjsRect1260"
-                                  width={390}
-                                  height={182}
-                                  x={-1}
-                                  y={-1}
-                                  rx={0}
-                                  ry={0}
-                                  fill="#ffffff"
-                                  opacity={1}
-                                  strokeWidth={0}
-                                  stroke="none"
-                                  strokeDasharray={0}
-                                />
-                              </clipPath>
-                              <clipPath id="gridRectMarkerMasklsjo9e42">
-                                <rect
-                                  id="SvgjsRect1261"
-                                  width={390}
-                                  height={182}
-                                  x={-1}
-                                  y={-1}
-                                  rx={0}
-                                  ry={0}
-                                  fill="#ffffff"
-                                  opacity={1}
-                                  strokeWidth={0}
-                                  stroke="none"
-                                  strokeDasharray={0}
-                                />
-                              </clipPath>
-                            </defs>
-                            <line
-                              id="SvgjsLine1259"
-                              x1={0}
-                              y1={0}
-                              x2={0}
-                              y2={180}
-                              stroke="#b6b6b6"
-                              strokeDasharray={3}
-                              className="apexcharts-xcrosshairs"
-                              x={0}
-                              y={0}
-                              width={1}
-                              height={180}
-                              fill="#b1b9c4"
-                              filter="none"
-                              fillOpacity="0.9"
-                              strokeWidth={1}
-                            />
-                            <g
-                              id="SvgjsG1268"
-                              className="apexcharts-xaxis"
-                              transform="translate(0, 0)"
-                            >
-                              <g
-                                id="SvgjsG1269"
-                                className="apexcharts-xaxis-texts-g"
-                                transform="translate(0, -4)"
-                              />
-                            </g>
-                            <g id="SvgjsG1272" className="apexcharts-grid">
-                              <line
-                                id="SvgjsLine1274"
-                                x1={0}
-                                y1={180}
-                                x2={388}
-                                y2={180}
-                                stroke="transparent"
-                                strokeDasharray={0}
-                              />
-                              <line
-                                id="SvgjsLine1273"
-                                x1={0}
-                                y1={1}
-                                x2={0}
-                                y2={180}
-                                stroke="transparent"
-                                strokeDasharray={0}
-                              />
-                            </g>
-                            <g
-                              id="SvgjsG1263"
-                              className="apexcharts-line-series apexcharts-plot-series"
-                            >
-                              <g
-                                id="SvgjsG1264"
-                                className="apexcharts-series"
-                                seriesname="seriesx1"
-                                dataLongestseries="true"
-                                rel={1}
-                                dataRealindex={0}
-                              >
-                                <path
-                                  id="apexcharts-line-0"
-                                  d="M 0 142.0714285714286L 0.9700000000000001 137.05714285714288L 1.9400000000000002 139.1142857142857L 2.91 140.78571428571428L 5.82 141.42857142857144L 6.79 142.0714285714286L 7.760000000000001 138.34285714285716L 8.73 137.70000000000005L 9.700000000000001 130.5L 12.610000000000001 130.37142857142857L 13.58 124.97142857142859L 14.55 127.28571428571428L 15.520000000000001 120.21428571428572L 16.490000000000002 125.87142857142857L 19.400000000000002 124.07142857142856L 20.37 122.91428571428577L 21.34 122.65714285714284L 22.310000000000002 117.51428571428573L 23.28 118.92857142857144L 27.16 121.62857142857143L 28.130000000000003 124.32857142857148L 29.1 116.10000000000002L 30.07 110.44285714285718L 32.980000000000004 112.24285714285713L 33.95 112.24285714285713L 34.92 117.12857142857143L 35.89 114.42857142857144L 36.86 106.32857142857148L 39.77 112.8857142857143L 40.74 128.70000000000005L 41.71 123.30000000000007L 42.68 115.07142857142861L 43.65 107.48571428571427L 46.56 108.51428571428568L 47.53 100.02857142857147L 48.5 105.81428571428569L 49.47 100.67142857142858L 50.440000000000005 105.17142857142858L 53.35 96.30000000000001L 54.32 113.6571428571429L 55.29 108.51428571428568L 56.260000000000005 106.58571428571429L 57.230000000000004 105.29999999999995L 60.099583333333335 97.71428571428572L 61.069583333333334 94.75714285714281L 62.03958333333333 96.94285714285712L 63.00958333333334 96.68571428571431L 63.97958333333334 98.87142857142857L 66.88958333333333 93.85714285714283L 67.85958333333333 98.87142857142857L 68.82958333333333 109.80000000000001L 69.79958333333333 108.12857142857138L 73.67958333333334 112.8857142857143L 74.64958333333334 120.72857142857146L 75.61958333333334 115.58571428571435L 76.58958333333334 108.64285714285717L 77.55958333333334 113.40000000000003L 80.46958333333333 117.77142857142854L 81.43958333333333 104.91428571428565L 82.40958333333333 110.69999999999999L 83.37958333333333 116.87142857142862L 84.34958333333334 114.94285714285712L 87.25958333333334 120.60000000000002L 88.22958333333334 123.42857142857144L 89.19958333333334 114.04285714285714L 90.16958333333334 112.37142857142862L 91.13958333333333 108.25714285714287L 94.04958333333333 108.64285714285717L 95.01958333333333 105.81428571428569L 95.98958333333334 105.94285714285718L 96.95958333333334 111.60000000000002L 97.92958333333334 120.72857142857146L 100.83958333333334 121.88571428571424L 101.80958333333334 119.95714285714286L 102.77958333333333 121.88571428571424L 103.74958333333333 129.59999999999997L 104.71958333333333 125.99999999999994L 107.62958333333334 125.61428571428576L 108.59958333333334 124.32857142857148L 109.56958333333334 123.94285714285718L 110.53958333333334 128.44285714285718L 111.50958333333334 137.44285714285718L 114.41958333333334 128.44285714285718L 115.38958333333333 128.44285714285718L 116.35958333333333 126.25714285714287L 117.32958333333333 134.48571428571432L 118.29958333333333 133.71428571428572L 122.17958333333334 127.92857142857144L 123.14958333333334 137.70000000000005L 124.11958333333334 140.78571428571428L 125.08958333333334 156.60000000000002L 127.99958333333333 150.3L 128.96958333333333 145.28571428571428L 129.93958333333333 132.55714285714282L 130.90958333333333 137.31428571428575L 131.87958333333333 133.0714285714286L 134.78958333333333 139.75714285714287L 135.75958333333332 131.52857142857147L 136.72958333333335 131.2714285714286L 137.69958333333335 132.8142857142857L 138.66958333333335 123.55714285714288L 141.57958333333335 120.47142857142853L 142.54958333333335 117.12857142857143L 143.51958333333334 128.70000000000005L 144.48958333333334 138.4714285714286L 145.45958333333334 134.10000000000002L 148.36958333333334 143.48571428571427L 149.33958333333334 140.5285714285714L 150.30958333333334 136.15714285714284L 151.27958333333333 139.24285714285713L 152.24958333333333 123.81428571428575L 155.15958333333333 126.12857142857149L 156.12958333333333 122.01428571428573L 158.06958333333333 121.75714285714287L 159.03958333333333 136.67142857142858L 161.94958333333335 148.75714285714287L 162.91958333333335 148.62857142857143L 163.88958333333335 151.71428571428572L 164.85958333333335 152.48571428571427L 165.82958333333335 145.92857142857144L 168.73958333333334 149.14285714285717L 169.70958333333334 145.92857142857144L 170.67958333333334 135.90000000000003L 171.64958333333334 129.98571428571427L 172.61958333333334 136.54285714285714L 175.52958333333333 146.05714285714288L 176.49958333333333 154.02857142857147L 177.46958333333333 150.04285714285714L 178.43958333333333 142.0714285714286L 179.40958333333333 129.98571428571427L 182.31958333333333 141.3L 183.28958333333333 142.9714285714286L 184.25958333333335 145.4142857142857L 185.22958333333335 146.82857142857148L 186.19958333333335 128.3142857142857L 189.10958333333335 126.77142857142854L 190.07958333333335 123.81428571428575L 191.04958333333335 122.01428571428573L 192.01958333333334 120.21428571428572L 192.98958333333334 120.34285714285716L 195.89958333333334 125.09999999999997L 196.86958333333334 127.28571428571428L 197.83958333333334 116.87142857142862L 198.80958333333334 107.35714285714289L 199.77958333333333 105.42857142857144L 202.68958333333333 103.88571428571424L 203.65958333333333 106.07142857142856L 204.62958333333333 104.91428571428565L 205.59958333333333 109.28571428571428L 206.56958333333333 125.22857142857146L 209.47958333333335 124.45714285714286L 210.44958333333335 127.79999999999995L 211.41958333333335 129.0857142857143L 212.38958333333335 135.51428571428573L 213.35958333333335 137.95714285714286L 217.23958333333334 135.90000000000003L 218.20958333333334 125.22857142857146L 219.17958333333334 118.41428571428571L 220.14958333333334 122.65714285714284L 223.05958333333334 126.89999999999998L 224.02958333333333 123.04285714285714L 224.99958333333333 123.17142857142858L 225.96958333333333 118.15714285714284L 226.93958333333333 111.3428571428571L 229.84958333333333 110.44285714285718L 230.81958333333336 121.24285714285713L 231.78958333333335 114.17142857142863L 232.75958333333335 96.04285714285714L 233.72958333333335 105.04285714285714L 236.63958333333335 110.44285714285718L 237.60958333333335 117L 238.57958333333335 121.75714285714287L 239.54958333333335 118.28571428571433L 240.51958333333334 122.91428571428577L 243.42958333333334 120.60000000000002L 244.39958333333334 121.24285714285713L 245.36958333333334 120.85714285714283L 246.33958333333334 119.82857142857142L 247.30958333333334 122.52857142857147L 250.21958333333333 125.61428571428576L 251.18958333333333 132.6857142857143L 252.15958333333333 134.87142857142857L 253.12958333333333 131.39999999999998L 254.09958333333333 129.34285714285716L 257.00958333333335 124.32857142857148L 257.9795833333333 112.62857142857143L 258.94958333333335 110.05714285714288L 259.9195833333333 109.5428571428572L 260.88958333333335 112.62857142857143L 263.7995833333333 109.41428571428571L 264.76958333333334 111.7285714285714L 265.7395833333333 111.08571428571429L 266.70958333333334 110.57142857142861L 267.67958333333337 102.72857142857146L 272.57 102.59999999999997L 273.54 98.22857142857146L 274.51 97.84285714285716L 277.42 99.77142857142854L 278.39 97.84285714285716L 279.36 109.67142857142858L 280.33 115.97142857142865L 281.3 117L 284.21000000000004 119.57142857142856L 285.18 121.62857142857143L 286.15000000000003 125.61428571428576L 287.12 120.34285714285716L 288.09000000000003 120.21428571428572L 291 116.74285714285713L 291.97 120.34285714285716L 292.94 117.77142857142854L 294.88 110.57142857142861L 297.79 111.85714285714289L 298.76 113.40000000000003L 299.73 104.39999999999998L 300.7 101.69999999999999L 301.67 95.01428571428573L 304.58 93.85714285714283L 305.55 86.14285714285717L 306.52000000000004 84.85714285714289L 307.49 88.19999999999999L 308.46000000000004 83.82857142857148L 311.37 80.35714285714289L 312.34000000000003 83.05714285714288L 313.31 77.65714285714284L 314.28000000000003 83.18571428571425L 315.25 57.08571428571429L 318.16 58.88571428571424L 319.13 57.985714285714266L 320.1 50.271428571428544L 321.07 53.10000000000002L 322.04 55.157142857142844L 324.95 57.47142857142859L 326.89 57.21428571428578L 327.86 60.428571428571445L 328.83 65.57142857142861L 331.74 55.542857142857144L 333.68 47.05714285714282L 334.65000000000003 54.64285714285717L 335.62 49.75714285714281L 338.53000000000003 52.200000000000045L 339.5 49.62857142857143L 340.47 42.94285714285718L 341.44 43.45714285714291L 342.41 50.271428571428544L 345.32 49.37142857142862L 346.29 49.5L 347.26 52.97142857142853L 348.23 54.900000000000034L 349.2 51.68571428571431L 353.08 52.071428571428555L 354.05 48.21428571428572L 355.02000000000004 50.14285714285711L 355.99 47.314285714285745L 358.90000000000003 48.3428571428571L 359.87 44.74285714285713L 360.84000000000003 52.200000000000045L 361.81 53.61428571428576L 362.78000000000003 47.05714285714282L 365.69 50.14285714285711L 366.66 44.87142857142862L 367.63 46.285714285714334L 368.6 50.52857142857141L 369.57 37.02857142857147L 372.48 43.19999999999999L 373.45 39.985714285714266L 374.42 41.01428571428568L 375.39 43.58571428571429L 376.36 43.32857142857142L 380.24 38.69999999999999L 381.21000000000004 41.52857142857141L 382.18 47.05714285714282L 383.15000000000003 44.35714285714289L 386.06 50.014285714285734L 387.03000000000003 43.8428571428571L 388 30.857142857142833"
-                                  fill="none"
-                                  fillOpacity={1}
-                                  stroke="rgba(255,255,255,0.85)"
-                                  strokeOpacity={1}
-                                  strokeLinecap="butt"
-                                  strokeWidth={2}
-                                  strokeDasharray={0}
-                                  className="apexcharts-line"
-                                  index={0}
-                                  clipPath="url(#gridRectMasklsjo9e42)"
-                                  pathto="M 0 142.0714285714286L 0.9700000000000001 137.05714285714288L 1.9400000000000002 139.1142857142857L 2.91 140.78571428571428L 5.82 141.42857142857144L 6.79 142.0714285714286L 7.760000000000001 138.34285714285716L 8.73 137.70000000000005L 9.700000000000001 130.5L 12.610000000000001 130.37142857142857L 13.58 124.97142857142859L 14.55 127.28571428571428L 15.520000000000001 120.21428571428572L 16.490000000000002 125.87142857142857L 19.400000000000002 124.07142857142856L 20.37 122.91428571428577L 21.34 122.65714285714284L 22.310000000000002 117.51428571428573L 23.28 118.92857142857144L 27.16 121.62857142857143L 28.130000000000003 124.32857142857148L 29.1 116.10000000000002L 30.07 110.44285714285718L 32.980000000000004 112.24285714285713L 33.95 112.24285714285713L 34.92 117.12857142857143L 35.89 114.42857142857144L 36.86 106.32857142857148L 39.77 112.8857142857143L 40.74 128.70000000000005L 41.71 123.30000000000007L 42.68 115.07142857142861L 43.65 107.48571428571427L 46.56 108.51428571428568L 47.53 100.02857142857147L 48.5 105.81428571428569L 49.47 100.67142857142858L 50.440000000000005 105.17142857142858L 53.35 96.30000000000001L 54.32 113.6571428571429L 55.29 108.51428571428568L 56.260000000000005 106.58571428571429L 57.230000000000004 105.29999999999995L 60.099583333333335 97.71428571428572L 61.069583333333334 94.75714285714281L 62.03958333333333 96.94285714285712L 63.00958333333334 96.68571428571431L 63.97958333333334 98.87142857142857L 66.88958333333333 93.85714285714283L 67.85958333333333 98.87142857142857L 68.82958333333333 109.80000000000001L 69.79958333333333 108.12857142857138L 73.67958333333334 112.8857142857143L 74.64958333333334 120.72857142857146L 75.61958333333334 115.58571428571435L 76.58958333333334 108.64285714285717L 77.55958333333334 113.40000000000003L 80.46958333333333 117.77142857142854L 81.43958333333333 104.91428571428565L 82.40958333333333 110.69999999999999L 83.37958333333333 116.87142857142862L 84.34958333333334 114.94285714285712L 87.25958333333334 120.60000000000002L 88.22958333333334 123.42857142857144L 89.19958333333334 114.04285714285714L 90.16958333333334 112.37142857142862L 91.13958333333333 108.25714285714287L 94.04958333333333 108.64285714285717L 95.01958333333333 105.81428571428569L 95.98958333333334 105.94285714285718L 96.95958333333334 111.60000000000002L 97.92958333333334 120.72857142857146L 100.83958333333334 121.88571428571424L 101.80958333333334 119.95714285714286L 102.77958333333333 121.88571428571424L 103.74958333333333 129.59999999999997L 104.71958333333333 125.99999999999994L 107.62958333333334 125.61428571428576L 108.59958333333334 124.32857142857148L 109.56958333333334 123.94285714285718L 110.53958333333334 128.44285714285718L 111.50958333333334 137.44285714285718L 114.41958333333334 128.44285714285718L 115.38958333333333 128.44285714285718L 116.35958333333333 126.25714285714287L 117.32958333333333 134.48571428571432L 118.29958333333333 133.71428571428572L 122.17958333333334 127.92857142857144L 123.14958333333334 137.70000000000005L 124.11958333333334 140.78571428571428L 125.08958333333334 156.60000000000002L 127.99958333333333 150.3L 128.96958333333333 145.28571428571428L 129.93958333333333 132.55714285714282L 130.90958333333333 137.31428571428575L 131.87958333333333 133.0714285714286L 134.78958333333333 139.75714285714287L 135.75958333333332 131.52857142857147L 136.72958333333335 131.2714285714286L 137.69958333333335 132.8142857142857L 138.66958333333335 123.55714285714288L 141.57958333333335 120.47142857142853L 142.54958333333335 117.12857142857143L 143.51958333333334 128.70000000000005L 144.48958333333334 138.4714285714286L 145.45958333333334 134.10000000000002L 148.36958333333334 143.48571428571427L 149.33958333333334 140.5285714285714L 150.30958333333334 136.15714285714284L 151.27958333333333 139.24285714285713L 152.24958333333333 123.81428571428575L 155.15958333333333 126.12857142857149L 156.12958333333333 122.01428571428573L 158.06958333333333 121.75714285714287L 159.03958333333333 136.67142857142858L 161.94958333333335 148.75714285714287L 162.91958333333335 148.62857142857143L 163.88958333333335 151.71428571428572L 164.85958333333335 152.48571428571427L 165.82958333333335 145.92857142857144L 168.73958333333334 149.14285714285717L 169.70958333333334 145.92857142857144L 170.67958333333334 135.90000000000003L 171.64958333333334 129.98571428571427L 172.61958333333334 136.54285714285714L 175.52958333333333 146.05714285714288L 176.49958333333333 154.02857142857147L 177.46958333333333 150.04285714285714L 178.43958333333333 142.0714285714286L 179.40958333333333 129.98571428571427L 182.31958333333333 141.3L 183.28958333333333 142.9714285714286L 184.25958333333335 145.4142857142857L 185.22958333333335 146.82857142857148L 186.19958333333335 128.3142857142857L 189.10958333333335 126.77142857142854L 190.07958333333335 123.81428571428575L 191.04958333333335 122.01428571428573L 192.01958333333334 120.21428571428572L 192.98958333333334 120.34285714285716L 195.89958333333334 125.09999999999997L 196.86958333333334 127.28571428571428L 197.83958333333334 116.87142857142862L 198.80958333333334 107.35714285714289L 199.77958333333333 105.42857142857144L 202.68958333333333 103.88571428571424L 203.65958333333333 106.07142857142856L 204.62958333333333 104.91428571428565L 205.59958333333333 109.28571428571428L 206.56958333333333 125.22857142857146L 209.47958333333335 124.45714285714286L 210.44958333333335 127.79999999999995L 211.41958333333335 129.0857142857143L 212.38958333333335 135.51428571428573L 213.35958333333335 137.95714285714286L 217.23958333333334 135.90000000000003L 218.20958333333334 125.22857142857146L 219.17958333333334 118.41428571428571L 220.14958333333334 122.65714285714284L 223.05958333333334 126.89999999999998L 224.02958333333333 123.04285714285714L 224.99958333333333 123.17142857142858L 225.96958333333333 118.15714285714284L 226.93958333333333 111.3428571428571L 229.84958333333333 110.44285714285718L 230.81958333333336 121.24285714285713L 231.78958333333335 114.17142857142863L 232.75958333333335 96.04285714285714L 233.72958333333335 105.04285714285714L 236.63958333333335 110.44285714285718L 237.60958333333335 117L 238.57958333333335 121.75714285714287L 239.54958333333335 118.28571428571433L 240.51958333333334 122.91428571428577L 243.42958333333334 120.60000000000002L 244.39958333333334 121.24285714285713L 245.36958333333334 120.85714285714283L 246.33958333333334 119.82857142857142L 247.30958333333334 122.52857142857147L 250.21958333333333 125.61428571428576L 251.18958333333333 132.6857142857143L 252.15958333333333 134.87142857142857L 253.12958333333333 131.39999999999998L 254.09958333333333 129.34285714285716L 257.00958333333335 124.32857142857148L 257.9795833333333 112.62857142857143L 258.94958333333335 110.05714285714288L 259.9195833333333 109.5428571428572L 260.88958333333335 112.62857142857143L 263.7995833333333 109.41428571428571L 264.76958333333334 111.7285714285714L 265.7395833333333 111.08571428571429L 266.70958333333334 110.57142857142861L 267.67958333333337 102.72857142857146L 272.57 102.59999999999997L 273.54 98.22857142857146L 274.51 97.84285714285716L 277.42 99.77142857142854L 278.39 97.84285714285716L 279.36 109.67142857142858L 280.33 115.97142857142865L 281.3 117L 284.21000000000004 119.57142857142856L 285.18 121.62857142857143L 286.15000000000003 125.61428571428576L 287.12 120.34285714285716L 288.09000000000003 120.21428571428572L 291 116.74285714285713L 291.97 120.34285714285716L 292.94 117.77142857142854L 294.88 110.57142857142861L 297.79 111.85714285714289L 298.76 113.40000000000003L 299.73 104.39999999999998L 300.7 101.69999999999999L 301.67 95.01428571428573L 304.58 93.85714285714283L 305.55 86.14285714285717L 306.52000000000004 84.85714285714289L 307.49 88.19999999999999L 308.46000000000004 83.82857142857148L 311.37 80.35714285714289L 312.34000000000003 83.05714285714288L 313.31 77.65714285714284L 314.28000000000003 83.18571428571425L 315.25 57.08571428571429L 318.16 58.88571428571424L 319.13 57.985714285714266L 320.1 50.271428571428544L 321.07 53.10000000000002L 322.04 55.157142857142844L 324.95 57.47142857142859L 326.89 57.21428571428578L 327.86 60.428571428571445L 328.83 65.57142857142861L 331.74 55.542857142857144L 333.68 47.05714285714282L 334.65000000000003 54.64285714285717L 335.62 49.75714285714281L 338.53000000000003 52.200000000000045L 339.5 49.62857142857143L 340.47 42.94285714285718L 341.44 43.45714285714291L 342.41 50.271428571428544L 345.32 49.37142857142862L 346.29 49.5L 347.26 52.97142857142853L 348.23 54.900000000000034L 349.2 51.68571428571431L 353.08 52.071428571428555L 354.05 48.21428571428572L 355.02000000000004 50.14285714285711L 355.99 47.314285714285745L 358.90000000000003 48.3428571428571L 359.87 44.74285714285713L 360.84000000000003 52.200000000000045L 361.81 53.61428571428576L 362.78000000000003 47.05714285714282L 365.69 50.14285714285711L 366.66 44.87142857142862L 367.63 46.285714285714334L 368.6 50.52857142857141L 369.57 37.02857142857147L 372.48 43.19999999999999L 373.45 39.985714285714266L 374.42 41.01428571428568L 375.39 43.58571428571429L 376.36 43.32857142857142L 380.24 38.69999999999999L 381.21000000000004 41.52857142857141L 382.18 47.05714285714282L 383.15000000000003 44.35714285714289L 386.06 50.014285714285734L 387.03000000000003 43.8428571428571L 388 30.857142857142833"
-                                  pathfrom="M -1 540L -1 540L 0.9700000000000001 540L 1.9400000000000002 540L 2.91 540L 5.82 540L 6.79 540L 7.760000000000001 540L 8.73 540L 9.700000000000001 540L 12.610000000000001 540L 13.58 540L 14.55 540L 15.520000000000001 540L 16.490000000000002 540L 19.400000000000002 540L 20.37 540L 21.34 540L 22.310000000000002 540L 23.28 540L 27.16 540L 28.130000000000003 540L 29.1 540L 30.07 540L 32.980000000000004 540L 33.95 540L 34.92 540L 35.89 540L 36.86 540L 39.77 540L 40.74 540L 41.71 540L 42.68 540L 43.65 540L 46.56 540L 47.53 540L 48.5 540L 49.47 540L 50.440000000000005 540L 53.35 540L 54.32 540L 55.29 540L 56.260000000000005 540L 57.230000000000004 540L 60.099583333333335 540L 61.069583333333334 540L 62.03958333333333 540L 63.00958333333334 540L 63.97958333333334 540L 66.88958333333333 540L 67.85958333333333 540L 68.82958333333333 540L 69.79958333333333 540L 73.67958333333334 540L 74.64958333333334 540L 75.61958333333334 540L 76.58958333333334 540L 77.55958333333334 540L 80.46958333333333 540L 81.43958333333333 540L 82.40958333333333 540L 83.37958333333333 540L 84.34958333333334 540L 87.25958333333334 540L 88.22958333333334 540L 89.19958333333334 540L 90.16958333333334 540L 91.13958333333333 540L 94.04958333333333 540L 95.01958333333333 540L 95.98958333333334 540L 96.95958333333334 540L 97.92958333333334 540L 100.83958333333334 540L 101.80958333333334 540L 102.77958333333333 540L 103.74958333333333 540L 104.71958333333333 540L 107.62958333333334 540L 108.59958333333334 540L 109.56958333333334 540L 110.53958333333334 540L 111.50958333333334 540L 114.41958333333334 540L 115.38958333333333 540L 116.35958333333333 540L 117.32958333333333 540L 118.29958333333333 540L 122.17958333333334 540L 123.14958333333334 540L 124.11958333333334 540L 125.08958333333334 540L 127.99958333333333 540L 128.96958333333333 540L 129.93958333333333 540L 130.90958333333333 540L 131.87958333333333 540L 134.78958333333333 540L 135.75958333333332 540L 136.72958333333335 540L 137.69958333333335 540L 138.66958333333335 540L 141.57958333333335 540L 142.54958333333335 540L 143.51958333333334 540L 144.48958333333334 540L 145.45958333333334 540L 148.36958333333334 540L 149.33958333333334 540L 150.30958333333334 540L 151.27958333333333 540L 152.24958333333333 540L 155.15958333333333 540L 156.12958333333333 540L 158.06958333333333 540L 159.03958333333333 540L 161.94958333333335 540L 162.91958333333335 540L 163.88958333333335 540L 164.85958333333335 540L 165.82958333333335 540L 168.73958333333334 540L 169.70958333333334 540L 170.67958333333334 540L 171.64958333333334 540L 172.61958333333334 540L 175.52958333333333 540L 176.49958333333333 540L 177.46958333333333 540L 178.43958333333333 540L 179.40958333333333 540L 182.31958333333333 540L 183.28958333333333 540L 184.25958333333335 540L 185.22958333333335 540L 186.19958333333335 540L 189.10958333333335 540L 190.07958333333335 540L 191.04958333333335 540L 192.01958333333334 540L 192.98958333333334 540L 195.89958333333334 540L 196.86958333333334 540L 197.83958333333334 540L 198.80958333333334 540L 199.77958333333333 540L 202.68958333333333 540L 203.65958333333333 540L 204.62958333333333 540L 205.59958333333333 540L 206.56958333333333 540L 209.47958333333335 540L 210.44958333333335 540L 211.41958333333335 540L 212.38958333333335 540L 213.35958333333335 540L 217.23958333333334 540L 218.20958333333334 540L 219.17958333333334 540L 220.14958333333334 540L 223.05958333333334 540L 224.02958333333333 540L 224.99958333333333 540L 225.96958333333333 540L 226.93958333333333 540L 229.84958333333333 540L 230.81958333333336 540L 231.78958333333335 540L 232.75958333333335 540L 233.72958333333335 540L 236.63958333333335 540L 237.60958333333335 540L 238.57958333333335 540L 239.54958333333335 540L 240.51958333333334 540L 243.42958333333334 540L 244.39958333333334 540L 245.36958333333334 540L 246.33958333333334 540L 247.30958333333334 540L 250.21958333333333 540L 251.18958333333333 540L 252.15958333333333 540L 253.12958333333333 540L 254.09958333333333 540L 257.00958333333335 540L 257.9795833333333 540L 258.94958333333335 540L 259.9195833333333 540L 260.88958333333335 540L 263.7995833333333 540L 264.76958333333334 540L 265.7395833333333 540L 266.70958333333334 540L 267.67958333333337 540L 272.57 540L 273.54 540L 274.51 540L 277.42 540L 278.39 540L 279.36 540L 280.33 540L 281.3 540L 284.21000000000004 540L 285.18 540L 286.15000000000003 540L 287.12 540L 288.09000000000003 540L 291 540L 291.97 540L 292.94 540L 294.88 540L 297.79 540L 298.76 540L 299.73 540L 300.7 540L 301.67 540L 304.58 540L 305.55 540L 306.52000000000004 540L 307.49 540L 308.46000000000004 540L 311.37 540L 312.34000000000003 540L 313.31 540L 314.28000000000003 540L 315.25 540L 318.16 540L 319.13 540L 320.1 540L 321.07 540L 322.04 540L 324.95 540L 326.89 540L 327.86 540L 328.83 540L 331.74 540L 333.68 540L 334.65000000000003 540L 335.62 540L 338.53000000000003 540L 339.5 540L 340.47 540L 341.44 540L 342.41 540L 345.32 540L 346.29 540L 347.26 540L 348.23 540L 349.2 540L 353.08 540L 354.05 540L 355.02000000000004 540L 355.99 540L 358.90000000000003 540L 359.87 540L 360.84000000000003 540L 361.81 540L 362.78000000000003 540L 365.69 540L 366.66 540L 367.63 540L 368.6 540L 369.57 540L 372.48 540L 373.45 540L 374.42 540L 375.39 540L 376.36 540L 380.24 540L 381.21000000000004 540L 382.18 540L 383.15000000000003 540L 386.06 540L 387.03000000000003 540L 388 540"
-                                />
-                                <g
-                                  id="SvgjsG1265"
-                                  className="apexcharts-series-markers-wrap"
-                                />
-                                <g
-                                  id="SvgjsG1266"
-                                  className="apexcharts-datalabels"
-                                />
-                              </g>
-                            </g>
-                            <line
-                              id="SvgjsLine1275"
-                              x1={0}
-                              y1={0}
-                              x2={388}
-                              y2={0}
-                              stroke="#b6b6b6"
-                              strokeDasharray={0}
-                              strokeWidth={1}
-                              className="apexcharts-ycrosshairs"
-                            />
-                            <line
-                              id="SvgjsLine1276"
-                              x1={0}
-                              y1={0}
-                              x2={388}
-                              y2={0}
-                              strokeDasharray={0}
-                              strokeWidth={0}
-                              className="apexcharts-ycrosshairs-hidden"
-                            />
-                            <g
-                              id="SvgjsG1277"
-                              className="apexcharts-yaxis-annotations"
-                            />
-                            <g
-                              id="SvgjsG1278"
-                              className="apexcharts-xaxis-annotations"
-                            />
-                            <g
-                              id="SvgjsG1279"
-                              className="apexcharts-point-annotations"
-                            />
-                          </g>
-                          <rect
-                            id="SvgjsRect1258"
-                            width={0}
-                            height={0}
-                            x={0}
-                            y={0}
-                            rx={0}
-                            ry={0}
-                            fill="#fefefe"
-                            opacity={1}
-                            strokeWidth={0}
-                            stroke="none"
-                            strokeDasharray={0}
-                          />
-                          <g
-                            id="SvgjsG1270"
-                            className="apexcharts-yaxis"
-                            rel={0}
-                            transform="translate(-21, 0)"
-                          >
-                            <g
-                              id="SvgjsG1271"
-                              className="apexcharts-yaxis-texts-g"
-                            />
-                          </g>
-                        </svg>
-                        <div className="apexcharts-legend" />
-                      </div>
-                    </div>
-                    <div className="resize-triggers">
-                      <div className="expand-trigger">
-                        <div style={{ width: 411, height: 266 }} />
-                      </div>
-                      <div className="contract-trigger" />
-                    </div>
-                  </a>
-                </div>
-              </div>
-              <div className="col-xxl-4 col-xl-4 col-lg-6 col-md-6 col-sm-6">
-                <div className="price-widget bg-eth">
-                  <a href="price-details.html" style={{ position: "relative" }}>
-                    <div className="price-content">
-                      <div className="icon-title">
-                        <i className="cc ETH" />
-                        <span>Ethereum</span>
-                      </div>
-                      <h5>$ 11,785.10</h5>
-                    </div>
-                    <div id="chart2" style={{ minHeight: 265 }}>
-                      <div
-                        id="apexcharts4ve3q1u1i"
-                        className="apexcharts-canvas apexcharts4ve3q1u1i light"
-                        style={{ width: 410, height: 250 }}
+                        <img
+                          src={us}
+                          alt="user-image"
+                          className="me-1"
+                          height={12}
+                        />
+                        <span className="align-middle">English</span>
+                      </a>
+                      <a
+                        href="javascript:void(0);"
+                        className="dropdown-item notify-item language"
+                        data-lang="sp"
                       >
-                        <svg
-                          id="SvgjsSvg1282"
-                          width={410}
-                          height={250}
-                          xmlns="http://www.w3.org/2000/svg"
-                          version="1.1"
-                          xmlnsXlink="http://www.w3.org/1999/xlink"
-                          xmlnsSvgjs="http://svgjs.com/svgjs"
-                          className="apexcharts-svg"
-                          xmlnsData="ApexChartsNS"
-                          transform="translate(0, 0)"
-                          style={{ background: "transparent" }}
-                        >
-                          <g
-                            id="SvgjsG1284"
-                            className="apexcharts-inner apexcharts-graphical"
-                            transform="translate(12, 30)"
-                          >
-                            <defs id="SvgjsDefs1283">
-                              <clipPath id="gridRectMask4ve3q1u1i">
-                                <rect
-                                  id="SvgjsRect1288"
-                                  width={390}
-                                  height={182}
-                                  x={-1}
-                                  y={-1}
-                                  rx={0}
-                                  ry={0}
-                                  fill="#ffffff"
-                                  opacity={1}
-                                  strokeWidth={0}
-                                  stroke="none"
-                                  strokeDasharray={0}
-                                />
-                              </clipPath>
-                              <clipPath id="gridRectMarkerMask4ve3q1u1i">
-                                <rect
-                                  id="SvgjsRect1289"
-                                  width={390}
-                                  height={182}
-                                  x={-1}
-                                  y={-1}
-                                  rx={0}
-                                  ry={0}
-                                  fill="#ffffff"
-                                  opacity={1}
-                                  strokeWidth={0}
-                                  stroke="none"
-                                  strokeDasharray={0}
-                                />
-                              </clipPath>
-                            </defs>
-                            <line
-                              id="SvgjsLine1287"
-                              x1={0}
-                              y1={0}
-                              x2={0}
-                              y2={180}
-                              stroke="#b6b6b6"
-                              strokeDasharray={3}
-                              className="apexcharts-xcrosshairs"
-                              x={0}
-                              y={0}
-                              width={1}
-                              height={180}
-                              fill="#b1b9c4"
-                              filter="none"
-                              fillOpacity="0.9"
-                              strokeWidth={1}
-                            />
-                            <g
-                              id="SvgjsG1296"
-                              className="apexcharts-xaxis"
-                              transform="translate(0, 0)"
-                            >
-                              <g
-                                id="SvgjsG1297"
-                                className="apexcharts-xaxis-texts-g"
-                                transform="translate(0, -4)"
-                              />
-                            </g>
-                            <g id="SvgjsG1300" className="apexcharts-grid">
-                              <line
-                                id="SvgjsLine1302"
-                                x1={0}
-                                y1={180}
-                                x2={388}
-                                y2={180}
-                                stroke="transparent"
-                                strokeDasharray={0}
-                              />
-                              <line
-                                id="SvgjsLine1301"
-                                x1={0}
-                                y1={1}
-                                x2={0}
-                                y2={180}
-                                stroke="transparent"
-                                strokeDasharray={0}
-                              />
-                            </g>
-                            <g
-                              id="SvgjsG1291"
-                              className="apexcharts-line-series apexcharts-plot-series"
-                            >
-                              <g
-                                id="SvgjsG1292"
-                                className="apexcharts-series"
-                                seriesname="seriesx1"
-                                dataLongestseries="true"
-                                rel={1}
-                                dataRealindex={0}
-                              >
-                                <path
-                                  id="apexcharts-line-0"
-                                  d="M 0 142.0714285714286L 0.9700000000000001 137.05714285714288L 1.9400000000000002 139.1142857142857L 2.91 140.78571428571428L 5.82 141.42857142857144L 6.79 142.0714285714286L 7.760000000000001 138.34285714285716L 8.73 137.70000000000005L 9.700000000000001 130.5L 12.610000000000001 130.37142857142857L 13.58 124.97142857142859L 14.55 127.28571428571428L 15.520000000000001 120.21428571428572L 16.490000000000002 125.87142857142857L 19.400000000000002 124.07142857142856L 20.37 122.91428571428577L 21.34 122.65714285714284L 22.310000000000002 117.51428571428573L 23.28 118.92857142857144L 27.16 121.62857142857143L 28.130000000000003 124.32857142857148L 29.1 116.10000000000002L 30.07 110.44285714285718L 32.980000000000004 112.24285714285713L 33.95 112.24285714285713L 34.92 117.12857142857143L 35.89 114.42857142857144L 36.86 106.32857142857148L 39.77 112.8857142857143L 40.74 128.70000000000005L 41.71 123.30000000000007L 42.68 115.07142857142861L 43.65 107.48571428571427L 46.56 108.51428571428568L 47.53 100.02857142857147L 48.5 105.81428571428569L 49.47 100.67142857142858L 50.440000000000005 105.17142857142858L 53.35 96.30000000000001L 54.32 113.6571428571429L 55.29 108.51428571428568L 56.260000000000005 106.58571428571429L 57.230000000000004 105.29999999999995L 60.099583333333335 97.71428571428572L 61.069583333333334 94.75714285714281L 62.03958333333333 96.94285714285712L 63.00958333333334 96.68571428571431L 63.97958333333334 98.87142857142857L 66.88958333333333 93.85714285714283L 67.85958333333333 98.87142857142857L 68.82958333333333 109.80000000000001L 69.79958333333333 108.12857142857138L 73.67958333333334 112.8857142857143L 74.64958333333334 120.72857142857146L 75.61958333333334 115.58571428571435L 76.58958333333334 108.64285714285717L 77.55958333333334 113.40000000000003L 80.46958333333333 117.77142857142854L 81.43958333333333 104.91428571428565L 82.40958333333333 110.69999999999999L 83.37958333333333 116.87142857142862L 84.34958333333334 114.94285714285712L 87.25958333333334 120.60000000000002L 88.22958333333334 123.42857142857144L 89.19958333333334 114.04285714285714L 90.16958333333334 112.37142857142862L 91.13958333333333 108.25714285714287L 94.04958333333333 108.64285714285717L 95.01958333333333 105.81428571428569L 95.98958333333334 105.94285714285718L 96.95958333333334 111.60000000000002L 97.92958333333334 120.72857142857146L 100.83958333333334 121.88571428571424L 101.80958333333334 119.95714285714286L 102.77958333333333 121.88571428571424L 103.74958333333333 129.59999999999997L 104.71958333333333 125.99999999999994L 107.62958333333334 125.61428571428576L 108.59958333333334 124.32857142857148L 109.56958333333334 123.94285714285718L 110.53958333333334 128.44285714285718L 111.50958333333334 137.44285714285718L 114.41958333333334 128.44285714285718L 115.38958333333333 128.44285714285718L 116.35958333333333 126.25714285714287L 117.32958333333333 134.48571428571432L 118.29958333333333 133.71428571428572L 122.17958333333334 127.92857142857144L 123.14958333333334 137.70000000000005L 124.11958333333334 140.78571428571428L 125.08958333333334 156.60000000000002L 127.99958333333333 150.3L 128.96958333333333 145.28571428571428L 129.93958333333333 132.55714285714282L 130.90958333333333 137.31428571428575L 131.87958333333333 133.0714285714286L 134.78958333333333 139.75714285714287L 135.75958333333332 131.52857142857147L 136.72958333333335 131.2714285714286L 137.69958333333335 132.8142857142857L 138.66958333333335 123.55714285714288L 141.57958333333335 120.47142857142853L 142.54958333333335 117.12857142857143L 143.51958333333334 128.70000000000005L 144.48958333333334 138.4714285714286L 145.45958333333334 134.10000000000002L 148.36958333333334 143.48571428571427L 149.33958333333334 140.5285714285714L 150.30958333333334 136.15714285714284L 151.27958333333333 139.24285714285713L 152.24958333333333 123.81428571428575L 155.15958333333333 126.12857142857149L 156.12958333333333 122.01428571428573L 158.06958333333333 121.75714285714287L 159.03958333333333 136.67142857142858L 161.94958333333335 148.75714285714287L 162.91958333333335 148.62857142857143L 163.88958333333335 151.71428571428572L 164.85958333333335 152.48571428571427L 165.82958333333335 145.92857142857144L 168.73958333333334 149.14285714285717L 169.70958333333334 145.92857142857144L 170.67958333333334 135.90000000000003L 171.64958333333334 129.98571428571427L 172.61958333333334 136.54285714285714L 175.52958333333333 146.05714285714288L 176.49958333333333 154.02857142857147L 177.46958333333333 150.04285714285714L 178.43958333333333 142.0714285714286L 179.40958333333333 129.98571428571427L 182.31958333333333 141.3L 183.28958333333333 142.9714285714286L 184.25958333333335 145.4142857142857L 185.22958333333335 146.82857142857148L 186.19958333333335 128.3142857142857L 189.10958333333335 126.77142857142854L 190.07958333333335 123.81428571428575L 191.04958333333335 122.01428571428573L 192.01958333333334 120.21428571428572L 192.98958333333334 120.34285714285716L 195.89958333333334 125.09999999999997L 196.86958333333334 127.28571428571428L 197.83958333333334 116.87142857142862L 198.80958333333334 107.35714285714289L 199.77958333333333 105.42857142857144L 202.68958333333333 103.88571428571424L 203.65958333333333 106.07142857142856L 204.62958333333333 104.91428571428565L 205.59958333333333 109.28571428571428L 206.56958333333333 125.22857142857146L 209.47958333333335 124.45714285714286L 210.44958333333335 127.79999999999995L 211.41958333333335 129.0857142857143L 212.38958333333335 135.51428571428573L 213.35958333333335 137.95714285714286L 217.23958333333334 135.90000000000003L 218.20958333333334 125.22857142857146L 219.17958333333334 118.41428571428571L 220.14958333333334 122.65714285714284L 223.05958333333334 126.89999999999998L 224.02958333333333 123.04285714285714L 224.99958333333333 123.17142857142858L 225.96958333333333 118.15714285714284L 226.93958333333333 111.3428571428571L 229.84958333333333 110.44285714285718L 230.81958333333336 121.24285714285713L 231.78958333333335 114.17142857142863L 232.75958333333335 96.04285714285714L 233.72958333333335 105.04285714285714L 236.63958333333335 110.44285714285718L 237.60958333333335 117L 238.57958333333335 121.75714285714287L 239.54958333333335 118.28571428571433L 240.51958333333334 122.91428571428577L 243.42958333333334 120.60000000000002L 244.39958333333334 121.24285714285713L 245.36958333333334 120.85714285714283L 246.33958333333334 119.82857142857142L 247.30958333333334 122.52857142857147L 250.21958333333333 125.61428571428576L 251.18958333333333 132.6857142857143L 252.15958333333333 134.87142857142857L 253.12958333333333 131.39999999999998L 254.09958333333333 129.34285714285716L 257.00958333333335 124.32857142857148L 257.9795833333333 112.62857142857143L 258.94958333333335 110.05714285714288L 259.9195833333333 109.5428571428572L 260.88958333333335 112.62857142857143L 263.7995833333333 109.41428571428571L 264.76958333333334 111.7285714285714L 265.7395833333333 111.08571428571429L 266.70958333333334 110.57142857142861L 267.67958333333337 102.72857142857146L 272.57 102.59999999999997L 273.54 98.22857142857146L 274.51 97.84285714285716L 277.42 99.77142857142854L 278.39 97.84285714285716L 279.36 109.67142857142858L 280.33 115.97142857142865L 281.3 117L 284.21000000000004 119.57142857142856L 285.18 121.62857142857143L 286.15000000000003 125.61428571428576L 287.12 120.34285714285716L 288.09000000000003 120.21428571428572L 291 116.74285714285713L 291.97 120.34285714285716L 292.94 117.77142857142854L 294.88 110.57142857142861L 297.79 111.85714285714289L 298.76 113.40000000000003L 299.73 104.39999999999998L 300.7 101.69999999999999L 301.67 95.01428571428573L 304.58 93.85714285714283L 305.55 86.14285714285717L 306.52000000000004 84.85714285714289L 307.49 88.19999999999999L 308.46000000000004 83.82857142857148L 311.37 80.35714285714289L 312.34000000000003 83.05714285714288L 313.31 77.65714285714284L 314.28000000000003 83.18571428571425L 315.25 57.08571428571429L 318.16 58.88571428571424L 319.13 57.985714285714266L 320.1 50.271428571428544L 321.07 53.10000000000002L 322.04 55.157142857142844L 324.95 57.47142857142859L 326.89 57.21428571428578L 327.86 60.428571428571445L 328.83 65.57142857142861L 331.74 55.542857142857144L 333.68 47.05714285714282L 334.65000000000003 54.64285714285717L 335.62 49.75714285714281L 338.53000000000003 52.200000000000045L 339.5 49.62857142857143L 340.47 42.94285714285718L 341.44 43.45714285714291L 342.41 50.271428571428544L 345.32 49.37142857142862L 346.29 49.5L 347.26 52.97142857142853L 348.23 54.900000000000034L 349.2 51.68571428571431L 353.08 52.071428571428555L 354.05 48.21428571428572L 355.02000000000004 50.14285714285711L 355.99 47.314285714285745L 358.90000000000003 48.3428571428571L 359.87 44.74285714285713L 360.84000000000003 52.200000000000045L 361.81 53.61428571428576L 362.78000000000003 47.05714285714282L 365.69 50.14285714285711L 366.66 44.87142857142862L 367.63 46.285714285714334L 368.6 50.52857142857141L 369.57 37.02857142857147L 372.48 43.19999999999999L 373.45 39.985714285714266L 374.42 41.01428571428568L 375.39 43.58571428571429L 376.36 43.32857142857142L 380.24 38.69999999999999L 381.21000000000004 41.52857142857141L 382.18 47.05714285714282L 383.15000000000003 44.35714285714289L 386.06 50.014285714285734L 387.03000000000003 43.8428571428571L 388 30.857142857142833"
-                                  fill="none"
-                                  fillOpacity={1}
-                                  stroke="rgba(255,255,255,0.85)"
-                                  strokeOpacity={1}
-                                  strokeLinecap="butt"
-                                  strokeWidth={2}
-                                  strokeDasharray={0}
-                                  className="apexcharts-line"
-                                  index={0}
-                                  clipPath="url(#gridRectMask4ve3q1u1i)"
-                                  pathto="M 0 142.0714285714286L 0.9700000000000001 137.05714285714288L 1.9400000000000002 139.1142857142857L 2.91 140.78571428571428L 5.82 141.42857142857144L 6.79 142.0714285714286L 7.760000000000001 138.34285714285716L 8.73 137.70000000000005L 9.700000000000001 130.5L 12.610000000000001 130.37142857142857L 13.58 124.97142857142859L 14.55 127.28571428571428L 15.520000000000001 120.21428571428572L 16.490000000000002 125.87142857142857L 19.400000000000002 124.07142857142856L 20.37 122.91428571428577L 21.34 122.65714285714284L 22.310000000000002 117.51428571428573L 23.28 118.92857142857144L 27.16 121.62857142857143L 28.130000000000003 124.32857142857148L 29.1 116.10000000000002L 30.07 110.44285714285718L 32.980000000000004 112.24285714285713L 33.95 112.24285714285713L 34.92 117.12857142857143L 35.89 114.42857142857144L 36.86 106.32857142857148L 39.77 112.8857142857143L 40.74 128.70000000000005L 41.71 123.30000000000007L 42.68 115.07142857142861L 43.65 107.48571428571427L 46.56 108.51428571428568L 47.53 100.02857142857147L 48.5 105.81428571428569L 49.47 100.67142857142858L 50.440000000000005 105.17142857142858L 53.35 96.30000000000001L 54.32 113.6571428571429L 55.29 108.51428571428568L 56.260000000000005 106.58571428571429L 57.230000000000004 105.29999999999995L 60.099583333333335 97.71428571428572L 61.069583333333334 94.75714285714281L 62.03958333333333 96.94285714285712L 63.00958333333334 96.68571428571431L 63.97958333333334 98.87142857142857L 66.88958333333333 93.85714285714283L 67.85958333333333 98.87142857142857L 68.82958333333333 109.80000000000001L 69.79958333333333 108.12857142857138L 73.67958333333334 112.8857142857143L 74.64958333333334 120.72857142857146L 75.61958333333334 115.58571428571435L 76.58958333333334 108.64285714285717L 77.55958333333334 113.40000000000003L 80.46958333333333 117.77142857142854L 81.43958333333333 104.91428571428565L 82.40958333333333 110.69999999999999L 83.37958333333333 116.87142857142862L 84.34958333333334 114.94285714285712L 87.25958333333334 120.60000000000002L 88.22958333333334 123.42857142857144L 89.19958333333334 114.04285714285714L 90.16958333333334 112.37142857142862L 91.13958333333333 108.25714285714287L 94.04958333333333 108.64285714285717L 95.01958333333333 105.81428571428569L 95.98958333333334 105.94285714285718L 96.95958333333334 111.60000000000002L 97.92958333333334 120.72857142857146L 100.83958333333334 121.88571428571424L 101.80958333333334 119.95714285714286L 102.77958333333333 121.88571428571424L 103.74958333333333 129.59999999999997L 104.71958333333333 125.99999999999994L 107.62958333333334 125.61428571428576L 108.59958333333334 124.32857142857148L 109.56958333333334 123.94285714285718L 110.53958333333334 128.44285714285718L 111.50958333333334 137.44285714285718L 114.41958333333334 128.44285714285718L 115.38958333333333 128.44285714285718L 116.35958333333333 126.25714285714287L 117.32958333333333 134.48571428571432L 118.29958333333333 133.71428571428572L 122.17958333333334 127.92857142857144L 123.14958333333334 137.70000000000005L 124.11958333333334 140.78571428571428L 125.08958333333334 156.60000000000002L 127.99958333333333 150.3L 128.96958333333333 145.28571428571428L 129.93958333333333 132.55714285714282L 130.90958333333333 137.31428571428575L 131.87958333333333 133.0714285714286L 134.78958333333333 139.75714285714287L 135.75958333333332 131.52857142857147L 136.72958333333335 131.2714285714286L 137.69958333333335 132.8142857142857L 138.66958333333335 123.55714285714288L 141.57958333333335 120.47142857142853L 142.54958333333335 117.12857142857143L 143.51958333333334 128.70000000000005L 144.48958333333334 138.4714285714286L 145.45958333333334 134.10000000000002L 148.36958333333334 143.48571428571427L 149.33958333333334 140.5285714285714L 150.30958333333334 136.15714285714284L 151.27958333333333 139.24285714285713L 152.24958333333333 123.81428571428575L 155.15958333333333 126.12857142857149L 156.12958333333333 122.01428571428573L 158.06958333333333 121.75714285714287L 159.03958333333333 136.67142857142858L 161.94958333333335 148.75714285714287L 162.91958333333335 148.62857142857143L 163.88958333333335 151.71428571428572L 164.85958333333335 152.48571428571427L 165.82958333333335 145.92857142857144L 168.73958333333334 149.14285714285717L 169.70958333333334 145.92857142857144L 170.67958333333334 135.90000000000003L 171.64958333333334 129.98571428571427L 172.61958333333334 136.54285714285714L 175.52958333333333 146.05714285714288L 176.49958333333333 154.02857142857147L 177.46958333333333 150.04285714285714L 178.43958333333333 142.0714285714286L 179.40958333333333 129.98571428571427L 182.31958333333333 141.3L 183.28958333333333 142.9714285714286L 184.25958333333335 145.4142857142857L 185.22958333333335 146.82857142857148L 186.19958333333335 128.3142857142857L 189.10958333333335 126.77142857142854L 190.07958333333335 123.81428571428575L 191.04958333333335 122.01428571428573L 192.01958333333334 120.21428571428572L 192.98958333333334 120.34285714285716L 195.89958333333334 125.09999999999997L 196.86958333333334 127.28571428571428L 197.83958333333334 116.87142857142862L 198.80958333333334 107.35714285714289L 199.77958333333333 105.42857142857144L 202.68958333333333 103.88571428571424L 203.65958333333333 106.07142857142856L 204.62958333333333 104.91428571428565L 205.59958333333333 109.28571428571428L 206.56958333333333 125.22857142857146L 209.47958333333335 124.45714285714286L 210.44958333333335 127.79999999999995L 211.41958333333335 129.0857142857143L 212.38958333333335 135.51428571428573L 213.35958333333335 137.95714285714286L 217.23958333333334 135.90000000000003L 218.20958333333334 125.22857142857146L 219.17958333333334 118.41428571428571L 220.14958333333334 122.65714285714284L 223.05958333333334 126.89999999999998L 224.02958333333333 123.04285714285714L 224.99958333333333 123.17142857142858L 225.96958333333333 118.15714285714284L 226.93958333333333 111.3428571428571L 229.84958333333333 110.44285714285718L 230.81958333333336 121.24285714285713L 231.78958333333335 114.17142857142863L 232.75958333333335 96.04285714285714L 233.72958333333335 105.04285714285714L 236.63958333333335 110.44285714285718L 237.60958333333335 117L 238.57958333333335 121.75714285714287L 239.54958333333335 118.28571428571433L 240.51958333333334 122.91428571428577L 243.42958333333334 120.60000000000002L 244.39958333333334 121.24285714285713L 245.36958333333334 120.85714285714283L 246.33958333333334 119.82857142857142L 247.30958333333334 122.52857142857147L 250.21958333333333 125.61428571428576L 251.18958333333333 132.6857142857143L 252.15958333333333 134.87142857142857L 253.12958333333333 131.39999999999998L 254.09958333333333 129.34285714285716L 257.00958333333335 124.32857142857148L 257.9795833333333 112.62857142857143L 258.94958333333335 110.05714285714288L 259.9195833333333 109.5428571428572L 260.88958333333335 112.62857142857143L 263.7995833333333 109.41428571428571L 264.76958333333334 111.7285714285714L 265.7395833333333 111.08571428571429L 266.70958333333334 110.57142857142861L 267.67958333333337 102.72857142857146L 272.57 102.59999999999997L 273.54 98.22857142857146L 274.51 97.84285714285716L 277.42 99.77142857142854L 278.39 97.84285714285716L 279.36 109.67142857142858L 280.33 115.97142857142865L 281.3 117L 284.21000000000004 119.57142857142856L 285.18 121.62857142857143L 286.15000000000003 125.61428571428576L 287.12 120.34285714285716L 288.09000000000003 120.21428571428572L 291 116.74285714285713L 291.97 120.34285714285716L 292.94 117.77142857142854L 294.88 110.57142857142861L 297.79 111.85714285714289L 298.76 113.40000000000003L 299.73 104.39999999999998L 300.7 101.69999999999999L 301.67 95.01428571428573L 304.58 93.85714285714283L 305.55 86.14285714285717L 306.52000000000004 84.85714285714289L 307.49 88.19999999999999L 308.46000000000004 83.82857142857148L 311.37 80.35714285714289L 312.34000000000003 83.05714285714288L 313.31 77.65714285714284L 314.28000000000003 83.18571428571425L 315.25 57.08571428571429L 318.16 58.88571428571424L 319.13 57.985714285714266L 320.1 50.271428571428544L 321.07 53.10000000000002L 322.04 55.157142857142844L 324.95 57.47142857142859L 326.89 57.21428571428578L 327.86 60.428571428571445L 328.83 65.57142857142861L 331.74 55.542857142857144L 333.68 47.05714285714282L 334.65000000000003 54.64285714285717L 335.62 49.75714285714281L 338.53000000000003 52.200000000000045L 339.5 49.62857142857143L 340.47 42.94285714285718L 341.44 43.45714285714291L 342.41 50.271428571428544L 345.32 49.37142857142862L 346.29 49.5L 347.26 52.97142857142853L 348.23 54.900000000000034L 349.2 51.68571428571431L 353.08 52.071428571428555L 354.05 48.21428571428572L 355.02000000000004 50.14285714285711L 355.99 47.314285714285745L 358.90000000000003 48.3428571428571L 359.87 44.74285714285713L 360.84000000000003 52.200000000000045L 361.81 53.61428571428576L 362.78000000000003 47.05714285714282L 365.69 50.14285714285711L 366.66 44.87142857142862L 367.63 46.285714285714334L 368.6 50.52857142857141L 369.57 37.02857142857147L 372.48 43.19999999999999L 373.45 39.985714285714266L 374.42 41.01428571428568L 375.39 43.58571428571429L 376.36 43.32857142857142L 380.24 38.69999999999999L 381.21000000000004 41.52857142857141L 382.18 47.05714285714282L 383.15000000000003 44.35714285714289L 386.06 50.014285714285734L 387.03000000000003 43.8428571428571L 388 30.857142857142833"
-                                  pathfrom="M -1 540L -1 540L 0.9700000000000001 540L 1.9400000000000002 540L 2.91 540L 5.82 540L 6.79 540L 7.760000000000001 540L 8.73 540L 9.700000000000001 540L 12.610000000000001 540L 13.58 540L 14.55 540L 15.520000000000001 540L 16.490000000000002 540L 19.400000000000002 540L 20.37 540L 21.34 540L 22.310000000000002 540L 23.28 540L 27.16 540L 28.130000000000003 540L 29.1 540L 30.07 540L 32.980000000000004 540L 33.95 540L 34.92 540L 35.89 540L 36.86 540L 39.77 540L 40.74 540L 41.71 540L 42.68 540L 43.65 540L 46.56 540L 47.53 540L 48.5 540L 49.47 540L 50.440000000000005 540L 53.35 540L 54.32 540L 55.29 540L 56.260000000000005 540L 57.230000000000004 540L 60.099583333333335 540L 61.069583333333334 540L 62.03958333333333 540L 63.00958333333334 540L 63.97958333333334 540L 66.88958333333333 540L 67.85958333333333 540L 68.82958333333333 540L 69.79958333333333 540L 73.67958333333334 540L 74.64958333333334 540L 75.61958333333334 540L 76.58958333333334 540L 77.55958333333334 540L 80.46958333333333 540L 81.43958333333333 540L 82.40958333333333 540L 83.37958333333333 540L 84.34958333333334 540L 87.25958333333334 540L 88.22958333333334 540L 89.19958333333334 540L 90.16958333333334 540L 91.13958333333333 540L 94.04958333333333 540L 95.01958333333333 540L 95.98958333333334 540L 96.95958333333334 540L 97.92958333333334 540L 100.83958333333334 540L 101.80958333333334 540L 102.77958333333333 540L 103.74958333333333 540L 104.71958333333333 540L 107.62958333333334 540L 108.59958333333334 540L 109.56958333333334 540L 110.53958333333334 540L 111.50958333333334 540L 114.41958333333334 540L 115.38958333333333 540L 116.35958333333333 540L 117.32958333333333 540L 118.29958333333333 540L 122.17958333333334 540L 123.14958333333334 540L 124.11958333333334 540L 125.08958333333334 540L 127.99958333333333 540L 128.96958333333333 540L 129.93958333333333 540L 130.90958333333333 540L 131.87958333333333 540L 134.78958333333333 540L 135.75958333333332 540L 136.72958333333335 540L 137.69958333333335 540L 138.66958333333335 540L 141.57958333333335 540L 142.54958333333335 540L 143.51958333333334 540L 144.48958333333334 540L 145.45958333333334 540L 148.36958333333334 540L 149.33958333333334 540L 150.30958333333334 540L 151.27958333333333 540L 152.24958333333333 540L 155.15958333333333 540L 156.12958333333333 540L 158.06958333333333 540L 159.03958333333333 540L 161.94958333333335 540L 162.91958333333335 540L 163.88958333333335 540L 164.85958333333335 540L 165.82958333333335 540L 168.73958333333334 540L 169.70958333333334 540L 170.67958333333334 540L 171.64958333333334 540L 172.61958333333334 540L 175.52958333333333 540L 176.49958333333333 540L 177.46958333333333 540L 178.43958333333333 540L 179.40958333333333 540L 182.31958333333333 540L 183.28958333333333 540L 184.25958333333335 540L 185.22958333333335 540L 186.19958333333335 540L 189.10958333333335 540L 190.07958333333335 540L 191.04958333333335 540L 192.01958333333334 540L 192.98958333333334 540L 195.89958333333334 540L 196.86958333333334 540L 197.83958333333334 540L 198.80958333333334 540L 199.77958333333333 540L 202.68958333333333 540L 203.65958333333333 540L 204.62958333333333 540L 205.59958333333333 540L 206.56958333333333 540L 209.47958333333335 540L 210.44958333333335 540L 211.41958333333335 540L 212.38958333333335 540L 213.35958333333335 540L 217.23958333333334 540L 218.20958333333334 540L 219.17958333333334 540L 220.14958333333334 540L 223.05958333333334 540L 224.02958333333333 540L 224.99958333333333 540L 225.96958333333333 540L 226.93958333333333 540L 229.84958333333333 540L 230.81958333333336 540L 231.78958333333335 540L 232.75958333333335 540L 233.72958333333335 540L 236.63958333333335 540L 237.60958333333335 540L 238.57958333333335 540L 239.54958333333335 540L 240.51958333333334 540L 243.42958333333334 540L 244.39958333333334 540L 245.36958333333334 540L 246.33958333333334 540L 247.30958333333334 540L 250.21958333333333 540L 251.18958333333333 540L 252.15958333333333 540L 253.12958333333333 540L 254.09958333333333 540L 257.00958333333335 540L 257.9795833333333 540L 258.94958333333335 540L 259.9195833333333 540L 260.88958333333335 540L 263.7995833333333 540L 264.76958333333334 540L 265.7395833333333 540L 266.70958333333334 540L 267.67958333333337 540L 272.57 540L 273.54 540L 274.51 540L 277.42 540L 278.39 540L 279.36 540L 280.33 540L 281.3 540L 284.21000000000004 540L 285.18 540L 286.15000000000003 540L 287.12 540L 288.09000000000003 540L 291 540L 291.97 540L 292.94 540L 294.88 540L 297.79 540L 298.76 540L 299.73 540L 300.7 540L 301.67 540L 304.58 540L 305.55 540L 306.52000000000004 540L 307.49 540L 308.46000000000004 540L 311.37 540L 312.34000000000003 540L 313.31 540L 314.28000000000003 540L 315.25 540L 318.16 540L 319.13 540L 320.1 540L 321.07 540L 322.04 540L 324.95 540L 326.89 540L 327.86 540L 328.83 540L 331.74 540L 333.68 540L 334.65000000000003 540L 335.62 540L 338.53000000000003 540L 339.5 540L 340.47 540L 341.44 540L 342.41 540L 345.32 540L 346.29 540L 347.26 540L 348.23 540L 349.2 540L 353.08 540L 354.05 540L 355.02000000000004 540L 355.99 540L 358.90000000000003 540L 359.87 540L 360.84000000000003 540L 361.81 540L 362.78000000000003 540L 365.69 540L 366.66 540L 367.63 540L 368.6 540L 369.57 540L 372.48 540L 373.45 540L 374.42 540L 375.39 540L 376.36 540L 380.24 540L 381.21000000000004 540L 382.18 540L 383.15000000000003 540L 386.06 540L 387.03000000000003 540L 388 540"
-                                />
-                                <g
-                                  id="SvgjsG1293"
-                                  className="apexcharts-series-markers-wrap"
-                                />
-                                <g
-                                  id="SvgjsG1294"
-                                  className="apexcharts-datalabels"
-                                />
-                              </g>
-                            </g>
-                            <line
-                              id="SvgjsLine1303"
-                              x1={0}
-                              y1={0}
-                              x2={388}
-                              y2={0}
-                              stroke="#b6b6b6"
-                              strokeDasharray={0}
-                              strokeWidth={1}
-                              className="apexcharts-ycrosshairs"
-                            />
-                            <line
-                              id="SvgjsLine1304"
-                              x1={0}
-                              y1={0}
-                              x2={388}
-                              y2={0}
-                              strokeDasharray={0}
-                              strokeWidth={0}
-                              className="apexcharts-ycrosshairs-hidden"
-                            />
-                            <g
-                              id="SvgjsG1305"
-                              className="apexcharts-yaxis-annotations"
-                            />
-                            <g
-                              id="SvgjsG1306"
-                              className="apexcharts-xaxis-annotations"
-                            />
-                            <g
-                              id="SvgjsG1307"
-                              className="apexcharts-point-annotations"
-                            />
-                          </g>
-                          <rect
-                            id="SvgjsRect1286"
-                            width={0}
-                            height={0}
-                            x={0}
-                            y={0}
-                            rx={0}
-                            ry={0}
-                            fill="#fefefe"
-                            opacity={1}
-                            strokeWidth={0}
-                            stroke="none"
-                            strokeDasharray={0}
-                          />
-                          <g
-                            id="SvgjsG1298"
-                            className="apexcharts-yaxis"
-                            rel={0}
-                            transform="translate(-21, 0)"
-                          >
-                            <g
-                              id="SvgjsG1299"
-                              className="apexcharts-yaxis-texts-g"
-                            />
-                          </g>
-                        </svg>
-                        <div className="apexcharts-legend" />
-                      </div>
-                    </div>
-                    <div className="resize-triggers">
-                      <div className="expand-trigger">
-                        <div style={{ width: 411, height: 266 }} />
-                      </div>
-                      <div className="contract-trigger" />
-                    </div>
-                  </a>
-                </div>
-              </div>
-              <div className="col-xxl-4 col-xl-4 col-lg-6 col-md-6 col-sm-6">
-                <div className="price-widget bg-usdt">
-                  <a href="price-details.html" style={{ position: "relative" }}>
-                    <div className="price-content">
-                      <div className="icon-title">
-                        <i className="cc USDT" />
-                        <span>Tether</span>
-                      </div>
-                      <h5>$ 11,785.10</h5>
-                    </div>
-                    <div id="chart3" style={{ minHeight: 265 }}>
-                      <div
-                        id="apexchartscb2o80gd"
-                        className="apexcharts-canvas apexchartscb2o80gd light"
-                        style={{ width: 410, height: 250 }}
+                        <img
+                          src={spain}
+                          alt="user-image"
+                          className="me-1"
+                          height={12}
+                        />
+                        <span className="align-middle">Spanish</span>
+                      </a>
+                      <a
+                        href="javascript:void(0);"
+                        className="dropdown-item notify-item language"
+                        data-lang="gr"
                       >
+                        <img
+                          src={germany}
+                          alt="user-image"
+                          className="me-1"
+                          height={12}
+                        />
+                        <span className="align-middle">German</span>
+                      </a>
+                      <a
+                        href="javascript:void(0);"
+                        className="dropdown-item notify-item language"
+                        data-lang="it"
+                      >
+                        <img
+                          src={italy}
+                          alt="user-image"
+                          className="me-1"
+                          height={12}
+                        />
+                        <span className="align-middle">Italian</span>
+                      </a>
+                      <a
+                        href="javascript:void(0);"
+                        className="dropdown-item notify-item language"
+                        data-lang="ru"
+                      >
+                        <img
+                          src={russia}
+                          alt="user-image"
+                          className="me-1"
+                          height={12}
+                        />
+                        <span className="align-middle">Russian</span>
+                      </a>
+                    </div>
+                  </div>
+                  <div className="mode-switcher">
+                    {isThemes ? (
+                      <a href="#" className="moon" onClick={toggleTheme2}>
                         <svg
-                          id="SvgjsSvg1310"
-                          width={410}
-                          height={250}
+                          width={14}
+                          height={14}
+                          viewBox="0 0 14 14"
+                          fill="none"
                           xmlns="http://www.w3.org/2000/svg"
-                          version="1.1"
-                          xmlnsXlink="http://www.w3.org/1999/xlink"
-                          xmlnsSvgjs="http://svgjs.com/svgjs"
-                          className="apexcharts-svg"
-                          xmlnsData="ApexChartsNS"
-                          transform="translate(0, 0)"
-                          style={{ background: "transparent" }}
                         >
-                          <g
-                            id="SvgjsG1312"
-                            className="apexcharts-inner apexcharts-graphical"
-                            transform="translate(12, 30)"
-                          >
-                            <defs id="SvgjsDefs1311">
-                              <clipPath id="gridRectMaskcb2o80gd">
-                                <rect
-                                  id="SvgjsRect1316"
-                                  width={390}
-                                  height={182}
-                                  x={-1}
-                                  y={-1}
-                                  rx={0}
-                                  ry={0}
-                                  fill="#ffffff"
-                                  opacity={1}
-                                  strokeWidth={0}
-                                  stroke="none"
-                                  strokeDasharray={0}
-                                />
-                              </clipPath>
-                              <clipPath id="gridRectMarkerMaskcb2o80gd">
-                                <rect
-                                  id="SvgjsRect1317"
-                                  width={390}
-                                  height={182}
-                                  x={-1}
-                                  y={-1}
-                                  rx={0}
-                                  ry={0}
-                                  fill="#ffffff"
-                                  opacity={1}
-                                  strokeWidth={0}
-                                  stroke="none"
-                                  strokeDasharray={0}
-                                />
-                              </clipPath>
-                            </defs>
-                            <line
-                              id="SvgjsLine1315"
-                              x1={0}
-                              y1={0}
-                              x2={0}
-                              y2={180}
-                              stroke="#b6b6b6"
-                              strokeDasharray={3}
-                              className="apexcharts-xcrosshairs"
-                              x={0}
-                              y={0}
-                              width={1}
-                              height={180}
-                              fill="#b1b9c4"
-                              filter="none"
-                              fillOpacity="0.9"
-                              strokeWidth={1}
-                            />
-                            <g
-                              id="SvgjsG1324"
-                              className="apexcharts-xaxis"
-                              transform="translate(0, 0)"
-                            >
-                              <g
-                                id="SvgjsG1325"
-                                className="apexcharts-xaxis-texts-g"
-                                transform="translate(0, -4)"
-                              />
-                            </g>
-                            <g id="SvgjsG1328" className="apexcharts-grid">
-                              <line
-                                id="SvgjsLine1330"
-                                x1={0}
-                                y1={180}
-                                x2={388}
-                                y2={180}
-                                stroke="transparent"
-                                strokeDasharray={0}
-                              />
-                              <line
-                                id="SvgjsLine1329"
-                                x1={0}
-                                y1={1}
-                                x2={0}
-                                y2={180}
-                                stroke="transparent"
-                                strokeDasharray={0}
-                              />
-                            </g>
-                            <g
-                              id="SvgjsG1319"
-                              className="apexcharts-line-series apexcharts-plot-series"
-                            >
-                              <g
-                                id="SvgjsG1320"
-                                className="apexcharts-series"
-                                seriesname="seriesx1"
-                                dataLongestseries="true"
-                                rel={1}
-                                dataRealindex={0}
-                              >
-                                <path
-                                  id="apexcharts-line-0"
-                                  d="M 0 142.0714285714286L 0.9700000000000001 137.05714285714288L 1.9400000000000002 139.1142857142857L 2.91 140.78571428571428L 5.82 141.42857142857144L 6.79 142.0714285714286L 7.760000000000001 138.34285714285716L 8.73 137.70000000000005L 9.700000000000001 130.5L 12.610000000000001 130.37142857142857L 13.58 124.97142857142859L 14.55 127.28571428571428L 15.520000000000001 120.21428571428572L 16.490000000000002 125.87142857142857L 19.400000000000002 124.07142857142856L 20.37 122.91428571428577L 21.34 122.65714285714284L 22.310000000000002 117.51428571428573L 23.28 118.92857142857144L 27.16 121.62857142857143L 28.130000000000003 124.32857142857148L 29.1 116.10000000000002L 30.07 110.44285714285718L 32.980000000000004 112.24285714285713L 33.95 112.24285714285713L 34.92 117.12857142857143L 35.89 114.42857142857144L 36.86 106.32857142857148L 39.77 112.8857142857143L 40.74 128.70000000000005L 41.71 123.30000000000007L 42.68 115.07142857142861L 43.65 107.48571428571427L 46.56 108.51428571428568L 47.53 100.02857142857147L 48.5 105.81428571428569L 49.47 100.67142857142858L 50.440000000000005 105.17142857142858L 53.35 96.30000000000001L 54.32 113.6571428571429L 55.29 108.51428571428568L 56.260000000000005 106.58571428571429L 57.230000000000004 105.29999999999995L 60.099583333333335 97.71428571428572L 61.069583333333334 94.75714285714281L 62.03958333333333 96.94285714285712L 63.00958333333334 96.68571428571431L 63.97958333333334 98.87142857142857L 66.88958333333333 93.85714285714283L 67.85958333333333 98.87142857142857L 68.82958333333333 109.80000000000001L 69.79958333333333 108.12857142857138L 73.67958333333334 112.8857142857143L 74.64958333333334 120.72857142857146L 75.61958333333334 115.58571428571435L 76.58958333333334 108.64285714285717L 77.55958333333334 113.40000000000003L 80.46958333333333 117.77142857142854L 81.43958333333333 104.91428571428565L 82.40958333333333 110.69999999999999L 83.37958333333333 116.87142857142862L 84.34958333333334 114.94285714285712L 87.25958333333334 120.60000000000002L 88.22958333333334 123.42857142857144L 89.19958333333334 114.04285714285714L 90.16958333333334 112.37142857142862L 91.13958333333333 108.25714285714287L 94.04958333333333 108.64285714285717L 95.01958333333333 105.81428571428569L 95.98958333333334 105.94285714285718L 96.95958333333334 111.60000000000002L 97.92958333333334 120.72857142857146L 100.83958333333334 121.88571428571424L 101.80958333333334 119.95714285714286L 102.77958333333333 121.88571428571424L 103.74958333333333 129.59999999999997L 104.71958333333333 125.99999999999994L 107.62958333333334 125.61428571428576L 108.59958333333334 124.32857142857148L 109.56958333333334 123.94285714285718L 110.53958333333334 128.44285714285718L 111.50958333333334 137.44285714285718L 114.41958333333334 128.44285714285718L 115.38958333333333 128.44285714285718L 116.35958333333333 126.25714285714287L 117.32958333333333 134.48571428571432L 118.29958333333333 133.71428571428572L 122.17958333333334 127.92857142857144L 123.14958333333334 137.70000000000005L 124.11958333333334 140.78571428571428L 125.08958333333334 156.60000000000002L 127.99958333333333 150.3L 128.96958333333333 145.28571428571428L 129.93958333333333 132.55714285714282L 130.90958333333333 137.31428571428575L 131.87958333333333 133.0714285714286L 134.78958333333333 139.75714285714287L 135.75958333333332 131.52857142857147L 136.72958333333335 131.2714285714286L 137.69958333333335 132.8142857142857L 138.66958333333335 123.55714285714288L 141.57958333333335 120.47142857142853L 142.54958333333335 117.12857142857143L 143.51958333333334 128.70000000000005L 144.48958333333334 138.4714285714286L 145.45958333333334 134.10000000000002L 148.36958333333334 143.48571428571427L 149.33958333333334 140.5285714285714L 150.30958333333334 136.15714285714284L 151.27958333333333 139.24285714285713L 152.24958333333333 123.81428571428575L 155.15958333333333 126.12857142857149L 156.12958333333333 122.01428571428573L 158.06958333333333 121.75714285714287L 159.03958333333333 136.67142857142858L 161.94958333333335 148.75714285714287L 162.91958333333335 148.62857142857143L 163.88958333333335 151.71428571428572L 164.85958333333335 152.48571428571427L 165.82958333333335 145.92857142857144L 168.73958333333334 149.14285714285717L 169.70958333333334 145.92857142857144L 170.67958333333334 135.90000000000003L 171.64958333333334 129.98571428571427L 172.61958333333334 136.54285714285714L 175.52958333333333 146.05714285714288L 176.49958333333333 154.02857142857147L 177.46958333333333 150.04285714285714L 178.43958333333333 142.0714285714286L 179.40958333333333 129.98571428571427L 182.31958333333333 141.3L 183.28958333333333 142.9714285714286L 184.25958333333335 145.4142857142857L 185.22958333333335 146.82857142857148L 186.19958333333335 128.3142857142857L 189.10958333333335 126.77142857142854L 190.07958333333335 123.81428571428575L 191.04958333333335 122.01428571428573L 192.01958333333334 120.21428571428572L 192.98958333333334 120.34285714285716L 195.89958333333334 125.09999999999997L 196.86958333333334 127.28571428571428L 197.83958333333334 116.87142857142862L 198.80958333333334 107.35714285714289L 199.77958333333333 105.42857142857144L 202.68958333333333 103.88571428571424L 203.65958333333333 106.07142857142856L 204.62958333333333 104.91428571428565L 205.59958333333333 109.28571428571428L 206.56958333333333 125.22857142857146L 209.47958333333335 124.45714285714286L 210.44958333333335 127.79999999999995L 211.41958333333335 129.0857142857143L 212.38958333333335 135.51428571428573L 213.35958333333335 137.95714285714286L 217.23958333333334 135.90000000000003L 218.20958333333334 125.22857142857146L 219.17958333333334 118.41428571428571L 220.14958333333334 122.65714285714284L 223.05958333333334 126.89999999999998L 224.02958333333333 123.04285714285714L 224.99958333333333 123.17142857142858L 225.96958333333333 118.15714285714284L 226.93958333333333 111.3428571428571L 229.84958333333333 110.44285714285718L 230.81958333333336 121.24285714285713L 231.78958333333335 114.17142857142863L 232.75958333333335 96.04285714285714L 233.72958333333335 105.04285714285714L 236.63958333333335 110.44285714285718L 237.60958333333335 117L 238.57958333333335 121.75714285714287L 239.54958333333335 118.28571428571433L 240.51958333333334 122.91428571428577L 243.42958333333334 120.60000000000002L 244.39958333333334 121.24285714285713L 245.36958333333334 120.85714285714283L 246.33958333333334 119.82857142857142L 247.30958333333334 122.52857142857147L 250.21958333333333 125.61428571428576L 251.18958333333333 132.6857142857143L 252.15958333333333 134.87142857142857L 253.12958333333333 131.39999999999998L 254.09958333333333 129.34285714285716L 257.00958333333335 124.32857142857148L 257.9795833333333 112.62857142857143L 258.94958333333335 110.05714285714288L 259.9195833333333 109.5428571428572L 260.88958333333335 112.62857142857143L 263.7995833333333 109.41428571428571L 264.76958333333334 111.7285714285714L 265.7395833333333 111.08571428571429L 266.70958333333334 110.57142857142861L 267.67958333333337 102.72857142857146L 272.57 102.59999999999997L 273.54 98.22857142857146L 274.51 97.84285714285716L 277.42 99.77142857142854L 278.39 97.84285714285716L 279.36 109.67142857142858L 280.33 115.97142857142865L 281.3 117L 284.21000000000004 119.57142857142856L 285.18 121.62857142857143L 286.15000000000003 125.61428571428576L 287.12 120.34285714285716L 288.09000000000003 120.21428571428572L 291 116.74285714285713L 291.97 120.34285714285716L 292.94 117.77142857142854L 294.88 110.57142857142861L 297.79 111.85714285714289L 298.76 113.40000000000003L 299.73 104.39999999999998L 300.7 101.69999999999999L 301.67 95.01428571428573L 304.58 93.85714285714283L 305.55 86.14285714285717L 306.52000000000004 84.85714285714289L 307.49 88.19999999999999L 308.46000000000004 83.82857142857148L 311.37 80.35714285714289L 312.34000000000003 83.05714285714288L 313.31 77.65714285714284L 314.28000000000003 83.18571428571425L 315.25 57.08571428571429L 318.16 58.88571428571424L 319.13 57.985714285714266L 320.1 50.271428571428544L 321.07 53.10000000000002L 322.04 55.157142857142844L 324.95 57.47142857142859L 326.89 57.21428571428578L 327.86 60.428571428571445L 328.83 65.57142857142861L 331.74 55.542857142857144L 333.68 47.05714285714282L 334.65000000000003 54.64285714285717L 335.62 49.75714285714281L 338.53000000000003 52.200000000000045L 339.5 49.62857142857143L 340.47 42.94285714285718L 341.44 43.45714285714291L 342.41 50.271428571428544L 345.32 49.37142857142862L 346.29 49.5L 347.26 52.97142857142853L 348.23 54.900000000000034L 349.2 51.68571428571431L 353.08 52.071428571428555L 354.05 48.21428571428572L 355.02000000000004 50.14285714285711L 355.99 47.314285714285745L 358.90000000000003 48.3428571428571L 359.87 44.74285714285713L 360.84000000000003 52.200000000000045L 361.81 53.61428571428576L 362.78000000000003 47.05714285714282L 365.69 50.14285714285711L 366.66 44.87142857142862L 367.63 46.285714285714334L 368.6 50.52857142857141L 369.57 37.02857142857147L 372.48 43.19999999999999L 373.45 39.985714285714266L 374.42 41.01428571428568L 375.39 43.58571428571429L 376.36 43.32857142857142L 380.24 38.69999999999999L 381.21000000000004 41.52857142857141L 382.18 47.05714285714282L 383.15000000000003 44.35714285714289L 386.06 50.014285714285734L 387.03000000000003 43.8428571428571L 388 30.857142857142833"
-                                  fill="none"
-                                  fillOpacity={1}
-                                  stroke="rgba(255,255,255,0.85)"
-                                  strokeOpacity={1}
-                                  strokeLinecap="butt"
-                                  strokeWidth={2}
-                                  strokeDasharray={0}
-                                  className="apexcharts-line"
-                                  index={0}
-                                  clipPath="url(#gridRectMaskcb2o80gd)"
-                                  pathto="M 0 142.0714285714286L 0.9700000000000001 137.05714285714288L 1.9400000000000002 139.1142857142857L 2.91 140.78571428571428L 5.82 141.42857142857144L 6.79 142.0714285714286L 7.760000000000001 138.34285714285716L 8.73 137.70000000000005L 9.700000000000001 130.5L 12.610000000000001 130.37142857142857L 13.58 124.97142857142859L 14.55 127.28571428571428L 15.520000000000001 120.21428571428572L 16.490000000000002 125.87142857142857L 19.400000000000002 124.07142857142856L 20.37 122.91428571428577L 21.34 122.65714285714284L 22.310000000000002 117.51428571428573L 23.28 118.92857142857144L 27.16 121.62857142857143L 28.130000000000003 124.32857142857148L 29.1 116.10000000000002L 30.07 110.44285714285718L 32.980000000000004 112.24285714285713L 33.95 112.24285714285713L 34.92 117.12857142857143L 35.89 114.42857142857144L 36.86 106.32857142857148L 39.77 112.8857142857143L 40.74 128.70000000000005L 41.71 123.30000000000007L 42.68 115.07142857142861L 43.65 107.48571428571427L 46.56 108.51428571428568L 47.53 100.02857142857147L 48.5 105.81428571428569L 49.47 100.67142857142858L 50.440000000000005 105.17142857142858L 53.35 96.30000000000001L 54.32 113.6571428571429L 55.29 108.51428571428568L 56.260000000000005 106.58571428571429L 57.230000000000004 105.29999999999995L 60.099583333333335 97.71428571428572L 61.069583333333334 94.75714285714281L 62.03958333333333 96.94285714285712L 63.00958333333334 96.68571428571431L 63.97958333333334 98.87142857142857L 66.88958333333333 93.85714285714283L 67.85958333333333 98.87142857142857L 68.82958333333333 109.80000000000001L 69.79958333333333 108.12857142857138L 73.67958333333334 112.8857142857143L 74.64958333333334 120.72857142857146L 75.61958333333334 115.58571428571435L 76.58958333333334 108.64285714285717L 77.55958333333334 113.40000000000003L 80.46958333333333 117.77142857142854L 81.43958333333333 104.91428571428565L 82.40958333333333 110.69999999999999L 83.37958333333333 116.87142857142862L 84.34958333333334 114.94285714285712L 87.25958333333334 120.60000000000002L 88.22958333333334 123.42857142857144L 89.19958333333334 114.04285714285714L 90.16958333333334 112.37142857142862L 91.13958333333333 108.25714285714287L 94.04958333333333 108.64285714285717L 95.01958333333333 105.81428571428569L 95.98958333333334 105.94285714285718L 96.95958333333334 111.60000000000002L 97.92958333333334 120.72857142857146L 100.83958333333334 121.88571428571424L 101.80958333333334 119.95714285714286L 102.77958333333333 121.88571428571424L 103.74958333333333 129.59999999999997L 104.71958333333333 125.99999999999994L 107.62958333333334 125.61428571428576L 108.59958333333334 124.32857142857148L 109.56958333333334 123.94285714285718L 110.53958333333334 128.44285714285718L 111.50958333333334 137.44285714285718L 114.41958333333334 128.44285714285718L 115.38958333333333 128.44285714285718L 116.35958333333333 126.25714285714287L 117.32958333333333 134.48571428571432L 118.29958333333333 133.71428571428572L 122.17958333333334 127.92857142857144L 123.14958333333334 137.70000000000005L 124.11958333333334 140.78571428571428L 125.08958333333334 156.60000000000002L 127.99958333333333 150.3L 128.96958333333333 145.28571428571428L 129.93958333333333 132.55714285714282L 130.90958333333333 137.31428571428575L 131.87958333333333 133.0714285714286L 134.78958333333333 139.75714285714287L 135.75958333333332 131.52857142857147L 136.72958333333335 131.2714285714286L 137.69958333333335 132.8142857142857L 138.66958333333335 123.55714285714288L 141.57958333333335 120.47142857142853L 142.54958333333335 117.12857142857143L 143.51958333333334 128.70000000000005L 144.48958333333334 138.4714285714286L 145.45958333333334 134.10000000000002L 148.36958333333334 143.48571428571427L 149.33958333333334 140.5285714285714L 150.30958333333334 136.15714285714284L 151.27958333333333 139.24285714285713L 152.24958333333333 123.81428571428575L 155.15958333333333 126.12857142857149L 156.12958333333333 122.01428571428573L 158.06958333333333 121.75714285714287L 159.03958333333333 136.67142857142858L 161.94958333333335 148.75714285714287L 162.91958333333335 148.62857142857143L 163.88958333333335 151.71428571428572L 164.85958333333335 152.48571428571427L 165.82958333333335 145.92857142857144L 168.73958333333334 149.14285714285717L 169.70958333333334 145.92857142857144L 170.67958333333334 135.90000000000003L 171.64958333333334 129.98571428571427L 172.61958333333334 136.54285714285714L 175.52958333333333 146.05714285714288L 176.49958333333333 154.02857142857147L 177.46958333333333 150.04285714285714L 178.43958333333333 142.0714285714286L 179.40958333333333 129.98571428571427L 182.31958333333333 141.3L 183.28958333333333 142.9714285714286L 184.25958333333335 145.4142857142857L 185.22958333333335 146.82857142857148L 186.19958333333335 128.3142857142857L 189.10958333333335 126.77142857142854L 190.07958333333335 123.81428571428575L 191.04958333333335 122.01428571428573L 192.01958333333334 120.21428571428572L 192.98958333333334 120.34285714285716L 195.89958333333334 125.09999999999997L 196.86958333333334 127.28571428571428L 197.83958333333334 116.87142857142862L 198.80958333333334 107.35714285714289L 199.77958333333333 105.42857142857144L 202.68958333333333 103.88571428571424L 203.65958333333333 106.07142857142856L 204.62958333333333 104.91428571428565L 205.59958333333333 109.28571428571428L 206.56958333333333 125.22857142857146L 209.47958333333335 124.45714285714286L 210.44958333333335 127.79999999999995L 211.41958333333335 129.0857142857143L 212.38958333333335 135.51428571428573L 213.35958333333335 137.95714285714286L 217.23958333333334 135.90000000000003L 218.20958333333334 125.22857142857146L 219.17958333333334 118.41428571428571L 220.14958333333334 122.65714285714284L 223.05958333333334 126.89999999999998L 224.02958333333333 123.04285714285714L 224.99958333333333 123.17142857142858L 225.96958333333333 118.15714285714284L 226.93958333333333 111.3428571428571L 229.84958333333333 110.44285714285718L 230.81958333333336 121.24285714285713L 231.78958333333335 114.17142857142863L 232.75958333333335 96.04285714285714L 233.72958333333335 105.04285714285714L 236.63958333333335 110.44285714285718L 237.60958333333335 117L 238.57958333333335 121.75714285714287L 239.54958333333335 118.28571428571433L 240.51958333333334 122.91428571428577L 243.42958333333334 120.60000000000002L 244.39958333333334 121.24285714285713L 245.36958333333334 120.85714285714283L 246.33958333333334 119.82857142857142L 247.30958333333334 122.52857142857147L 250.21958333333333 125.61428571428576L 251.18958333333333 132.6857142857143L 252.15958333333333 134.87142857142857L 253.12958333333333 131.39999999999998L 254.09958333333333 129.34285714285716L 257.00958333333335 124.32857142857148L 257.9795833333333 112.62857142857143L 258.94958333333335 110.05714285714288L 259.9195833333333 109.5428571428572L 260.88958333333335 112.62857142857143L 263.7995833333333 109.41428571428571L 264.76958333333334 111.7285714285714L 265.7395833333333 111.08571428571429L 266.70958333333334 110.57142857142861L 267.67958333333337 102.72857142857146L 272.57 102.59999999999997L 273.54 98.22857142857146L 274.51 97.84285714285716L 277.42 99.77142857142854L 278.39 97.84285714285716L 279.36 109.67142857142858L 280.33 115.97142857142865L 281.3 117L 284.21000000000004 119.57142857142856L 285.18 121.62857142857143L 286.15000000000003 125.61428571428576L 287.12 120.34285714285716L 288.09000000000003 120.21428571428572L 291 116.74285714285713L 291.97 120.34285714285716L 292.94 117.77142857142854L 294.88 110.57142857142861L 297.79 111.85714285714289L 298.76 113.40000000000003L 299.73 104.39999999999998L 300.7 101.69999999999999L 301.67 95.01428571428573L 304.58 93.85714285714283L 305.55 86.14285714285717L 306.52000000000004 84.85714285714289L 307.49 88.19999999999999L 308.46000000000004 83.82857142857148L 311.37 80.35714285714289L 312.34000000000003 83.05714285714288L 313.31 77.65714285714284L 314.28000000000003 83.18571428571425L 315.25 57.08571428571429L 318.16 58.88571428571424L 319.13 57.985714285714266L 320.1 50.271428571428544L 321.07 53.10000000000002L 322.04 55.157142857142844L 324.95 57.47142857142859L 326.89 57.21428571428578L 327.86 60.428571428571445L 328.83 65.57142857142861L 331.74 55.542857142857144L 333.68 47.05714285714282L 334.65000000000003 54.64285714285717L 335.62 49.75714285714281L 338.53000000000003 52.200000000000045L 339.5 49.62857142857143L 340.47 42.94285714285718L 341.44 43.45714285714291L 342.41 50.271428571428544L 345.32 49.37142857142862L 346.29 49.5L 347.26 52.97142857142853L 348.23 54.900000000000034L 349.2 51.68571428571431L 353.08 52.071428571428555L 354.05 48.21428571428572L 355.02000000000004 50.14285714285711L 355.99 47.314285714285745L 358.90000000000003 48.3428571428571L 359.87 44.74285714285713L 360.84000000000003 52.200000000000045L 361.81 53.61428571428576L 362.78000000000003 47.05714285714282L 365.69 50.14285714285711L 366.66 44.87142857142862L 367.63 46.285714285714334L 368.6 50.52857142857141L 369.57 37.02857142857147L 372.48 43.19999999999999L 373.45 39.985714285714266L 374.42 41.01428571428568L 375.39 43.58571428571429L 376.36 43.32857142857142L 380.24 38.69999999999999L 381.21000000000004 41.52857142857141L 382.18 47.05714285714282L 383.15000000000003 44.35714285714289L 386.06 50.014285714285734L 387.03000000000003 43.8428571428571L 388 30.857142857142833"
-                                  pathfrom="M -1 540L -1 540L 0.9700000000000001 540L 1.9400000000000002 540L 2.91 540L 5.82 540L 6.79 540L 7.760000000000001 540L 8.73 540L 9.700000000000001 540L 12.610000000000001 540L 13.58 540L 14.55 540L 15.520000000000001 540L 16.490000000000002 540L 19.400000000000002 540L 20.37 540L 21.34 540L 22.310000000000002 540L 23.28 540L 27.16 540L 28.130000000000003 540L 29.1 540L 30.07 540L 32.980000000000004 540L 33.95 540L 34.92 540L 35.89 540L 36.86 540L 39.77 540L 40.74 540L 41.71 540L 42.68 540L 43.65 540L 46.56 540L 47.53 540L 48.5 540L 49.47 540L 50.440000000000005 540L 53.35 540L 54.32 540L 55.29 540L 56.260000000000005 540L 57.230000000000004 540L 60.099583333333335 540L 61.069583333333334 540L 62.03958333333333 540L 63.00958333333334 540L 63.97958333333334 540L 66.88958333333333 540L 67.85958333333333 540L 68.82958333333333 540L 69.79958333333333 540L 73.67958333333334 540L 74.64958333333334 540L 75.61958333333334 540L 76.58958333333334 540L 77.55958333333334 540L 80.46958333333333 540L 81.43958333333333 540L 82.40958333333333 540L 83.37958333333333 540L 84.34958333333334 540L 87.25958333333334 540L 88.22958333333334 540L 89.19958333333334 540L 90.16958333333334 540L 91.13958333333333 540L 94.04958333333333 540L 95.01958333333333 540L 95.98958333333334 540L 96.95958333333334 540L 97.92958333333334 540L 100.83958333333334 540L 101.80958333333334 540L 102.77958333333333 540L 103.74958333333333 540L 104.71958333333333 540L 107.62958333333334 540L 108.59958333333334 540L 109.56958333333334 540L 110.53958333333334 540L 111.50958333333334 540L 114.41958333333334 540L 115.38958333333333 540L 116.35958333333333 540L 117.32958333333333 540L 118.29958333333333 540L 122.17958333333334 540L 123.14958333333334 540L 124.11958333333334 540L 125.08958333333334 540L 127.99958333333333 540L 128.96958333333333 540L 129.93958333333333 540L 130.90958333333333 540L 131.87958333333333 540L 134.78958333333333 540L 135.75958333333332 540L 136.72958333333335 540L 137.69958333333335 540L 138.66958333333335 540L 141.57958333333335 540L 142.54958333333335 540L 143.51958333333334 540L 144.48958333333334 540L 145.45958333333334 540L 148.36958333333334 540L 149.33958333333334 540L 150.30958333333334 540L 151.27958333333333 540L 152.24958333333333 540L 155.15958333333333 540L 156.12958333333333 540L 158.06958333333333 540L 159.03958333333333 540L 161.94958333333335 540L 162.91958333333335 540L 163.88958333333335 540L 164.85958333333335 540L 165.82958333333335 540L 168.73958333333334 540L 169.70958333333334 540L 170.67958333333334 540L 171.64958333333334 540L 172.61958333333334 540L 175.52958333333333 540L 176.49958333333333 540L 177.46958333333333 540L 178.43958333333333 540L 179.40958333333333 540L 182.31958333333333 540L 183.28958333333333 540L 184.25958333333335 540L 185.22958333333335 540L 186.19958333333335 540L 189.10958333333335 540L 190.07958333333335 540L 191.04958333333335 540L 192.01958333333334 540L 192.98958333333334 540L 195.89958333333334 540L 196.86958333333334 540L 197.83958333333334 540L 198.80958333333334 540L 199.77958333333333 540L 202.68958333333333 540L 203.65958333333333 540L 204.62958333333333 540L 205.59958333333333 540L 206.56958333333333 540L 209.47958333333335 540L 210.44958333333335 540L 211.41958333333335 540L 212.38958333333335 540L 213.35958333333335 540L 217.23958333333334 540L 218.20958333333334 540L 219.17958333333334 540L 220.14958333333334 540L 223.05958333333334 540L 224.02958333333333 540L 224.99958333333333 540L 225.96958333333333 540L 226.93958333333333 540L 229.84958333333333 540L 230.81958333333336 540L 231.78958333333335 540L 232.75958333333335 540L 233.72958333333335 540L 236.63958333333335 540L 237.60958333333335 540L 238.57958333333335 540L 239.54958333333335 540L 240.51958333333334 540L 243.42958333333334 540L 244.39958333333334 540L 245.36958333333334 540L 246.33958333333334 540L 247.30958333333334 540L 250.21958333333333 540L 251.18958333333333 540L 252.15958333333333 540L 253.12958333333333 540L 254.09958333333333 540L 257.00958333333335 540L 257.9795833333333 540L 258.94958333333335 540L 259.9195833333333 540L 260.88958333333335 540L 263.7995833333333 540L 264.76958333333334 540L 265.7395833333333 540L 266.70958333333334 540L 267.67958333333337 540L 272.57 540L 273.54 540L 274.51 540L 277.42 540L 278.39 540L 279.36 540L 280.33 540L 281.3 540L 284.21000000000004 540L 285.18 540L 286.15000000000003 540L 287.12 540L 288.09000000000003 540L 291 540L 291.97 540L 292.94 540L 294.88 540L 297.79 540L 298.76 540L 299.73 540L 300.7 540L 301.67 540L 304.58 540L 305.55 540L 306.52000000000004 540L 307.49 540L 308.46000000000004 540L 311.37 540L 312.34000000000003 540L 313.31 540L 314.28000000000003 540L 315.25 540L 318.16 540L 319.13 540L 320.1 540L 321.07 540L 322.04 540L 324.95 540L 326.89 540L 327.86 540L 328.83 540L 331.74 540L 333.68 540L 334.65000000000003 540L 335.62 540L 338.53000000000003 540L 339.5 540L 340.47 540L 341.44 540L 342.41 540L 345.32 540L 346.29 540L 347.26 540L 348.23 540L 349.2 540L 353.08 540L 354.05 540L 355.02000000000004 540L 355.99 540L 358.90000000000003 540L 359.87 540L 360.84000000000003 540L 361.81 540L 362.78000000000003 540L 365.69 540L 366.66 540L 367.63 540L 368.6 540L 369.57 540L 372.48 540L 373.45 540L 374.42 540L 375.39 540L 376.36 540L 380.24 540L 381.21000000000004 540L 382.18 540L 383.15000000000003 540L 386.06 540L 387.03000000000003 540L 388 540"
-                                />
-                                <g
-                                  id="SvgjsG1321"
-                                  className="apexcharts-series-markers-wrap"
-                                />
-                                <g
-                                  id="SvgjsG1322"
-                                  className="apexcharts-datalabels"
-                                />
-                              </g>
-                            </g>
-                            <line
-                              id="SvgjsLine1331"
-                              x1={0}
-                              y1={0}
-                              x2={388}
-                              y2={0}
-                              stroke="#b6b6b6"
-                              strokeDasharray={0}
-                              strokeWidth={1}
-                              className="apexcharts-ycrosshairs"
-                            />
-                            <line
-                              id="SvgjsLine1332"
-                              x1={0}
-                              y1={0}
-                              x2={388}
-                              y2={0}
-                              strokeDasharray={0}
-                              strokeWidth={0}
-                              className="apexcharts-ycrosshairs-hidden"
-                            />
-                            <g
-                              id="SvgjsG1333"
-                              className="apexcharts-yaxis-annotations"
-                            />
-                            <g
-                              id="SvgjsG1334"
-                              className="apexcharts-xaxis-annotations"
-                            />
-                            <g
-                              id="SvgjsG1335"
-                              className="apexcharts-point-annotations"
-                            />
-                          </g>
-                          <rect
-                            id="SvgjsRect1314"
-                            width={0}
-                            height={0}
-                            x={0}
-                            y={0}
-                            rx={0}
-                            ry={0}
-                            fill="#fefefe"
-                            opacity={1}
-                            strokeWidth={0}
-                            stroke="none"
-                            strokeDasharray={0}
+                          <path
+                            d="M13.0089 8.97241C12.7855 9.64616 12.4491 10.2807 12.0107 10.8477C11.277 11.7966 10.2883 12.5169 9.1602 12.9244C8.03209 13.3319 6.81126 13.4097 5.64056 13.1486C4.46987 12.8876 3.39772 12.2986 2.54959 11.4504C1.70145 10.6023 1.1124 9.53013 0.851363 8.35944C0.590325 7.18874 0.668097 5.96791 1.07558 4.8398C1.48306 3.71169 2.2034 2.72296 3.1523 1.9893C3.71928 1.55094 4.35384 1.21447 5.02759 0.991088C4.69163 1.84583 4.54862 2.77147 4.61793 3.7009C4.72758 5.17128 5.36134 6.55346 6.40394 7.59606C7.44654 8.63866 8.82873 9.27242 10.2991 9.38207C11.2285 9.45138 12.1542 9.30837 13.0089 8.97241Z"
+                            stroke="white"
+                            strokeWidth="1.4"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
                           />
-                          <g
-                            id="SvgjsG1326"
-                            className="apexcharts-yaxis"
-                            rel={0}
-                            transform="translate(-21, 0)"
-                          >
-                            <g
-                              id="SvgjsG1327"
-                              className="apexcharts-yaxis-texts-g"
-                            />
-                          </g>
                         </svg>
-                        <div className="apexcharts-legend" />
+                      </a>
+                    ) : (
+                      <a className="sun" href="#" onClick={toggleTheme}>
+                        <svg
+                          width={16}
+                          height={16}
+                          viewBox="0 0 16 16"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M7.99993 11.182C9.7572 11.182 11.1818 9.75745 11.1818 8.00018C11.1818 6.24291 9.7572 4.81836 7.99993 4.81836C6.24266 4.81836 4.81812 6.24291 4.81812 8.00018C4.81812 9.75745 6.24266 11.182 7.99993 11.182Z"
+                            stroke="#23262F"
+                            strokeWidth="1.5"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
+                          <path
+                            d="M8 1V2.27273"
+                            stroke="#23262F"
+                            strokeWidth="1.5"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
+                          <path
+                            d="M8 13.7271V14.9998"
+                            stroke="#23262F"
+                            strokeWidth="1.5"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
+                          <path
+                            d="M3.04956 3.04932L3.9532 3.95295"
+                            stroke="#23262F"
+                            strokeWidth="1.5"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
+                          <path
+                            d="M12.0469 12.0469L12.9505 12.9505"
+                            stroke="#23262F"
+                            strokeWidth="1.5"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
+                          <path
+                            d="M1 8H2.27273"
+                            stroke="#23262F"
+                            strokeWidth="1.5"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
+                          <path
+                            d="M13.7273 8H15"
+                            stroke="#23262F"
+                            strokeWidth="1.5"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
+                          <path
+                            d="M3.04956 12.9505L3.9532 12.0469"
+                            stroke="#23262F"
+                            strokeWidth="1.5"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
+                          <path
+                            d="M12.0469 3.95295L12.9505 3.04932"
+                            stroke="#23262F"
+                            strokeWidth="1.5"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
+                        </svg>
+                      </a>
+                    )}
+                  </div>
+                  <div className="dropdown notification">
+                    <button
+                      className="btn dropdown-toggle"
+                      type="button"
+                      id="dropdownMenuButton3"
+                      data-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                    >
+                      <span className="icon-notification" />
+                    </button>
+                    <div
+                      className="dropdown-menu"
+                      aria-labelledby="dropdownMenuButton3"
+                    >
+                      <div className="dropdown-item">
+                        <div className="media server-log">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width={24}
+                            height={24}
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            strokeWidth={2}
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            className="feather feather-server"
+                          >
+                            <rect
+                              x={2}
+                              y={2}
+                              width={20}
+                              height={8}
+                              rx={2}
+                              ry={2}
+                            />
+                            <rect
+                              x={2}
+                              y={14}
+                              width={20}
+                              height={8}
+                              rx={2}
+                              ry={2}
+                            />
+                            <line x1={6} y1={6} x2={6} y2={6} />
+                            <line x1={6} y1={18} x2={6} y2={18} />
+                          </svg>
+                          <div className="media-body">
+                            <div className="data-info">
+                              <h6 className>Server Rebooted</h6>
+                              <p className>45 min ago</p>
+                            </div>
+                            <div className="icon-status">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width={24}
+                                height={24}
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                strokeWidth={2}
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                className="feather feather-x"
+                              >
+                                <line x1={18} y1={6} x2={6} y2={18} />
+                                <line x1={6} y1={6} x2={18} y2={18} />
+                              </svg>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="dropdown-item">
+                        <div className="media">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width={24}
+                            height={24}
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            strokeWidth={2}
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            className="feather feather-heart"
+                          >
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+                          </svg>
+                          <div className="media-body">
+                            <div className="data-info">
+                              <h6 className>Licence Expiring Soon</h6>
+                              <p className>8 hrs ago</p>
+                            </div>
+                            <div className="icon-status">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width={24}
+                                height={24}
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                strokeWidth={2}
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                className="feather feather-x"
+                              >
+                                <line x1={18} y1={6} x2={6} y2={18} />
+                                <line x1={6} y1={6} x2={18} y2={18} />
+                              </svg>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="dropdown-item">
+                        <div className="media file-upload">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width={24}
+                            height={24}
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            strokeWidth={2}
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            className="feather feather-file-text"
+                          >
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                            <polyline points="14 2 14 8 20 8" />
+                            <line x1={16} y1={13} x2={8} y2={13} />
+                            <line x1={16} y1={17} x2={8} y2={17} />
+                            <polyline points="10 9 9 9 8 9" />
+                          </svg>
+                          <div className="media-body">
+                            <div className="data-info">
+                              <h6 className>Kelly Portfolio.pdf</h6>
+                              <p className>670 kb</p>
+                            </div>
+                            <div className="icon-status">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width={24}
+                                height={24}
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                strokeWidth={2}
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                className="feather feather-check"
+                              >
+                                <polyline points="20 6 9 17 4 12" />
+                              </svg>
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </div>
-                    <div className="resize-triggers">
-                      <div className="expand-trigger">
-                        <div style={{ width: 411, height: 266 }} />
-                      </div>
-                      <div className="contract-trigger" />
+                  </div>
+                  <div className="mobile-button">
+                    <span />
+                  </div>
+                  <div className="wallet">
+                    <a href="/auth/login"> Sign In </a>
+                  </div>
+                  <div className="dropdown user">
+                    <button
+                      className="btn dropdown-toggle"
+                      type="button"
+                      id="dropdownMenuButton4"
+                      data-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false"
+                    >
+                      <img src={avt_01} alt />
+                    </button>
+                    <div
+                      className="dropdown-menu"
+                      aria-labelledby="dropdownMenuButton4"
+                    >
+                      <a className="dropdown-item" href="#">
+                        <i className="bx bx-user font-size-16 align-middle me-1" />
+                        <span>Profile</span>
+                      </a>
+                      <a className="dropdown-item" href="#">
+                        <i className="bx bx-wallet font-size-16 align-middle me-1" />
+                        <span>My Wallet</span>
+                      </a>
+                      <a className="dropdown-item d-block" href="#">
+                        <span className="badge bg-success float-end">11</span>
+                        <i className="bx bx-wrench font-size-16 align-middle me-1" />
+                        <span>Settings</span>
+                      </a>
+                      <a className="dropdown-item" href="#">
+                        <i className="bx bx-lock-open font-size-16 align-middle me-1" />
+                        <span>Lock screen</span>
+                      </a>
+                      <div className="dropdown-divider" />
+                      <a
+                        className="dropdown-item text-danger"
+                        href="user-login.html"
+                      >
+                        <i className="bx bx-power-off font-size-16 align-middle me-1 text-danger" />
+                        <span>Logout</span>
+                      </a>
                     </div>
-                  </a>
+                  </div>
                 </div>
               </div>
-              {/* <div class="col-xxl-4 col-xl-4 col-lg-6 col-md-6 col-sm-6">
-          <div class="price-widget bg-dark">
-              <a href="price-details.html">
-                  <div class="price-content">
-                      <div class="icon-title">
-                          <i class="cc XRP"></i>
-                          <span>Ripple</span>
-                      </div>
-                      <h5>$ 11,785.10</h5>
-                  </div>
-                  <div id="chart4"></div>
-              </a>
-          </div>
-      </div>
-      <div class="col-xxl-4 col-xl-4 col-lg-6 col-md-6 col-sm-6">
-          <div class="price-widget bg-dark">
-              <a href="price-details.html">
-                  <div class="price-content">
-                      <div class="icon-title">
-                          <i class="cc LTC"></i>
-                          <span>Litecoin</span>
-                      </div>
-                      <h5>$ 11,785.10</h5>
-                  </div>
-                  <div id="chart5"></div>
-              </a>
-          </div>
-      </div>
-      <div class="col-xxl-4 col-xl-4 col-lg-6 col-md-6 col-sm-6">
-          <div class="price-widget bg-dark">
-              <a href="price-details.html">
-                  <div class="price-content">
-                      <div class="icon-title">
-                          <i class="cc ADA"></i>
-                          <span>Cardano</span>
-                      </div>
-                      <h5>$ 11,785.10</h5>
-                  </div>
-                  <div id="chart6"></div>
-              </a>
-          </div>
-      </div> */}
             </div>
           </div>
         </div>
-        <div className="portfolio section-padding bg-gradient-primary">
-          <div className="container">
-            <div className="row py-lg-5 justify-content-center">
-              <div className="col-xl-7">
-                <div className="section-title text-center">
-                  <h2 className="text-white">
-                    Create your cryptocurrency portfolio today
-                  </h2>
-                  <p className="text-white">
-                    Tradee has a variety of features that make it the best place
-                    to start trading
-                  </p>
+      </header>
+      <div style={{ height: 50 }} />
+
+      {/* end Header */}
+      {/* Banner Top */}
+      <section className="banner">
+        <div className="container">
+          <div className="row">
+            <div className="col-xl-6 col-md-12">
+              <div className="banner__content">
+                <h2 className="title">
+                  Buy &amp; Sell Digital Assets In The Rockie
+                </h2>
+                <p className="fs-20 desc">
+                  Coin rockie is the easiest, safest, and fastest way to buy
+                  &amp; sell crypto asset exchange.
+                </p>
+                <a href="#" className="btn-action">
+                  <span>Get started now</span>
+                </a>
+                <div className="partner">
+                  <h6>Our Partners</h6>
+                  <div className="partner__list">
+                    <div className="swiper swiper-partner">
+                      <div className="swiper-wrapper">
+                        <div className="swiper-slide">
+                          <a href="#">
+                            <img src={logo_01} alt />
+                          </a>
+                        </div>
+                        <div className="swiper-slide">
+                          <a href="#">
+                            <img src={logo_02} alt />
+                          </a>
+                        </div>
+                        <div className="swiper-slide">
+                          <a href="#">
+                            <img src={logo_03} alt />
+                          </a>
+                        </div>
+                        <div className="swiper-slide">
+                          <a href="#">
+                            <img src={logo_04} alt />
+                          </a>
+                        </div>
+                        <div className="swiper-slide">
+                          <a href="#">
+                            <img src={logo_01} alt />
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-            <div className="row align-items-center justify-content-between">
-              <div className="col-xl-4 col-lg-6">
-                <div className="portfolio_list">
-                  <div className="media">
-                    <span className="port-icon">
-                      {" "}
-                      <i className="fas fa-user-circle" />
-                    </span>
-                    <div className="media-body">
-                      <h4>Manage your portfolio</h4>
-                      <p>
-                        Buy and sell popular digital currencies, keep track of
-                        them in the one place.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="media">
-                    <span className="port-icon">
-                      {" "}
-                      <i className="fas fa-shopping-bag" />
-                    </span>
-                    <div className="media-body">
-                      <h4>Recurring buys</h4>
-                      <p>
-                        Invest in cryptocurrency slowly over time by scheduling
-                        buys daily, weekly, or monthly.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="col-xl-4 col-lg-6">
-                <div className="portfolio_img">
-                  {/* <img src={portfolio} alt className="img-fluid" /> */}
-                </div>
-              </div>
-              <div className="col-xl-4 col-lg-6">
-                <div className="portfolio_list">
-                  <div className="media">
-                    <span className="port-icon">
-                      {" "}
-                      <i className="fas fa-shield-virus" />
-                    </span>
-                    <div className="media-body">
-                      <h4>Vault protection</h4>
-                      <p>
-                        For added security, store your funds in a vault with
-                        time delayed withdrawals.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="media">
-                    <span className="port-icon">
-                      {" "}
-                      <i className="fas fa-mobile" />
-                    </span>
-                    <div className="media-body">
-                      <h4>Mobile apps</h4>
-                      <p>
-                        Stay on top of the markets with the Tradee app for{" "}
-                        <a href="#">Android</a>
-                        or
-                        <a href="#">iOS</a>.
-                      </p>
-                    </div>
-                  </div>
-                </div>
+            <div className="col-xl-6 col-md-12">
+              <div className="banner__image">
+                <img src={banner_01} alt />
               </div>
             </div>
           </div>
         </div>
-        <div className="trade-app section-padding">
-          <div className="container">
-            <div className="row justify-content-center">
-              <div className="col-xl-6">
-                <div className="section-title text-center">
-                  <h2>Trade. Anywhere</h2>
-                  <p>
-                    {" "}
-                    All of our products are ready to go, easy to use and offer
-                    great value to any kind of business
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="row">
-              <div className="col-xl-4 col-lg-4 col-md-12">
-                <div className="card trade-app-content">
-                  <div className="card-body">
-                    <span>
-                      <i className="fas fa-mobile" />
-                    </span>
-                    <h4 className="card-title">Mobile</h4>
-                    <p>
-                      All the power of Tradee's cryptocurrency exchange, in the
-                      palm of your hand. Download the Tradee mobile crypto
-                      trading app today
-                    </p>
-                    <a href="#"> Know More </a>
-                  </div>
-                </div>
-              </div>
-              <div className="col-xl-4 col-lg-4 col-md-12">
-                <div className="card trade-app-content">
-                  <div className="card-body">
-                    <span>
-                      <i className="fas fa-desktop" />
-                    </span>
-                    <h4 className="card-title">Desktop</h4>
-                    <p>
-                      Powerful crypto trading platform for those who mean
-                      business. The Tradee crypto trading experience,
-                      tailor-made for your Windows or MacOS device.
-                    </p>
-                    <a href="#"> Know More </a>
-                  </div>
-                </div>
-              </div>
-              <div className="col-xl-4 col-lg-4 col-md-12">
-                <div className="card trade-app-content">
-                  <div className="card-body">
-                    <span>
-                      <i className="fas fa-database" />
-                    </span>
-                    <h4 className="card-title">API</h4>
-                    <p>
-                      The Tradee API is designed to provide an easy and
-                      efficient way to integrate your trading application into
-                      our platform.
-                    </p>
-                    <a href="#"> Know More </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="brand  bg-light section-padding">
-          <div className="container">
-            <div className="row">
-              <div className="col-xl-12">
-                <div className="trusted-business pb-5 text-center">
-                  <h3>
-                    Trusted by over <strong>10.000 users</strong>
-                  </h3>
-                </div>
-                {/* <div className="row justify-content-center">
-                  <div className="col-auto">
-                    <div className="trusted-logo">
-                      <a href="#">
-                        <img className="img-fluid" src={image} alt />
-                      </a>
-                    </div>
-                  </div>
-                  <div className="col-auto">
-                    <div className="trusted-logo">
-                      <a href="#">
-                        <img className="img-fluid" src={image1} alt />
-                      </a>
-                    </div>
-                  </div>
-                  <div className="col-auto">
-                    <div className="trusted-logo">
-                      <a href="#">
-                        <img className="img-fluid" src={image2} alt />
-                      </a>
-                    </div>
-                  </div>
-                  <div className="col-auto">
-                    <div className="trusted-logo">
-                      <a href="#">
-                        <img className="img-fluid" src={image3} alt />
-                      </a>
-                    </div>
-                  </div>
-                  <div className="col-auto">
-                    <div className="trusted-logo">
-                      <a href="#">
-                        <img className="img-fluid" src={image4} alt />
-                      </a>
-                    </div>
-                  </div>
-                  <div className="col-auto">
-                    <div className="trusted-logo">
-                      <a href="#">
-                        <img className="img-fluid" src={image5} alt />
-                      </a>
-                    </div>
-                  </div>
-                </div> */}
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="appss section-padding">
-          <div className="container">
-            <div className="row align-items-center justify-content-between">
-              <div className="col-xl-7 col-lg-6 col-md-6">
-                <div className="appss-content">
-                  <h2>The secure app to store crypto yourself</h2>
-                  <ul>
-                    <li>
-                      <i className="la la-check" /> All your digital assets in
-                      one place
+      </section>
+      {/* End Banner Top */}
+      <section
+        className="crypto aos-init aos-animate"
+        data-aos="fade-up"
+        data-aos-duration={1000}
+      >
+        <div className="container">
+          <div className="row">
+            <div className="col-md-12">
+              <div className="crypto__main">
+                <div className="flat-tabs">
+                  <ul className="menu-tab">
+                    <li className="active">
+                      <h6 className="fs-16">Crypto</h6>
                     </li>
                     <li>
-                      <i className="la la-check" /> Use Decentralized Apps
+                      <h6 className="fs-16">DeFi</h6>
                     </li>
                     <li>
-                      <i className="la la-check" /> Pay friends, not addresses
+                      <h6 className="fs-16">BSC</h6>
+                    </li>
+                    <li>
+                      <h6 className="fs-16">NFT</h6>
+                    </li>
+                    <li>
+                      <h6 className="fs-16">Metaverse</h6>
+                    </li>
+                    <li>
+                      <h6 className="fs-16">Polkadot</h6>
+                    </li>
+                    <li>
+                      <h6 className="fs-16">Solana</h6>
+                    </li>
+                    <li>
+                      <h6 className="fs-16">Opensea</h6>
+                    </li>
+                    <li>
+                      <h6 className="fs-16">Makersplace</h6>
                     </li>
                   </ul>
-                  <div className="mt-4">
-                    <a href="#" className="btn btn-primary my-1 waves-effect">
-                      <img src={android} alt />
+                  <div className="content-tab">
+                    <div className="content-inner" style={{}}>
+                      <div className="crypto-box">
+                        <div className="top">
+                          <a href="#">
+                            <span className="icon-btc">
+                              <span className="path1" />
+                              <span className="path2" />
+                            </span>
+                            <span>Bitcoin</span>
+                            <span className="unit">BTC/USD</span>
+                          </a>
+                        </div>
+                        <h6 className="price">USD 46,168.95</h6>
+                        <div className="bottom">
+                          <p>36,641.20</p>
+                          <p className="sale critical">-0.79%</p>
+                        </div>
+                      </div>
+                      <div className="crypto-box active">
+                        <div className="top">
+                          <a href="#">
+                            <span className="icon-eth">
+                              <span className="path1" />
+                              <span className="path2" />
+                              <span className="path3" />
+                              <span className="path4" />
+                            </span>
+                            <span>Ethereum</span>
+                            <span className="unit">ETH/USD</span>
+                          </a>
+                        </div>
+                        <h6 className="price">USD $3,480.04</h6>
+                        <div className="bottom">
+                          <p>36,641.20</p>
+                          <div className="sale success">+10.55%</div>
+                        </div>
+                      </div>
+                      <div className="crypto-box">
+                        <div className="top">
+                          <a href="#">
+                            <span className="icon-tether">
+                              <span className="path1" />
+                              <span className="path2" />
+                            </span>
+                            <span>Tether</span>
+                            <span className="unit">USDT/USD</span>
+                          </a>
+                        </div>
+                        <h6 className="price">USD 1.00</h6>
+                        <div className="bottom">
+                          <p>36,641.20</p>
+                          <div className="sale critical">-0.01%%</div>
+                        </div>
+                      </div>
+                      <div className="crypto-box">
+                        <div className="top">
+                          <a href="#">
+                            <span className="icon-bnb">
+                              <span className="path1" />
+                              <span className="path2" />
+                              <span className="path3" />
+                              <span className="path4" />
+                              <span className="path5" />
+                              <span className="path6" />
+                            </span>
+                            <span>BNB</span>{" "}
+                            <span className="unit">BNB/USD</span>
+                          </a>
+                        </div>
+                        <h6 className="price">USD 443.56</h6>
+                        <div className="bottom">
+                          <p>36,641.20</p>
+                          <div className="sale critical">-1.24%</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="content-inner" style={{ display: "none" }}>
+                      <div className="crypto-box">
+                        <div className="top">
+                          <a href="#">
+                            <span className="icon-btc">
+                              <span className="path1" />
+                              <span className="path2" />
+                            </span>
+                            <span>Bitcoin</span>
+                            <span className="unit">BTC/USD</span>
+                          </a>
+                        </div>
+                        <h6 className="price">USD 46,168.95</h6>
+                        <div className="bottom">
+                          <p>36,641.20</p>
+                          <p className="sale critical">-0.79%</p>
+                        </div>
+                      </div>
+                      <div className="crypto-box active">
+                        <div className="top">
+                          <a href="#">
+                            <span className="icon-eth">
+                              <span className="path1" />
+                              <span className="path2" />
+                              <span className="path3" />
+                              <span className="path4" />
+                            </span>
+                            <span>Ethereum</span>
+                            <span className="unit">ETH/USD</span>
+                          </a>
+                        </div>
+                        <h6 className="price">USD $3,480.04</h6>
+                        <div className="bottom">
+                          <p>36,641.20</p>
+                          <div className="sale success">+10.55%</div>
+                        </div>
+                      </div>
+                      <div className="crypto-box">
+                        <div className="top">
+                          <a href="#">
+                            <span className="icon-tether">
+                              <span className="path1" />
+                              <span className="path2" />
+                            </span>
+                            <span>Tether</span>
+                            <span className="unit">USDT/USD</span>
+                          </a>
+                        </div>
+                        <h6 className="price">USD 1.00</h6>
+                        <div className="bottom">
+                          <p>36,641.20</p>
+                          <div className="sale critical">-0.01%%</div>
+                        </div>
+                      </div>
+                      <div className="crypto-box">
+                        <div className="top">
+                          <a href="#">
+                            <span className="icon-bnb">
+                              <span className="path1" />
+                              <span className="path2" />
+                              <span className="path3" />
+                              <span className="path4" />
+                              <span className="path5" />
+                              <span className="path6" />
+                            </span>
+                            <span>BNB</span>{" "}
+                            <span className="unit">BNB/USD</span>
+                          </a>
+                        </div>
+                        <h6 className="price">USD 443.56</h6>
+                        <div className="bottom">
+                          <p>36,641.20</p>
+                          <div className="sale critical">-1.24%</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="content-inner" style={{ display: "none" }}>
+                      <div className="crypto-box">
+                        <div className="top">
+                          <a href="#">
+                            <span className="icon-btc">
+                              <span className="path1" />
+                              <span className="path2" />
+                            </span>
+                            <span>Bitcoin</span>
+                            <span className="unit">BTC/USD</span>
+                          </a>
+                        </div>
+                        <h6 className="price">USD 46,168.95</h6>
+                        <div className="bottom">
+                          <p>36,641.20</p>
+                          <p className="sale critical">-0.79%</p>
+                        </div>
+                      </div>
+                      <div className="crypto-box active">
+                        <div className="top">
+                          <a href="#">
+                            <span className="icon-eth">
+                              <span className="path1" />
+                              <span className="path2" />
+                              <span className="path3" />
+                              <span className="path4" />
+                            </span>
+                            <span>Ethereum</span>
+                            <span className="unit">ETH/USD</span>
+                          </a>
+                        </div>
+                        <h6 className="price">USD $3,480.04</h6>
+                        <div className="bottom">
+                          <p>36,641.20</p>
+                          <div className="sale success">+10.55%</div>
+                        </div>
+                      </div>
+                      <div className="crypto-box">
+                        <div className="top">
+                          <a href="#">
+                            <span className="icon-tether">
+                              <span className="path1" />
+                              <span className="path2" />
+                            </span>
+                            <span>Tether</span>
+                            <span className="unit">USDT/USD</span>
+                          </a>
+                        </div>
+                        <h6 className="price">USD 1.00</h6>
+                        <div className="bottom">
+                          <p>36,641.20</p>
+                          <div className="sale critical">-0.01%%</div>
+                        </div>
+                      </div>
+                      <div className="crypto-box">
+                        <div className="top">
+                          <a href="#">
+                            <span className="icon-bnb">
+                              <span className="path1" />
+                              <span className="path2" />
+                              <span className="path3" />
+                              <span className="path4" />
+                              <span className="path5" />
+                              <span className="path6" />
+                            </span>
+                            <span>BNB</span>{" "}
+                            <span className="unit">BNB/USD</span>
+                          </a>
+                        </div>
+                        <h6 className="price">USD 443.56</h6>
+                        <div className="bottom">
+                          <p>36,641.20</p>
+                          <div className="sale critical">-1.24%</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="content-inner" style={{ display: "none" }}>
+                      <div className="crypto-box">
+                        <div className="top">
+                          <a href="#">
+                            <span className="icon-btc">
+                              <span className="path1" />
+                              <span className="path2" />
+                            </span>
+                            <span>Bitcoin</span>
+                            <span className="unit">BTC/USD</span>
+                          </a>
+                        </div>
+                        <h6 className="price">USD 46,168.95</h6>
+                        <div className="bottom">
+                          <p>36,641.20</p>
+                          <p className="sale critical">-0.79%</p>
+                        </div>
+                      </div>
+                      <div className="crypto-box active">
+                        <div className="top">
+                          <a href="#">
+                            <span className="icon-eth">
+                              <span className="path1" />
+                              <span className="path2" />
+                              <span className="path3" />
+                              <span className="path4" />
+                            </span>
+                            <span>Ethereum</span>
+                            <span className="unit">ETH/USD</span>
+                          </a>
+                        </div>
+                        <h6 className="price">USD $3,480.04</h6>
+                        <div className="bottom">
+                          <p>36,641.20</p>
+                          <div className="sale success">+10.55%</div>
+                        </div>
+                      </div>
+                      <div className="crypto-box">
+                        <div className="top">
+                          <a href="#">
+                            <span className="icon-tether">
+                              <span className="path1" />
+                              <span className="path2" />
+                            </span>
+                            <span>Tether</span>
+                            <span className="unit">USDT/USD</span>
+                          </a>
+                        </div>
+                        <h6 className="price">USD 1.00</h6>
+                        <div className="bottom">
+                          <p>36,641.20</p>
+                          <div className="sale critical">-0.01%%</div>
+                        </div>
+                      </div>
+                      <div className="crypto-box">
+                        <div className="top">
+                          <a href="#">
+                            <span className="icon-bnb">
+                              <span className="path1" />
+                              <span className="path2" />
+                              <span className="path3" />
+                              <span className="path4" />
+                              <span className="path5" />
+                              <span className="path6" />
+                            </span>
+                            <span>BNB</span>{" "}
+                            <span className="unit">BNB/USD</span>
+                          </a>
+                        </div>
+                        <h6 className="price">USD 443.56</h6>
+                        <div className="bottom">
+                          <p>36,641.20</p>
+                          <div className="sale critical">-1.24%</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="content-inner" style={{ display: "none" }}>
+                      <div className="crypto-box">
+                        <div className="top">
+                          <a href="#">
+                            <span className="icon-btc">
+                              <span className="path1" />
+                              <span className="path2" />
+                            </span>
+                            <span>Bitcoin</span>
+                            <span className="unit">BTC/USD</span>
+                          </a>
+                        </div>
+                        <h6 className="price">USD 46,168.95</h6>
+                        <div className="bottom">
+                          <p>36,641.20</p>
+                          <p className="sale critical">-0.79%</p>
+                        </div>
+                      </div>
+                      <div className="crypto-box active">
+                        <div className="top">
+                          <a href="#">
+                            <span className="icon-eth">
+                              <span className="path1" />
+                              <span className="path2" />
+                              <span className="path3" />
+                              <span className="path4" />
+                            </span>
+                            <span>Ethereum</span>
+                            <span className="unit">ETH/USD</span>
+                          </a>
+                        </div>
+                        <h6 className="price">USD $3,480.04</h6>
+                        <div className="bottom">
+                          <p>36,641.20</p>
+                          <div className="sale success">+10.55%</div>
+                        </div>
+                      </div>
+                      <div className="crypto-box">
+                        <div className="top">
+                          <a href="#">
+                            <span className="icon-tether">
+                              <span className="path1" />
+                              <span className="path2" />
+                            </span>
+                            <span>Tether</span>
+                            <span className="unit">USDT/USD</span>
+                          </a>
+                        </div>
+                        <h6 className="price">USD 1.00</h6>
+                        <div className="bottom">
+                          <p>36,641.20</p>
+                          <div className="sale critical">-0.01%%</div>
+                        </div>
+                      </div>
+                      <div className="crypto-box">
+                        <div className="top">
+                          <a href="#">
+                            <span className="icon-bnb">
+                              <span className="path1" />
+                              <span className="path2" />
+                              <span className="path3" />
+                              <span className="path4" />
+                              <span className="path5" />
+                              <span className="path6" />
+                            </span>
+                            <span>BNB</span>{" "}
+                            <span className="unit">BNB/USD</span>
+                          </a>
+                        </div>
+                        <h6 className="price">USD 443.56</h6>
+                        <div className="bottom">
+                          <p>36,641.20</p>
+                          <div className="sale critical">-1.24%</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="content-inner" style={{ display: "none" }}>
+                      <div className="crypto-box">
+                        <div className="top">
+                          <a href="#">
+                            <span className="icon-btc">
+                              <span className="path1" />
+                              <span className="path2" />
+                            </span>
+                            <span>Bitcoin</span>
+                            <span className="unit">BTC/USD</span>
+                          </a>
+                        </div>
+                        <h6 className="price">USD 46,168.95</h6>
+                        <div className="bottom">
+                          <p>36,641.20</p>
+                          <p className="sale critical">-0.79%</p>
+                        </div>
+                      </div>
+                      <div className="crypto-box active">
+                        <div className="top">
+                          <a href="#">
+                            <span className="icon-eth">
+                              <span className="path1" />
+                              <span className="path2" />
+                              <span className="path3" />
+                              <span className="path4" />
+                            </span>
+                            <span>Ethereum</span>
+                            <span className="unit">ETH/USD</span>
+                          </a>
+                        </div>
+                        <h6 className="price">USD $3,480.04</h6>
+                        <div className="bottom">
+                          <p>36,641.20</p>
+                          <div className="sale success">+10.55%</div>
+                        </div>
+                      </div>
+                      <div className="crypto-box">
+                        <div className="top">
+                          <a href="#">
+                            <span className="icon-tether">
+                              <span className="path1" />
+                              <span className="path2" />
+                            </span>
+                            <span>Tether</span>
+                            <span className="unit">USDT/USD</span>
+                          </a>
+                        </div>
+                        <h6 className="price">USD 1.00</h6>
+                        <div className="bottom">
+                          <p>36,641.20</p>
+                          <div className="sale critical">-0.01%%</div>
+                        </div>
+                      </div>
+                      <div className="crypto-box">
+                        <div className="top">
+                          <a href="#">
+                            <span className="icon-bnb">
+                              <span className="path1" />
+                              <span className="path2" />
+                              <span className="path3" />
+                              <span className="path4" />
+                              <span className="path5" />
+                              <span className="path6" />
+                            </span>
+                            <span>BNB</span>{" "}
+                            <span className="unit">BNB/USD</span>
+                          </a>
+                        </div>
+                        <h6 className="price">USD 443.56</h6>
+                        <div className="bottom">
+                          <p>36,641.20</p>
+                          <div className="sale critical">-1.24%</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="content-inner" style={{ display: "none" }}>
+                      <div className="crypto-box">
+                        <div className="top">
+                          <a href="#">
+                            <span className="icon-btc">
+                              <span className="path1" />
+                              <span className="path2" />
+                            </span>
+                            <span>Bitcoin</span>
+                            <span className="unit">BTC/USD</span>
+                          </a>
+                        </div>
+                        <h6 className="price">USD 46,168.95</h6>
+                        <div className="bottom">
+                          <p>36,641.20</p>
+                          <p className="sale critical">-0.79%</p>
+                        </div>
+                      </div>
+                      <div className="crypto-box active">
+                        <div className="top">
+                          <a href="#">
+                            <span className="icon-eth">
+                              <span className="path1" />
+                              <span className="path2" />
+                              <span className="path3" />
+                              <span className="path4" />
+                            </span>
+                            <span>Ethereum</span>
+                            <span className="unit">ETH/USD</span>
+                          </a>
+                        </div>
+                        <h6 className="price">USD $3,480.04</h6>
+                        <div className="bottom">
+                          <p>36,641.20</p>
+                          <div className="sale success">+10.55%</div>
+                        </div>
+                      </div>
+                      <div className="crypto-box">
+                        <div className="top">
+                          <a href="#">
+                            <span className="icon-tether">
+                              <span className="path1" />
+                              <span className="path2" />
+                            </span>
+                            <span>Tether</span>
+                            <span className="unit">USDT/USD</span>
+                          </a>
+                        </div>
+                        <h6 className="price">USD 1.00</h6>
+                        <div className="bottom">
+                          <p>36,641.20</p>
+                          <div className="sale critical">-0.01%%</div>
+                        </div>
+                      </div>
+                      <div className="crypto-box">
+                        <div className="top">
+                          <a href="#">
+                            <span className="icon-bnb">
+                              <span className="path1" />
+                              <span className="path2" />
+                              <span className="path3" />
+                              <span className="path4" />
+                              <span className="path5" />
+                              <span className="path6" />
+                            </span>
+                            <span>BNB</span>{" "}
+                            <span className="unit">BNB/USD</span>
+                          </a>
+                        </div>
+                        <h6 className="price">USD 443.56</h6>
+                        <div className="bottom">
+                          <p>36,641.20</p>
+                          <div className="sale critical">-1.24%</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="coin-list">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-12">
+              <div className="block-text">
+                <h3 className="heading">Market Update</h3>
+                <a className="btn-action-2" href="#">
+                  See All Coins
+                </a>
+              </div>
+              <div className="coin-list__main">
+                <div className="flat-tabs">
+                  <ul className="menu-tab">
+                    <li className="active">
+                      <h6 className="fs-16">View All</h6>
+                    </li>
+                    <li>
+                      <h6 className="fs-16">Metaverse</h6>
+                    </li>
+                    <li>
+                      <h6 className="fs-16">Entertainment</h6>
+                    </li>
+                    <li>
+                      <h6 className="fs-16">Energy</h6>
+                    </li>
+                    <li>
+                      <h6 className="fs-16">NFT</h6>
+                    </li>
+                    <li>
+                      <h6 className="fs-16">Gaming</h6>
+                    </li>
+                    <li>
+                      <h6 className="fs-16">Music</h6>
+                    </li>
+                  </ul>
+                  <div className="content-tab">
+                    <div className="content-inner">
+                      <table className="table">
+                        <thead>
+                          <tr>
+                            <th scope="col" />
+                            <th scope="col">#</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Last Price</th>
+                            <th scope="col">24h %</th>
+                            <th scope="col">Market Cap</th>
+                            <th scope="col">Last 7 Days</th>
+                            <th scope="col" />
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">
+                              <span className="icon-star" />
+                            </th>
+                            <td>1</td>
+                            <td>
+                              <a href="#">
+                                <span className="icon-btc">
+                                  <span className="path1" />
+                                  <span className="path2" />
+                                </span>
+                                <span>Bitcoin</span>
+                                <span className="unit">BTC</span>
+                              </a>
+                            </td>
+                            <td className="boild">$56,623.54</td>
+                            <td className="up">+1.45%</td>
+                            <td className="boild">$880,423,640,582</td>
+                            <td>
+                              <div id="total-revenue-chart-1" />
+                            </td>
+                            <td>
+                              <a href="#" className="btn">
+                                Trade
+                              </a>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th scope="row">
+                              <span className="icon-star" />
+                            </th>
+                            <td>2</td>
+                            <td>
+                              <a href="#">
+                                <span className="icon-eth">
+                                  <span className="path1" />
+                                  <span className="path2" />
+                                  <span className="path3" />
+                                  <span className="path4" />
+                                </span>
+                                <span>Ethereum</span>
+                                <span className="unit">ETH</span>
+                              </a>
+                            </td>
+                            <td className="boild">$56,623.54</td>
+                            <td className="down">-5.12%</td>
+                            <td className="boild">$880,423,640,582</td>
+                            <td>
+                              <div id="total-revenue-chart-2" />
+                            </td>
+                            <td>
+                              <a href="#" className="btn">
+                                Trade
+                              </a>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th scope="row">
+                              <span className="icon-star" />
+                            </th>
+                            <td>3</td>
+                            <td>
+                              <a href="#">
+                                <span className="icon-bnb">
+                                  <span className="path1" />
+                                  <span className="path2" />
+                                  <span className="path3" />
+                                  <span className="path4" />
+                                  <span className="path5" />
+                                  <span className="path6" />
+                                </span>
+                                <span>BNB</span>
+                                <span className="unit">BNB/USD</span>
+                              </a>
+                            </td>
+                            <td className="boild">$56,623.54</td>
+                            <td className="down">-3.75%</td>
+                            <td className="boild">$880,423,640,582</td>
+                            <td>
+                              <div id="total-revenue-chart-3" />
+                            </td>
+                            <td>
+                              <a href="#" className="btn">
+                                Trade
+                              </a>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th scope="row">
+                              <span className="icon-star" />
+                            </th>
+                            <td>4</td>
+                            <td>
+                              <a href="#">
+                                <span className="icon-tether">
+                                  <span className="path1" />
+                                  <span className="path2" />
+                                </span>
+                                <span>Tether</span>
+                                <span className="unit">USDT/USD</span>
+                              </a>
+                            </td>
+                            <td className="boild">$56,623.54</td>
+                            <td className="up">+1.45%</td>
+                            <td className="boild">$880,423,640,582</td>
+                            <td>
+                              <div id="total-revenue-chart-4" />
+                            </td>
+                            <td>
+                              <a href="#" className="btn">
+                                Trade
+                              </a>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th scope="row">
+                              <span className="icon-star" />
+                            </th>
+                            <td>5</td>
+                            <td>
+                              <a href="#">
+                                <span className="icon-sol">
+                                  <span className="path1" />
+                                  <span className="path2" />
+                                  <span className="path3" />
+                                  <span className="path4" />
+                                  <span className="path5" />
+                                </span>
+                                <span>Solana</span>
+                                <span className="unit">SOL</span>
+                              </a>
+                            </td>
+                            <td className="boild">$56,623.54</td>
+                            <td className="up">+1.45%</td>
+                            <td className="boild">$880,423,640,582</td>
+                            <td>
+                              <div id="total-revenue-chart-5" />
+                            </td>
+                            <td>
+                              <a href="#" className="btn">
+                                Trade
+                              </a>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th scope="row">
+                              <span className="icon-star" />
+                            </th>
+                            <td>6</td>
+                            <td>
+                              <a href="#">
+                                <span className="icon-btc">
+                                  <span className="path1" />
+                                  <span className="path2" />
+                                </span>
+                                <span>XRP</span>{" "}
+                                <span className="unit">XRP</span>
+                              </a>
+                            </td>
+                            <td className="boild">$56,623.54</td>
+                            <td className="down">-2.22%</td>
+                            <td className="boild">$880,423,640,582</td>
+                            <td>
+                              <div id="total-revenue-chart-6" />
+                            </td>
+                            <td>
+                              <a href="#" className="btn">
+                                Trade
+                              </a>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th scope="row">
+                              <span className="icon-star" />
+                            </th>
+                            <td>7</td>
+                            <td>
+                              <a href="#">
+                                <span className="icon-ada">
+                                  <span className="path1" />
+                                  <span className="path2" />
+                                  <span className="path3" />
+                                  <span className="path4" />
+                                  <span className="path5" />
+                                  <span className="path6" />
+                                  <span className="path7" />
+                                  <span className="path8" />
+                                  <span className="path9" />
+                                </span>
+                                <span>Cardano</span>
+                                <span className="unit">ADA</span>
+                              </a>
+                            </td>
+                            <td className="boild">$56,623.54</td>
+                            <td className="up">+0.8%</td>
+                            <td className="boild">$880,423,640,582</td>
+                            <td>
+                              <div id="total-revenue-chart-7" />
+                            </td>
+                            <td>
+                              <a href="#" className="btn">
+                                Trade
+                              </a>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th scope="row">
+                              <span className="icon-star" />
+                            </th>
+                            <td>8</td>
+                            <td>
+                              <a href="#">
+                                <span className="icon-avax">
+                                  <span className="path1" />
+                                  <span className="path2" />
+                                  <span className="path3" />
+                                  <span className="path4" />
+                                </span>
+                                <span>Avalanche</span>
+                                <span className="unit">AVAX</span>
+                              </a>
+                            </td>
+                            <td className="boild">$56,623.54</td>
+                            <td className="up">+1.41%</td>
+                            <td className="boild">$880,423,640,582</td>
+                            <td>
+                              <div id="total-revenue-chart-8" />
+                            </td>
+                            <td>
+                              <a href="#" className="btn">
+                                Trade
+                              </a>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="work">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-12">
+              <div className="block-text center">
+                <h3 className="heading">How It Work</h3>
+                <p className="fs-20 desc">
+                  Stacks is a production-ready library of stackable content
+                  blocks built in React Native.
+                </p>
+              </div>
+              <div className="work__main">
+                <div className="work-box">
+                  <div className="image">
+                    <img src={Cloud} alt />
+                  </div>
+                  <div className="content">
+                    <p className="step">Step 1</p>
+                    <a href="#" className="title">
+                      Download
                     </a>
-                    <a href="#" className="btn btn-primary my-1 waves-effect">
-                      <img src={apple} alt />
+                    <p className="text">
+                      Stacks is a production-ready library of stackable content
+                      blocks built in React Native.
+                    </p>
+                  </div>
+                  <img className="line" src={connect_line} alt />
+                </div>
+                <div className="work-box">
+                  <div className="image">
+                    <img src={Wallet} alt />
+                  </div>
+                  <div className="content">
+                    <p className="step">Step 2</p>
+                    <a href="#" className="title">
+                      Connect wallet
                     </a>
+                    <p className="text">
+                      Stacks is a production-ready library of stackable content
+                      blocks built in React Native.
+                    </p>
                   </div>
+                  <img className="line" src={connect_line} alt />
                 </div>
-              </div>
-              <div className="col-xl-4 col-lg-6 col-md-6">
-                <div className="appss-img">
-                  <img className="img-fluid" src={app} alt />
+                <div className="work-box">
+                  <div className="image">
+                    <img src={Mining} alt />
+                  </div>
+                  <div className="content">
+                    <p className="step">Step 3</p>
+                    <a href="#" className="title">
+                      Start trading
+                    </a>
+                    <p className="text">
+                      Stacks is a production-ready library of stackable content
+                      blocks built in React Native.
+                    </p>
+                  </div>
+                  <img className="line" src={connect_line} alt />
+                </div>
+                <div className="work-box">
+                  <div className="image">
+                    <img src={Comparison} alt />
+                  </div>
+                  <div className="content">
+                    <p className="step">Step 4</p>
+                    <a href="#" className="title">
+                      Earn money
+                    </a>
+                    <p className="text">
+                      Stacks is a production-ready library of stackable content
+                      blocks built in React Native.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div className="blog bg-light section-padding">
-          <div className="container">
-            <div className="row justify-content-center">
-              <div className="col-xl-6">
-                <div className="section-title text-center">
-                  <h2>Blog</h2>
+      </section>
+      <section className="about">
+        <div className="container">
+          <div className="row">
+            <div className="col-xl-6 col-md-12">
+              <div className="about_image">
+                <div className="swiper img-swiper">
+                  <div className="swiper-wrapper">
+                    <div className="swiper-slide">
+                      <img className="img-main" src={about_h1} alt />
+                    </div>
+                    <div className="swiper-slide">
+                      <img className="img-main" src={about_h1} alt />
+                    </div>
+                    <div className="swiper-slide">
+                      <img className="img-main" src={about_h1} alt />
+                    </div>
+                    <div className="swiper-slide">
+                      <img className="img-main" src={about_h1} alt />
+                    </div>
+                  </div>
+                  <div className="swiper-pagination" />
+                </div>
+                <img className="icon icon-1" src={icon_01} alt />
+                <img className="icon icon-2" src={icon_02} alt />
+                <img className="icon icon-3" src={icon_03} alt />
+                <img className="icon icon-4" src={icon_04} alt />
+                <img className="icon icon-5" src={icon_05} alt />
+              </div>
+            </div>
+            <div className="col-xl-6 col-md-12">
+              <div
+                className="about__content"
+                data-aos="fade-up"
+                data-aos-duration={1000}
+              >
+                <h3 className="heading">What Is Rockie</h3>
+                <p className="fs-20 decs">
+                  Experience a variety of trading on Bitcost. You can use
+                  various types of coin transactions such as Spot Trade, Futures
+                  Trade, P2P, Staking, Mining, and margin.
+                </p>
+                <ul className="list">
+                  <li>
+                    <h6 className="title">
+                      <span className="icon-check" />
+                      View real-time cryptocurrency prices
+                    </h6>
+                    <p className="text">
+                      Experience a variety of trading on Bitcost. You can use
+                      various types of coin transactions such as Spot Trade,
+                      Futures Trade, P2P, Staking, Mining, and margin.
+                    </p>
+                  </li>
+                  <li>
+                    <h6 className="title">
+                      <span className="icon-check" />
+                      Buy and sell BTC, ETH, XRP, OKB, Etc...
+                    </h6>
+                    <p className="text">
+                      Experience a variety of trading on Bitcost. You can use
+                      various types of coin transactions such as Spot Trade,
+                      Futures Trade, P2P, Staking, Mining, and margin.
+                    </p>
+                  </li>
+                </ul>
+                <a href="#" className="btn-action">
+                  Explore More
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="download">
+        <div className="container">
+          <div className="row">
+            <div className="col-xl-6 col-md-12">
+              <div
+                className="download__content"
+                data-aos="fade-up"
+                data-aos-duration={1000}
+              >
+                <h3 className="heading">
+                  Free your money &amp; Invest with confident
+                </h3>
+                <p className="fs-20 decs">
+                  With Cryptor Trade, you can be sure your trading skills are
+                  matched
+                </p>
+                <ul className="list">
+                  <li>
+                    <h6 className="title">
+                      <span className="icon-check" />
+                      Buy, Sell, And Trade On The Go
+                    </h6>
+                    <p className="text">
+                      Managa your holdings from your mobile decive
+                    </p>
+                  </li>
+                  <li>
+                    <h6 className="title">
+                      <span className="icon-check" />
+                      Take Control Of Your Wealth
+                    </h6>
+                    <p className="text">
+                      Rest assured you (and only you) have access to your funds
+                    </p>
+                  </li>
+                </ul>
+                <div className="group-button">
+                  <a href="#">
+                    <img src={googleplay} alt />
+                  </a>
+                  <a href="#">
+                    <img src={appstore} alt />
+                  </a>
                 </div>
               </div>
             </div>
-            <div className="row">
-              <div className="col-xl-4 col-lg-4 col-md-12">
-                <div className="blog-grid">
-                  <div className="card">
-                    <img className="img-fluid card-img-top" src={image6} alt />
-                    <div className="card-body">
-                      <a href="blog-single.html">
-                        <h4 className="card-title">
-                          Why does Litecoin need MimbleWimble?
-                        </h4>
-                      </a>
-                      <p className="card-text">
-                        Cras chinwag brown bread Eaton cracking goal so I said a
-                        load of old tosh baking cakes.!
-                      </p>
+            <div className="col-xl-6 col-md-12">
+              <div className="download__image">
+                <div className="button">Scan To Download</div>
+                <img src={download} alt />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="testimonials">
+        <div className="container">
+          <div className="row">
+            <div className="col-xl-6 col-md-12">
+              <div className="block-text">
+                <h3 className="heading">Our customers love what we do</h3>
+                <h6 className="fs-20">
+                  Transform Your idea into Reality With Finsweet
+                </h6>
+                <p>
+                  It is a long established fact that a reader will be distracted
+                  by the readable content of a page when looking at its layout.
+                </p>
+                <div className="swiper swiper-thumb1">
+                  <div className="swiper-wrapper list-img">
+                    <div className="swiper-slide">
+                      <img src={avt_02} alt />
                     </div>
-                    <div className="card-footer">
-                      <div className="meta-info">
-                        <a href="#" className="author">
-                          <img src={image7} alt /> Admin
-                        </a>
-                        <a href="#" className="post-date">
-                          <i className="la la-calendar" /> 31 July, 2019
-                        </a>
+                    <div className="swiper-slide">
+                      <img src={avt_03} alt />
+                    </div>
+                    <div className="swiper-slide">
+                      <img src={avt_04} alt />
+                    </div>
+                  </div>
+                </div>
+                <div className="couter">
+                  <h6>30+</h6>
+                  <p className="title">Customer Reviews</p>
+                </div>
+              </div>
+            </div>
+            <div className="col-xl-6 col-md-12">
+              <div className="swiper swiper-testimonial-1">
+                <div className="swiper-wrapper">
+                  <div className="swiper-slide">
+                    <div className="testimonials-box">
+                      <span className="icon-quote" />
+                      <h6 className="text">
+                        “Great course I really enjoyed it and the course was way
+                        easy to learn with very good explanations of the code, I
+                        could easily understand and develop applications with
+                        the knowledge gathered during the course.”
+                      </h6>
+                      <div className="bottom">
+                        <div className="info">
+                          <img src={avt_02} alt />
+                          <div className="content">
+                            <h6 className="name">Johnny Andro</h6>
+                            <p className="position">Director, Company</p>
+                          </div>
+                        </div>
+                        <img src={logo_05} alt />
+                      </div>
+                    </div>
+                  </div>
+                  <div className="swiper-slide">
+                    <div className="testimonials-box">
+                      <span className="icon-quote" />
+                      <h6 className="text">
+                        “Great course I really enjoyed it and the course was way
+                        easy to learn with very good explanations of the code, I
+                        could easily understand and develop applications with
+                        the knowledge gathered during the course.”
+                      </h6>
+                      <div className="bottom">
+                        <div className="info">
+                          <img src={avt_03} alt />
+                          <div className="content">
+                            <h6 className="name">Johnny Andro</h6>
+                            <p className="position">Director, Company</p>
+                          </div>
+                        </div>
+                        <img src={logo_05} alt />
+                      </div>
+                    </div>
+                  </div>
+                  <div className="swiper-slide">
+                    <div className="testimonials-box">
+                      <span className="icon-quote" />
+                      <h6 className="text">
+                        “Great course I really enjoyed it and the course was way
+                        easy to learn with very good explanations of the code, I
+                        could easily understand and develop applications with
+                        the knowledge gathered during the course.”
+                      </h6>
+                      <div className="bottom">
+                        <div className="info">
+                          <img src={avt_04} alt />
+                          <div className="content">
+                            <h6 className="name">Johnny Andro</h6>
+                            <p className="position">Director, Company</p>
+                          </div>
+                        </div>
+                        <img src={logo_05} alt />
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div className="col-xl-4 col-lg-4 col-md-12">
-                <div className="blog-grid">
-                  <div className="card">
-                    <img className="img-fluid card-img-top" src={image8} alt />
-                    <div className="card-body">
-                      <a href="blog-single.html">
-                        <h4 className="card-title">
-                          How to securely store your HD wallet seeds?
-                        </h4>
-                      </a>
-                      <p className="card-text">
-                        Cras chinwag brown bread Eaton cracking goal so I said a
-                        load of old tosh baking cakes.!
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="section-sale">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-7">
+              <div className="block-text">
+                <h4 className="heading">Earn up to $25 worth of crypto</h4>
+                <p className="desc">
+                  Discover how specific cryptocurrencies work — and get a bit of
+                  each crypto to try out for yourself.
+                </p>
+              </div>
+            </div>
+            <div className="col-md-5">
+              <div className="button">
+                <a href="#">Create Account</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer className="footer">
+        <div className="container">
+          <div className="footer__main">
+            <div className="row">
+              <div className="col-xl-4 col-md-8">
+                <div className="info">
+                  <a href="index.html" className="logo">
+                    <img src={log_footer} alt />
+                  </a>
+                  <h6>Let's talk! 🤙</h6>
+                  <ul className="list">
+                    <li>
+                      <p>+12 345 678 9101</p>
+                    </li>
+                    <li>
+                      <p>Info.Avitex@Gmail.Com</p>
+                    </li>
+                    <li>
+                      <p>
+                        Cecilia Chapman 711-2880 Nulla St. Mankato Mississippi
+                        96522
                       </p>
-                    </div>
-                    <div className="card-footer">
-                      <div className="meta-info">
-                        <a href="#" className="author">
-                          <img src={image9} alt /> Admin
-                        </a>
-                        <a href="#" className="post-date">
-                          <i className="la la-calendar" /> 31 July, 2019
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="col-xl-4 col-lg-4 col-md-12">
-                <div className="blog-grid">
-                  <div className="card">
-                    <img className="img-fluid card-img-top" src={image10} alt />
-                    <div className="card-body">
-                      <a href="blog-single.html">
-                        <h4 className="card-title">
-                          Exclusive Interview With Xinxi Wang Of Litecoin
-                        </h4>
-                      </a>
-                      <p className="card-text">
-                        Cras chinwag brown bread Eaton cracking goal so I said a
-                        load of old tosh baking cakes.!
-                      </p>
-                    </div>
-                    <div className="card-footer">
-                      <div className="meta-info">
-                        <a href="#" className="author">
-                          <img src={image11} alt /> Admin
-                        </a>
-                        <a href="#" className="post-date">
-                          <i className="la la-calendar" /> 31 July, 2019
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="get-touch section-padding">
-          <div className="container">
-            <div className="row justify-content-center">
-              <div className="col-xl-6">
-                <div className="section-title">
-                  <h2>Get in touch. Stay in touch.</h2>
-                </div>
-              </div>
-            </div>
-            <div className="row">
-              <div className="col-xl-3 col-lg-6 col-md-6">
-                <div className="get-touch-content">
-                  <span>
-                    <i className="fas fa-headset" />
-                  </span>
-                  <h4>24 / 7 Support</h4>
-                  <p>
-                    Got a problem? Just get in touch. Our support team is
-                    available 24/7.
-                  </p>
-                </div>
-              </div>
-              <div className="col-xl-3 col-lg-6 col-md-6">
-                <div className="get-touch-content">
-                  <span>
-                    <i className="fas fa-blog" />
-                  </span>
-                  <h4>Tradee Blog</h4>
-                  <p>
-                    News and updates from the world’s leading cryptocurrency
-                    exchange.
-                  </p>
-                </div>
-              </div>
-              <div className="col-xl-3 col-lg-6 col-md-6">
-                <div className="get-touch-content">
-                  <span>
-                    <i className="fas fa-briefcase" />
-                  </span>
-                  <h4>Careers</h4>
-                  <p>
-                    Help build the future of technology. Start your new career
-                    at Tradee.
-                  </p>
-                </div>
-              </div>
-              <div className="col-xl-3 col-lg-6 col-md-6">
-                <div className="get-touch-content">
-                  <span>
-                    <i className="fas fa-users" />
-                  </span>
-                  <h4>Community</h4>
-                  <p>
-                    Tradee is global. Join the discussion in our worldwide
-                    communities.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="bottom section-padding">
-          <div className="container">
-            <div className="row">
-              <div className="col-xl-4">
-                <div className="bottom-logo">
-                  <img className="pb-3" src={logow} alt />
-                  <p>
-                    Tradee is a unique and beautiful collection of UI elements
-                    that are all flexible and modular. A complete and
-                    customizable solution to building the website of your
-                    dreams.
-                  </p>
-                </div>
-              </div>
-              <div className="col-xl-2">
-                <div className="bottom-widget">
-                  <h4 className="widget-title">Company</h4>
-                  <ul>
-                    <li>
-                      <a href="#">About</a>
-                    </li>
-                    <li>
-                      <a href="#">Career</a>
-                    </li>
-                    <li>
-                      <a href="#">Affiliate</a>
-                    </li>
-                    <li>
-                      <a href="#">Our Partner</a>
                     </li>
                   </ul>
                 </div>
               </div>
-              <div className="col-xl-2">
-                <div className="bottom-widget">
-                  <h4 className="widget-title">Support</h4>
+              <div className="col-xl-2 col-md-4">
+                <div className="widget-link s1">
+                  <h6 className="title">PRODUCTS</h6>
                   <ul>
                     <li>
-                      <a href="#">Ticket</a>
+                      <a href="spot.html">Spot</a>
                     </li>
                     <li>
-                      <a href="#">FAQ</a>
+                      <a href="#">Inverse Perpetual</a>
                     </li>
                     <li>
-                      <a href="#">Blog</a>
+                      <a href="#">USDT Perpetual</a>
                     </li>
                     <li>
-                      <a href="#">Helpdesk</a>
+                      <a href="exchange.html">Exchange</a>
+                    </li>
+                    <li>
+                      <a href="#">Launchpad</a>
+                    </li>
+                    <li>
+                      <a href="#">Binance Pay</a>
                     </li>
                   </ul>
                 </div>
               </div>
-              <div className="col-xl-4">
-                <div className="bottom-widget">
-                  <h4 className="widget-title">Exchange Pair</h4>
-                  <div className="row">
-                    <div className="col-xl-6">
-                      <ul>
-                        <li>
-                          <a href="#">ETH to BTC</a>
-                        </li>
-                        <li>
-                          <a href="#">BTC to ETH</a>
-                        </li>
-                        <li>
-                          <a href="#">LTC to ETH</a>
-                        </li>
-                        <li>
-                          <a href="#">USDT to BTC</a>
-                        </li>
-                      </ul>
-                    </div>
-                    <div className="col-xl-6">
-                      <ul>
-                        <li>
-                          <a href="#">BTC to USDT</a>
-                        </li>
-                        <li>
-                          <a href="#">LTC to BTC</a>
-                        </li>
-                        <li>
-                          <a href="#">XMR to BTC</a>
-                        </li>
-                        <li>
-                          <a href="#">ETC to DASH</a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="footer">
-          <div className="container">
-            <div className="row">
-              <div className="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-                <div className="copyright">
-                  <p>
-                    © Copyright 2019 <a href="#">Tradee</a> I All Rights
-                    Reserved
-                  </p>
-                </div>
-              </div>
-              <div className="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
-                <div className="footer-social">
+              <div className="col-xl-2 col-md-4">
+                <div className="widget-link s2">
+                  <h6 className="title">SERVICES</h6>
                   <ul>
                     <li>
-                      <a href="#">
-                        <i className="fab fa-facebook" />
-                      </a>
+                      <a href="buy-crypto-select.html">Buy Crypto</a>
                     </li>
                     <li>
-                      <a href="#">
-                        <i className="fab fa-twitter" />
-                      </a>
+                      <a href="markets.html">Markets</a>
                     </li>
                     <li>
-                      <a href="#">
-                        <i className="fab fa-linkedin" />
-                      </a>
+                      <a href="#">Tranding Fee</a>
                     </li>
                     <li>
-                      <a href="#">
-                        <i className="fab fa-youtube" />
-                      </a>
+                      <a href="#">Affiliate Program</a>
+                    </li>
+                    <li>
+                      <a href="#">Referral Program</a>
+                    </li>
+                    <li>
+                      <a href="#">API</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div className="col-xl-2 col-md-4">
+                <div className="widget-link s3">
+                  <h6 className="title">SUPPORT</h6>
+                  <ul>
+                    <li>
+                      <a href="#">Bybit Learn</a>
+                    </li>
+                    <li>
+                      <a href="#">Help Center</a>
+                    </li>
+                    <li>
+                      <a href="user-profile.html">User Feedback</a>
+                    </li>
+                    <li>
+                      <a href="#">Submit a request</a>
+                    </li>
+                    <li>
+                      <a href="#">API Documentation</a>
+                    </li>
+                    <li>
+                      <a href="#">Trading Rules</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div className="col-xl-2 col-md-4">
+                <div className="widget-link s4">
+                  <h6 className="title">ABOUT US</h6>
+                  <ul>
+                    <li>
+                      <a href="#">About Bybit</a>
+                    </li>
+                    <li>
+                      <a href="#">Authenticity Check</a>
+                    </li>
+                    <li>
+                      <a href="#">Careers</a>
+                    </li>
+                    <li>
+                      <a href="#">Business Contacts</a>
+                    </li>
+                    <li>
+                      <a href="blog-default.html">Blog</a>
                     </li>
                   </ul>
                 </div>
@@ -1528,7 +2060,35 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </div>
+        <div className="container-fluid bg">
+          <div className="footer__bottom">
+            <p>Copyright © 2022 Themesflat</p>
+            <ul className="list-social">
+              <li>
+                <a href>
+                  <i className="fa-brands fa-facebook" />
+                </a>
+              </li>
+              <li>
+                <a href>
+                  <i className="fa-brands fa-twitter" />
+                </a>
+              </li>
+              <li>
+                <a href>
+                  <i className="fa-brands fa-instagram" />
+                </a>
+              </li>
+              <li>
+                <a href>
+                  <i className="fa-brands fa-linkedin" />
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+      {/* Swiper JS */}
     </div>
   );
 };
