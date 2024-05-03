@@ -22,6 +22,7 @@ import Wallet from "../components/Wallet/wallet";
 import UserVerifications from "../components/Admin/SingleUser/UserVerificatons";
 import Exchange from "../components/User/Exchange";
 import Top from "../components/Top";
+import Contact from "../components/Contact/Contact";
 export default function Router() {
   return (
     <AuthProvider authType={"cookie"} authName={"auth"}>
@@ -29,6 +30,7 @@ export default function Router() {
         <Top />
         <Routes>
           <Route index path="/" element={<Home />} />
+          <Route path="/contactus" element={<Contact />} />
           <Route index path="/wallet" element={<Wallet />} />
           <Route index path="/auth/login" element={<Login />} />
           <Route path="/auth/signup" element={<SignUp />} />
