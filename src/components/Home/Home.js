@@ -87,7 +87,7 @@ const Home = () => {
                   <div className="left__main">
                     <nav id="main-nav" className="main-nav">
                       <ul id="menu-primary-menu" className="menu">
-                        <li  className="menu-item-has-children current-menu-item">
+                        <li className="menu-item-has-children current-menu-item">
                           <Link to="/">Home</Link>
                         </li>
                         <li className="menu-item-has-children">
@@ -364,12 +364,10 @@ const Home = () => {
           <div className="row">
             <div className="col-xl-6 col-md-12">
               <div className="banner__content">
-                <h2 className="title">
-                  Buy &amp; Sell Digital Assets In The Rockie
-                </h2>
+                <h2 className="title">Buy &amp; Sell Digital Assets</h2>
                 <p className="fs-20 desc">
-                  Coin rockie is the easiest, safest, and fastest way to buy
-                  &amp; sell crypto asset exchange.
+                  The easiest, safest, and fastest way to buy &amp; sell crypto
+                  asset exchange.
                 </p>
                 <Link to="/auth/signup" className="btn-action">
                   <span>Get started now</span>
